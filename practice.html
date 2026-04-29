@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Practice | Small Data Ethics</title>
+  <meta name="description" content="Practice guidance for Small Data Ethics — operational guardrails for intake, merging, eligibility, and communication." />
+  <meta name="author" content="Laini Byfield" />
+  <link rel="canonical" href="https://smalldataethics.com/practice.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head><body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-grid">
+      <div class="brand">
+        <a class="brand-link" href="/" aria-label="Home">
+          <span class="mark" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="3" y="3" width="7" height="5" rx="1.5" fill="white" opacity="0.9"/>
+  <rect x="12" y="3" width="7" height="5" rx="1.5" fill="white" opacity="0.55"/>
+  <rect x="3" y="10" width="7" height="5" rx="1.5" fill="white" opacity="0.55"/>
+  <rect x="12" y="10" width="7" height="5" rx="1.5" fill="white" opacity="0.9"/>
+  <rect x="3" y="17" width="16" height="2" rx="1" fill="white" opacity="0.35"/>
+</svg></span>
+        </a>
+        <div>
+          <p class="kicker">Evergreen notes and applied theory</p>
+          <h1><a class="title-link" href="/">Small Data Ethics</a></h1>
+          <p class="subhead">For the professional who has to explain a wrong outcome to a real person</p>
+        </div>
+      </div>
+      <nav class="nav" aria-label="Primary">
+        <a href='/what-is.html'>What is Small Data Ethics</a>
+<a href='/theory.html'>Theory</a>
+<a href='/policy/index.html'>Policy</a>
+<a href='/governance/index.html'>Governance</a>
+<a href='/practice.html' class='active' aria-current='page'>Practice</a>
+<a href='/ethicmap.html'>ETHICMAP</a>
+<a href='/newsletter.html'>Newsletter</a>
+<a href='/work-with-me.html'>Work with me</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+<section class="page-hero">
+  <div class="container hero-inner">
+    <p class="eyebrow">By <strong>Laini Byfield</strong></p>
+    <h2>Practice</h2>
+    <p class="lead">How to run small data systems day-to-day without turning people into collateral damage.</p>
+    <div class='chips'><span class='chip'>Data lineage</span><span class='chip'>Merging</span><span class='chip'>Comms</span><span class='chip'>Appeals</span></div>
+  </div>
+</section>
+
+<section id="pipeline" class="section alt">
+  <div class="container prose">
+    <h2>Operational guardrails by pipeline stage</h2>
+    <div class="stack">
+      <div class="stack-item">
+        <h3>Intake</h3>
+        <ul>
+          <li>Document source, fields, and intended purpose before loading</li>
+          <li>Validate schema; detect drift early rather than at payout time</li>
+          <li>Tag each load with a load date and source version</li>
+        </ul>
+      </div>
+      <div class="stack-item">
+        <h3>Matching and merging</h3>
+        <ul>
+          <li>Prefer stable identifiers; define fallback rules in writing</li>
+          <li>Flag collisions, duplicates, and ambiguous matches for review</li>
+          <li>Quantify match uncertainty; set review thresholds before running</li>
+        </ul>
+      </div>
+      <div class="stack-item">
+        <h3>Scoring and eligibility</h3>
+        <ul>
+          <li>Make rules explainable in plain language before they go live</li>
+          <li>Log rule version and cutoff assumptions with every run</li>
+          <li>Define what can be appealed and what evidence counts</li>
+        </ul>
+      </div>
+      <div class="stack-item">
+        <h3>Communication</h3>
+        <ul>
+          <li>Avoid false certainty — name what may update later</li>
+          <li>Provide a "how to correct" path, not just outcome notices</li>
+          <li>Use safe reporting; small-n suppression where re-identification is plausible</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="checklist" class="section">
+  <div class="container prose">
+    <h2>A practical checklist</h2>
+    <ul>
+      <li>Is the data necessary for this purpose — what can be removed?</li>
+      <li>Can a person contest the outcome — what is the timeline?</li>
+      <li>Can you trace an outcome to its source file and rule version?</li>
+      <li>What are the known error modes — what is the repair plan?</li>
+    </ul>
+    <p class="note">These four questions are a condensed version of the ETHICMAP cycle applied to a single run. If you cannot answer all four, the system is not ready to produce consequential outputs. <a href="/ethicmap.html">See the full ETHICMAP cycle →</a></p>
+  </div>
+</section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>© <span id="year"></span> Laini Byfield. All rights reserved.</p>
+      <p>No tracking. No cookies.</p>
+    </div>
+  </footer>
+
+  <script src="/assets/script.js"></script>
+</body>
+</html>
