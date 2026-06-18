@@ -4,83 +4,85 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>GDPR data minimisation | Small Data Ethics</title>
-  <meta name="description" content="GDPR data minimisation explained for Small Data Ethics — operational implications and safeguards." />
+  <meta name="description" content="GDPR data minimisation explained for Small Data Ethics." />
   <meta name="author" content="Laini Byfield" />
   <link rel="canonical" href="https://smalldataethics.com/policy/gdpr.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="/assets/logo.png" type="image/png" />
   <link rel="stylesheet" href="/assets/styles.css" />
 </head><body>
   <a class="skip" href="#main">Skip to content</a>
-
-  <header class="site-header">
-    <div class="container header-grid">
-      <div class="brand">
-        <a class="brand-link" href="/" aria-label="Home">
-          <span class="mark" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect x="3" y="3" width="7" height="5" rx="1.5" fill="white" opacity="0.9"/>
-  <rect x="12" y="3" width="7" height="5" rx="1.5" fill="white" opacity="0.55"/>
-  <rect x="3" y="10" width="7" height="5" rx="1.5" fill="white" opacity="0.55"/>
-  <rect x="12" y="10" width="7" height="5" rx="1.5" fill="white" opacity="0.9"/>
-  <rect x="3" y="17" width="16" height="2" rx="1" fill="white" opacity="0.35"/>
-</svg></span>
-        </a>
-        <div>
-          <p class="kicker">Evergreen notes and applied theory</p>
-          <h1><a class="title-link" href="/">Small Data Ethics</a></h1>
-          <p class="subhead">For the professional who has to explain a wrong outcome to a real person</p>
-        </div>
-      </div>
-      <nav class="nav" aria-label="Primary">
-        <a href='/what-is.html'>What is Small Data Ethics</a>
-<a href='/theory.html'>Theory</a>
-<a href='/policy/index.html' class='active' aria-current='page'>Policy</a>
-<a href='/governance/index.html'>Governance</a>
-<a href='/practice.html'>Practice</a>
-<a href='/ethicmap.html'>ETHICMAP</a>
-<a href='/newsletter.html'>Newsletter</a>
-<a href='/work-with-me.html'>Work with me</a>
-      </nav>
-    </div>
+  <header class="topbar">
+    <a class="topbar-brand" href="/" aria-label="Small Data Ethics home">
+      <span class="mark-logo" aria-hidden="true"><img src="/assets/logo.png" alt="" width="40" height="40" style="display:block;border-radius:4px;" /></span>
+      <span class="brand-text">
+        <span class="kicker">Notes and Applied Theory</span>
+        <span class="site-title">Small Data Ethics</span>
+      </span>
+    </a>
+    <span class="topbar-tagline" aria-hidden="true">For the professional who has to explain a wrong outcome to a real person</span>
+    <button class="menu-btn" id="menu-btn" aria-controls="sidebar" aria-expanded="false">&#9776; Menu</button>
   </header>
-
-  <main id="main">
+  <div class="sidebar-overlay" id="sidebar-overlay" aria-hidden="true"></div>
+  <div class="page-layout">
+    <nav class="sidebar" id="sidebar" aria-label="Primary">
+  <div class="sidebar-group">
+    <span class="sidebar-group-label">Foundations</span>
+    <a href="/what-is.html">Start Here</a>
+    <a href="/theory.html">Theory</a>
+    <a href="/ethics-vs-privacy.html" class="sub">Ethics vs Privacy</a>
+  </div>
+  <div class="sidebar-group">
+    <span class="sidebar-group-label">Structures</span>
+    <a href="/policy/index.html">Policy</a>
+    <a href="/policy/gdpr.html" class="sub active">GDPR</a>
+    <a href="/policy/jisc.html" class="sub">Jisc</a>
+    <a href="/policy/odi.html" class="sub">ODI</a>
+    <a href="/governance/index.html">Governance</a>
+    <a href="/governance/ethics-boards.html" class="sub">Ethics boards</a>
+    <a href="/governance/review-committee.html" class="sub">Review committees</a>
+    <a href="/practice.html">Practice</a>
+  </div>
+  <div class="sidebar-group">
+    <span class="sidebar-group-label">Method</span>
+    <a href="/ethicmap.html">ETHICMAP</a>
+    <a href="/ethicmap/framework-explained.html" class="sub">Framework explained</a>
+    <a href="/ethicmap/theory-informed-design.html" class="sub">Theory-informed design</a>
+    <a href="/ethicmap/reading-list.html" class="sub">Reading list</a>
+  </div>
+  <div class="sidebar-group">
+    <span class="sidebar-group-label">Extension</span>
+    <a href="/newsletter.html">Notes</a>
+    <a href="/notes/outcome-done-stakeholder-problem.html" class="sub">Outcome Done</a>
+    <a href="/notes/benefit-becomes-evidence.html" class="sub">Benefit as evidence</a>
+  </div>
+</nav>
+    <main class="content" id="main">
 <section class="page-hero">
-  <div class="container hero-inner">
+  <div class="container">
     <p class="eyebrow">By <strong>Laini Byfield</strong></p>
     <h2>GDPR data minimisation</h2>
     <p class="lead">A practical standard for small data: do not collect, retain, or expose more than is necessary for the purpose.</p>
-    <div class='chips'><span class='chip'>Adequate</span><span class='chip'>Relevant</span><span class='chip'>Limited</span></div>
+    <div class="chips"><span class="chip">Adequate</span><span class="chip">Relevant</span><span class="chip">Limited</span></div>
   </div>
 </section>
-
-<section id="gdpr" class="section alt">
+<section class="section alt">
   <div class="container prose">
     <h2>What minimisation means in small data</h2>
     <p>Data minimisation is a principle: personal data should be adequate, relevant, and limited to what is necessary for the stated purpose.</p>
     <div class="card wide">
-      <h3>Operational implications</h3>
       <div class="grid-3">
-        <div>
-          <h4>Fields</h4>
-          <p>Resist "just in case" columns. Every extra field increases identifiability and misuse potential.</p>
-        </div>
-        <div>
-          <h4>Retention</h4>
-          <p>Keep data only as long as needed for payouts, audits, and appeals — then reduce or delete.</p>
-        </div>
-        <div>
-          <h4>Access</h4>
-          <p>Small data requires tighter role-based access. Fewer people should see raw records.</p>
-        </div>
+        <div><h4>Fields</h4><p>Resist &#8220;just in case&#8221; columns. Every extra field increases identifiability and misuse potential.</p></div>
+        <div><h4>Retention</h4><p>Keep data only as long as needed for payouts, audits, and appeals &#8212; then reduce or delete.</p></div>
+        <div><h4>Access</h4><p>Small data requires tighter role-based access. Fewer people should see raw records.</p></div>
       </div>
     </div>
-    <p class="small">Reference: UK ICO guidance on data minimisation (UK GDPR).</p>
+    <p class="note" style="margin-top:14px;">Reference: UK ICO guidance on data minimisation (UK GDPR).</p>
   </div>
 </section>
-
-<section id="gdpr-fit" class="section">
+<section class="section">
   <div class="container prose">
     <h2>How it fits Small Data Ethics</h2>
     <p>Minimisation is necessary but not sufficient. Small Data Ethics adds:</p>
@@ -89,18 +91,17 @@
       <li><strong>Traceability</strong>: what file, load date, and rule created the outcome</li>
       <li><strong>Repair</strong>: correction and reprocessing when errors occur</li>
     </ul>
-    <p class="note"><a href="/ethics-vs-privacy.html">Read: Small Data Ethics is not Small Data Privacy →</a></p>
+    <p class="note"><a href="/ethics-vs-privacy.html">Read: Small Data Ethics is not Small Data Privacy &#8594;</a></p>
   </div>
 </section>
-  </main>
-
+    </main>
+  </div>
   <footer class="site-footer">
-    <div class="container footer-grid">
-      <p>© <span id="year"></span> Laini Byfield. All rights reserved.</p>
-      <p>No tracking. No cookies.</p>
+    <div class="footer-inner">
+      <span>&#169; <span id="year"></span> Laini Byfield. All rights reserved.</span>
+      <span><a href="/work-with-me.html">Work with me</a> &nbsp;&middot;&nbsp; No tracking. No cookies.</span>
     </div>
   </footer>
-
   <script src="/assets/script.js"></script>
 </body>
 </html>
