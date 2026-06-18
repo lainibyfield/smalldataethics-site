@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Definition of Outcome Done Has a Stakeholder Problem | Small Data Ethics</title>
+  <meta name="description" content="The Scrum Expansion Pack's Definition of Outcome Done asks whether value landed. ETHICMAP asks for whom. A governance layer for the stakeholders who are never in the room." />
+  <meta name="author" content="Laini Byfield" />
+  <link rel="canonical" href="https://smalldataethics.com/notes/outcome-done-stakeholder-problem.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="The Definition of Outcome Done Has a Stakeholder Problem" />
+  <meta property="og:description" content="The Scrum Expansion Pack asks whether value landed. ETHICMAP asks for whom." />
+  <meta property="og:url" content="https://smalldataethics.com/notes/outcome-done-stakeholder-problem.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="/assets/logo.png" type="image/png" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <style>
+    .article-body {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px 60px;
+    }
+    .article-body h2 {
+      font-family: 'Source Serif 4', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 40px 0 14px;
+      letter-spacing: .01em;
+    }
+    .article-body p {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.75;
+      margin-bottom: 18px;
+    }
+    .article-body p:last-child { margin-bottom: 0; }
+    .article-body strong { font-weight: 600; color: var(--ink); }
+    .article-body em { font-style: italic; }
+    .article-body hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-figure {
+      margin: 32px 0;
+      text-align: center;
+    }
+    .article-figure img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 16px rgba(28,43,64,.10);
+    }
+    .article-figure figcaption {
+      font-size: 12.5px;
+      color: var(--faint);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-byline {
+      font-size: 13px;
+      color: var(--faint);
+      margin-bottom: 32px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    .article-footer {
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--faint);
+      font-style: italic;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--brick);
+      text-decoration: none;
+      margin-bottom: 32px;
+    }
+    .back-link:hover { color: var(--brick-light); }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <a class="topbar-brand" href="/" aria-label="Small Data Ethics home">
+      <span class="mark-logo" aria-hidden="true"><img src="/assets/logo.png" alt="" width="40" height="40" style="display:block;border-radius:4px;" /></span>
+      <span class="brand-text">
+        <span class="kicker">Notes and Applied Theory</span>
+        <span class="site-title">Small Data Ethics</span>
+      </span>
+    </a>
+    <span class="topbar-tagline" aria-hidden="true">For the professional who has to explain a wrong outcome to a real person</span>
+    <button class="menu-btn" id="menu-btn" aria-controls="sidebar" aria-expanded="false">&#9776; Menu</button>
+  </header>
+
+  <div class="sidebar-overlay" id="sidebar-overlay" aria-hidden="true"></div>
+
+  <div class="page-layout">
+
+    <nav class="sidebar" id="sidebar" aria-label="Primary">
+      <div class="sidebar-group">
+        <span class="sidebar-group-label">Foundations</span>
+        <a href="/what-is.html">Start Here</a>
+        <a href="/theory.html">Theory</a>
+        <a href="/ethics-vs-privacy.html" class="sub">Ethics vs Privacy</a>
+      </div>
+      <div class="sidebar-group">
+        <span class="sidebar-group-label">Structures</span>
+        <a href="/policy/index.html">Policy</a>
+        <a href="/policy/gdpr.html" class="sub">GDPR</a>
+        <a href="/policy/jisc.html" class="sub">Jisc</a>
+        <a href="/policy/odi.html" class="sub">ODI</a>
+        <a href="/governance/index.html">Governance</a>
+        <a href="/governance/ethics-boards.html" class="sub">Ethics boards</a>
+        <a href="/governance/review-committee.html" class="sub">Review committees</a>
+        <a href="/practice.html">Practice</a>
+      </div>
+      <div class="sidebar-group">
+        <span class="sidebar-group-label">Method</span>
+        <a href="/ethicmap.html">ETHICMAP</a>
+        <a href="/ethicmap/framework-explained.html" class="sub">Framework explained</a>
+        <a href="/ethicmap/theory-informed-design.html" class="sub">Theory-informed design</a>
+        <a href="/ethicmap/reading-list.html" class="sub">Reading list</a>
+      </div>
+      <div class="sidebar-group">
+        <span class="sidebar-group-label">Extension</span>
+        <a href="/newsletter.html">Notes</a>
+        <a href="/notes/outcome-done-stakeholder-problem.html" class="sub active">Outcome Done</a>
+      </div>
+    </nav>
+
+    <main class="content" id="main">
+
+      <section class="page-hero">
+        <div class="container">
+          <p class="eyebrow">By <strong>Laini Byfield</strong></p>
+          <h2>The Definition of Outcome Done Has a Stakeholder Problem</h2>
+          <p class="lead">The Scrum Expansion Pack asks whether value actually landed. ETHICMAP asks for whom &#8212; and provides the governance layer to answer that second question in programs where data subjects are never in the room.</p>
+          <div class="chips">
+            <span class="chip">Scrum</span>
+            <span class="chip">Outcome Done</span>
+            <span class="chip">ETHICMAP</span>
+            <span class="chip">Data subjects</span>
+            <span class="chip">Governance</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="orient">
+        <div class="container">Published on smalldataethics.com &nbsp;&middot;&nbsp; Evergreen note</div>
+      </div>
+
+      <div style="padding: 40px 0 0;">
+        <div class="article-body">
+
+          <p class="article-byline">By Laini Byfield &nbsp;&middot;&nbsp; CSPO &nbsp;&middot;&nbsp; NBC-HWC &nbsp;&middot;&nbsp; Developer of ETHICMAP</p>
+
+          <p>In June 2025, Ralph Jocham, John Coleman, and Jeff Sutherland published the Scrum Guide Expansion Pack &#8212; a companion document to the 2020 Scrum Guide designed to address the gaps that practitioners had been navigating quietly for years. It does not replace Scrum. It extends it. And in doing so, it asks a question the original guide never quite got around to asking: did value actually land?</p>
+
+          <p>The mechanism for that question is a new concept called the Definition of Outcome Done &#8212; a companion to the existing Definition of Output Done. Output Done asks whether the work was completed. Outcome Done asks whether completion produced anything meaningful. The distinction is real, and it matters. A feature can ship cleanly and still fail. A program can run on schedule and still not move anything worth moving.</p>
+
+          <p>This is a genuine step forward for Scrum practitioners &#8212; and for anyone using agile frameworks to manage programs that touch people&#8217;s lives directly. But the Expansion Pack&#8217;s new question surfaces a harder one that it doesn&#8217;t answer: <em>whose</em> outcome counts? And more specifically: who is in the room when that gets decided?</p>
+
+          <hr />
+
+          <h2>What the Expansion Pack Gets Right</h2>
+
+          <p>The 2020 Scrum Guide was built for simplicity. Its minimalism was intentional &#8212; Scrum&#8217;s founders wanted a framework light enough to travel across industries, contexts, and team sizes without becoming prescriptive. That worked. Scrum left software development and spread into marketing, education, healthcare operations, HR, and benefits administration. The framework adapted because it was designed to adapt.</p>
+
+          <p>But simplicity has a cost. The 2020 Guide describes value delivery without defining what value means or how to verify it. Sprint Reviews inspect the Increment. Retrospectives surface process failures. Neither event has a built-in mechanism for asking whether the thing delivered actually changed anything for the people it was supposed to serve.</p>
+
+          <p>The Expansion Pack addresses this directly. By formalizing the Definition of Outcome Done alongside the Definition of Output Done, it creates a structural checkpoint for value realization &#8212; not just value delivery. Did the outcome we intended actually occur? Is there observable evidence that something moved? The framework now asks teams to hold themselves accountable not only for completing work, but for what that work produced in the world.</p>
+
+          <p>For Product Owners in particular, this is a significant expansion of accountability. The Product Owner has always been responsible for maximizing value. The Expansion Pack sharpens that responsibility into something measurable: value must be defined in terms of outcomes, and outcomes must be verified against observable evidence. That is a harder standard to meet &#8212; and a better one.</p>
+
+          <hr />
+
+          <h2>The Stakeholder Model Has a Blind Spot</h2>
+
+          <p>Scrum&#8217;s stakeholder model is built around presence. Stakeholders are the people who show up &#8212; sponsors, business owners, end users who participate in research, team members, organizational leadership. The Sprint Review is designed to surface their feedback. Backlog refinement incorporates their priorities. The Product Owner synthesizes their needs into an ordered backlog.</p>
+
+          <p>This model works well when the people affected by a product are also the people represented in the process. But there is a class of program &#8212; common in wellness, benefits, HR, and health data management &#8212; where that assumption breaks down quietly and completely.</p>
+
+          <p>In these programs, the people whose data is being collected, measured, analyzed, and acted upon are rarely in the sprint review. They did not commission the product. They did not write the acceptance criteria. They may not know the program exists in its current form, or what data it holds, or how that data is being used to make decisions about them. They are, in the governance sense of the term, <strong>data subjects</strong> &#8212; the individuals to whom the data belongs at its origin, whose behaviors and health states and participation patterns are the raw material of the program&#8217;s entire value proposition.</p>
+
+          <p>Data subjects are stakeholders in every meaningful sense. The program exists because of them. Its outcomes land on them. Its errors affect them. And yet they are structurally invisible in agile processes built around the stakeholders who show up.</p>
+
+          <p>And they are not a monolithic group. Data subjects include people who never participated at all, people who participated partially, people exposed to program decisions without knowing it, and people affected by error, burden, or coercion built into the program&#8217;s design. What they share is not a behavior &#8212; it is a structural position. The program acts on them. They do not act on the program.</p>
+
+          <p>This is not a failure of intent. Most product teams operating in these spaces care about the people their programs serve. The invisibility is structural. Sprint ceremonies are designed for the people in the room. Data subjects, by definition, are not in the room &#8212; and no element of the standard Scrum framework, including the Expansion Pack&#8217;s new Outcome Done definition, creates a mechanism for putting them there.</p>
+
+          <p>The result is a stakeholder problem embedded in the definition of outcome itself. If the people whose outcomes matter most are absent from the process of defining what &#8220;done&#8221; looks like, then the Definition of Outcome Done is measuring outcomes for the organization &#8212; not for the people the program is supposed to serve. Those are not always the same thing. In programs that carry real power asymmetry &#8212; employer-sponsored wellness, managed benefits, population health &#8212; they are frequently quite different.</p>
+
+          <hr />
+
+          <h2>ETHICMAP Puts Data Subjects in the Room</h2>
+
+          <p>ETHICMAP is a Small Data Ethics framework built for repeatable program operations &#8212; programs that run in cycles, collect data from real people, and produce decisions that affect those people&#8217;s lives. It was designed specifically for the operational context where governance failures are most likely to be invisible: not at launch, but mid-cycle, after the program is running and before anything has visibly gone wrong.</p>
+
+          <p>The framework is structured as an implementation cycle with eight dimensions. Four of them map directly onto the gap the Expansion Pack&#8217;s Outcome Done definition leaves open.</p>
+
+          <figure class="article-figure">
+            <img src="/assets/outcome-done-graphic.png" alt="A More Complete Definition of Outcome Done &#8212; ETHICMAP governance layer showing stakeholders in the room vs. stakeholders not in the room, and the four ETHICMAP dimensions that add the missing questions: Harmony, Incentive, Measurement, and Environment." />
+            <figcaption>ETHICMAP as governance layer: the dimensions that make the invisible visible. Scrum asks &#8220;Did value land?&#8221; ETHICMAP asks &#8220;For whom, under what conditions, measured how, and in what context?&#8221;</figcaption>
+          </figure>
+
+          <p><strong>Harmony</strong> asks: for whom does this work &#8212; who benefits, who is burdened, who is exposed? This is the dimension that makes data subjects visible as a distinct stakeholder class. It forces the question the sprint review does not: are the people whose data powers this program experiencing it as beneficial, neutral, or harmful? Are the burdens of participation distributed equitably? Are the people most exposed to program decisions the same people who had the least input into program design? Harmony does not assume that organizational outcomes and participant outcomes are aligned. It requires you to check.</p>
+
+          <p><strong>Incentive</strong> asks: why would someone participate &#8212; and does participation remain feasible without becoming coercive? In employer-sponsored programs, this question carries significant weight. Participation is rarely purely voluntary. Financial incentives, social pressure, and employment context all shape the conditions under which data subjects engage with a program. The Expansion Pack&#8217;s Outcome Done asks whether value was realized. Incentive asks whether the pathway to that value was one participants could meaningfully choose &#8212; or whether &#8220;participation&#8221; was the only option that didn&#8217;t cost them something.</p>
+
+          <p><strong>Measurement</strong> asks: what moved &#8212; and what are the uncertainty and error rates, not just the point estimates? This dimension directly challenges a common failure mode in outcome measurement: reporting a result as though it is clean when the underlying data is noisy, incomplete, or systematically biased toward people who engaged most visibly. Data subjects who did not participate, who participated partially, or whose data was excluded from analysis are still stakeholders in the program&#8217;s outcomes. Measurement discipline requires accounting for them &#8212; not just reporting on the population that produced clean data.</p>
+
+          <p><strong>Environment</strong> asks: where are we operating &#8212; what are the constraints, norms, and power dynamics? In any program that operates within an employment relationship, power dynamics are not background context. They are active variables. Data subjects in employer-sponsored programs are not consumers choosing between competing products. They are employees navigating an institution that holds significant power over their livelihoods. Environment surfaces that asymmetry as a design constraint, not an afterthought.</p>
+
+          <p>Together, these four dimensions operationalize the question the Expansion Pack raises but cannot answer on its own. Outcome Done asks whether value was realized. ETHICMAP asks for whom, under what conditions, measured how, and in what power context. That is not a philosophical addition to the framework. It is the methodology that makes Outcome Done answerable in programs where data subjects are the source of value and the target of outcomes simultaneously.</p>
+
+          <hr />
+
+          <h2>A Complete Definition of Outcome Done</h2>
+
+          <p>The 2025 Expansion Pack is a meaningful document. Its authors understood that Scrum had outgrown its original context and needed guidance that traveled with it into harder territory &#8212; AI integration, complex stakeholder ecosystems, outcome accountability. The Definition of Outcome Done is the right question at the right time.</p>
+
+          <p>But a definition of outcome is only as complete as the population it accounts for. In programs that collect and act on data from real people &#8212; wellness programs, benefits administration, population health initiatives, HR analytics &#8212; the people whose data drives the program are not incidental. They are the program. Their outcomes are the outcomes. And if they are absent from the process of defining what &#8220;done&#8221; looks like, the framework is measuring something narrower than it believes.</p>
+
+          <p>ETHICMAP does not replace Scrum. It does not replace the Expansion Pack. It is the governance layer that makes outcome measurement honest in contexts where data subjects exist and matter &#8212; which is most of the contexts where agile frameworks are now operating.</p>
+
+          <p>A Product Owner who wants to meet the standard the Expansion Pack sets needs a methodology for asking: did value land for the people who couldn&#8217;t be in the sprint review? ETHICMAP is that methodology. It is built for exactly this: repeatable programs, real people, invisible risk, and the governance discipline to see what the process alone cannot show you.</p>
+
+          <p>The Expansion Pack asks whether value was realized. ETHICMAP asks for whom.</p>
+
+          <p>A complete Definition of Outcome Done requires both questions &#8212; and a framework capable of answering the second one.</p>
+
+          <div class="article-footer">
+            <p>Laini Byfield is the developer of ETHICMAP and the Small Data Ethics framework. She is a Certified Scrum Product Owner, NBC-HWC, and Total Rewards program manager. ETHICMAP is published at <a href="https://smalldataethics.com">smalldataethics.com</a>.</p>
+          </div>
+
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>&#169; <span id="year"></span> Laini Byfield. All rights reserved.</span>
+      <span><a href="/work-with-me.html">Work with me</a> &nbsp;&middot;&nbsp; No tracking. No cookies.</span>
+    </div>
+  </footer>
+
+  <script src="/assets/script.js"></script>
+</body>
+</html>
