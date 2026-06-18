@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" font-family="'DM Sans', system-ui, sans-serif" role="img" aria-label="The subpoena chain runs in both directions. Round one: employer subpoenas employee's sponsored therapy records and uses them in its own defense. Round two: the same records are subpoenaed by a plaintiff and used against the employer.">
+  <defs>
+    <marker id="arrowNavy" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1C2B40"/>
+    </marker>
+    <marker id="arrowBrick" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8B3A2A"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="34" text-anchor="middle" font-size="19" font-weight="700" fill="#1C2B40" font-family="'Source Serif 4', serif">The subpoena chain runs in both directions</text>
+  <text x="400" y="56" text-anchor="middle" font-size="13" fill="#7A7A7A">The same sponsored-benefit records, reachable by whoever is on offense</text>
+
+  <!-- Center column: the records -->
+  <rect x="320" y="180" width="160" height="100" rx="10" fill="#F6F4F1" stroke="#C8C4BE" stroke-width="1.5"/>
+  <text x="400" y="212" text-anchor="middle" font-size="13" font-weight="600" fill="#1C2B40">Sponsored</text>
+  <text x="400" y="230" text-anchor="middle" font-size="13" font-weight="600" fill="#1C2B40">therapy records</text>
+  <text x="400" y="252" text-anchor="middle" font-size="10.5" fill="#7A7A7A">Full transcript =</text>
+  <text x="400" y="266" text-anchor="middle" font-size="10.5" fill="#7A7A7A">discoverable medical record</text>
+
+  <!-- ROUND 1 (top, navy) -->
+  <text x="70" y="110" font-size="11" font-weight="700" letter-spacing="0.08em" fill="#1C2B40">ROUND 1 — EMPLOYER ON OFFENSE</text>
+
+  <!-- Employer box -->
+  <rect x="60" y="125" width="170" height="58" rx="9" fill="#1C2B40"/>
+  <text x="145" y="150" text-anchor="middle" font-size="13" font-weight="600" fill="#fff">Employer</text>
+  <text x="145" y="168" text-anchor="middle" font-size="10.5" fill="rgba(255,255,255,.7)">defending a claim</text>
+
+  <!-- Outcome box round 1 -->
+  <rect x="570" y="125" width="170" height="58" rx="9" fill="#fff" stroke="#1C2B40" stroke-width="1.5"/>
+  <text x="655" y="150" text-anchor="middle" font-size="12" font-weight="600" fill="#1C2B40">Used in employer&#8217;s</text>
+  <text x="655" y="168" text-anchor="middle" font-size="12" font-weight="600" fill="#1C2B40">defense</text>
+
+  <!-- Round 1 arrows: employer -> records -> outcome -->
+  <path d="M 232 154 C 270 154, 280 200, 318 210" fill="none" stroke="#1C2B40" stroke-width="2" marker-end="url(#arrowNavy)"/>
+  <path d="M 482 210 C 525 200, 535 154, 568 154" fill="none" stroke="#1C2B40" stroke-width="2" marker-end="url(#arrowNavy)"/>
+  <text x="262" y="178" font-size="10" fill="#1C2B40" font-style="italic">subpoena</text>
+
+  <!-- ROUND 2 (bottom, brick) -->
+  <text x="70" y="350" font-size="11" font-weight="700" letter-spacing="0.08em" fill="#8B3A2A">ROUND 2 — EMPLOYEE ON OFFENSE</text>
+
+  <!-- Plaintiff box -->
+  <rect x="60" y="362" width="170" height="58" rx="9" fill="#8B3A2A"/>
+  <text x="145" y="387" text-anchor="middle" font-size="13" font-weight="600" fill="#fff">Plaintiff&#8217;s counsel</text>
+  <text x="145" y="405" text-anchor="middle" font-size="10.5" fill="rgba(255,255,255,.75)">suing the employer</text>
+
+  <!-- Outcome box round 2 -->
+  <rect x="570" y="362" width="170" height="58" rx="9" fill="#fff" stroke="#8B3A2A" stroke-width="1.5"/>
+  <text x="655" y="387" text-anchor="middle" font-size="12" font-weight="600" fill="#8B3A2A">Used against the</text>
+  <text x="655" y="405" text-anchor="middle" font-size="12" font-weight="600" fill="#8B3A2A">employer</text>
+
+  <!-- Round 2 arrows: plaintiff -> records -> outcome -->
+  <path d="M 232 391 C 270 391, 280 250, 318 250" fill="none" stroke="#8B3A2A" stroke-width="2" marker-end="url(#arrowBrick)"/>
+  <path d="M 482 250 C 525 250, 535 391, 568 391" fill="none" stroke="#8B3A2A" stroke-width="2" marker-end="url(#arrowBrick)"/>
+  <text x="258" y="330" font-size="10" fill="#8B3A2A" font-style="italic">same subpoena</text>
+
+  <!-- bottom caption -->
+  <text x="400" y="448" text-anchor="middle" font-size="11.5" fill="#7A7A7A" font-style="italic">Ungoverned benefit records are a two-directional liability, not a one-time advantage.</text>
+</svg>
