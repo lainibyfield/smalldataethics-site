@@ -4,58 +4,71 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ETHICMAP reading list | Small Data Ethics</title>
-  <meta name="description" content="A books-only reading list for Small Data Ethics and ETHICMAP — privacy, fairness, power, and operational accountability." />
+  <meta name="description" content="A books-only reading list for Small Data Ethics and ETHICMAP." />
   <meta name="author" content="Laini Byfield" />
   <link rel="canonical" href="https://smalldataethics.com/ethicmap/reading-list.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="/assets/logo.png" type="image/png" />
   <link rel="stylesheet" href="/assets/styles.css" />
 </head><body>
   <a class="skip" href="#main">Skip to content</a>
-
-  <header class="site-header">
-    <div class="container header-grid">
-      <div class="brand">
-        <a class="brand-link" href="/" aria-label="Home">
-          <span class="mark" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect x="3" y="3" width="7" height="5" rx="1.5" fill="white" opacity="0.9"/>
-  <rect x="12" y="3" width="7" height="5" rx="1.5" fill="white" opacity="0.55"/>
-  <rect x="3" y="10" width="7" height="5" rx="1.5" fill="white" opacity="0.55"/>
-  <rect x="12" y="10" width="7" height="5" rx="1.5" fill="white" opacity="0.9"/>
-  <rect x="3" y="17" width="16" height="2" rx="1" fill="white" opacity="0.35"/>
-</svg></span>
-        </a>
-        <div>
-          <p class="kicker">Evergreen notes and applied theory</p>
-          <h1><a class="title-link" href="/">Small Data Ethics</a></h1>
-          <p class="subhead">For the professional who has to explain a wrong outcome to a real person</p>
-        </div>
-      </div>
-      <nav class="nav" aria-label="Primary">
-        <a href='/what-is.html'>What is Small Data Ethics</a>
-<a href='/theory.html'>Theory</a>
-<a href='/policy/index.html'>Policy</a>
-<a href='/governance/index.html'>Governance</a>
-<a href='/practice.html'>Practice</a>
-<a href='/ethicmap.html' class='active' aria-current='page'>ETHICMAP</a>
-<a href='/newsletter.html'>Newsletter</a>
-<a href='/work-with-me.html'>Work with me</a>
-      </nav>
-    </div>
+  <header class="topbar">
+    <a class="topbar-brand" href="/" aria-label="Small Data Ethics home">
+      <span class="mark-logo" aria-hidden="true"><img src="/assets/logo.png" alt="" width="40" height="40" style="display:block;border-radius:4px;" /></span>
+      <span class="brand-text">
+        <span class="kicker">Notes and Applied Theory</span>
+        <span class="site-title">Small Data Ethics</span>
+      </span>
+    </a>
+    <span class="topbar-tagline" aria-hidden="true">For the professional who has to explain a wrong outcome to a real person</span>
+    <button class="menu-btn" id="menu-btn" aria-controls="sidebar" aria-expanded="false">&#9776; Menu</button>
   </header>
-
-  <main id="main">
+  <div class="sidebar-overlay" id="sidebar-overlay" aria-hidden="true"></div>
+  <div class="page-layout">
+    <nav class="sidebar" id="sidebar" aria-label="Primary">
+  <div class="sidebar-group">
+    <span class="sidebar-group-label">Foundations</span>
+    <a href="/what-is.html">Start Here</a>
+    <a href="/theory.html">Theory</a>
+    <a href="/ethics-vs-privacy.html" class="sub">Ethics vs Privacy</a>
+  </div>
+  <div class="sidebar-group">
+    <span class="sidebar-group-label">Structures</span>
+    <a href="/policy/index.html">Policy</a>
+    <a href="/policy/gdpr.html" class="sub">GDPR</a>
+    <a href="/policy/jisc.html" class="sub">Jisc</a>
+    <a href="/policy/odi.html" class="sub">ODI</a>
+    <a href="/governance/index.html">Governance</a>
+    <a href="/governance/ethics-boards.html" class="sub">Ethics boards</a>
+    <a href="/governance/review-committee.html" class="sub">Review committees</a>
+    <a href="/practice.html">Practice</a>
+  </div>
+  <div class="sidebar-group">
+    <span class="sidebar-group-label">Method</span>
+    <a href="/ethicmap.html">ETHICMAP</a>
+    <a href="/ethicmap/framework-explained.html" class="sub">Framework explained</a>
+    <a href="/ethicmap/theory-informed-design.html" class="sub">Theory-informed design</a>
+    <a href="/ethicmap/reading-list.html" class="sub active">Reading list</a>
+  </div>
+  <div class="sidebar-group">
+    <span class="sidebar-group-label">Extension</span>
+    <a href="/newsletter.html">Notes</a>
+    <a href="/notes/outcome-done-stakeholder-problem.html" class="sub">Outcome Done</a>
+    <a href="/notes/benefit-becomes-evidence.html" class="sub">Benefit as evidence</a>
+  </div>
+</nav>
+    <main class="content" id="main">
 <section class="page-hero">
-  <div class="container hero-inner">
+  <div class="container">
     <p class="eyebrow">By <strong>Laini Byfield</strong></p>
     <h2>Resources and reading list</h2>
-    <p class="lead">Books that support Small Data Ethics and ETHICMAP — curated for practitioners who want theory with operational teeth.</p>
-    <div class='chips'><span class='chip'>Books</span><span class='chip'>Governance</span><span class='chip'>Fairness</span><span class='chip'>Privacy</span><span class='chip'>Power</span></div>
+    <p class="lead">Books that support Small Data Ethics and ETHICMAP &#8212; curated for practitioners who want theory with operational teeth.</p>
+    <div class="chips"><span class="chip">Books</span><span class="chip">Governance</span><span class="chip">Fairness</span><span class="chip">Privacy</span><span class="chip">Power</span></div>
   </div>
 </section>
-
-<section id="how-to-use" class="section alt">
+<section class="section alt">
   <div class="container prose">
     <h2>How to use this list</h2>
     <ul>
@@ -66,63 +79,61 @@
     <p class="note">This list is intentionally book-only so the site remains self-contained and indexable.</p>
   </div>
 </section>
-
-<section id="books" class="section">
+<section class="section">
   <div class="container prose">
     <h2>Reading list</h2>
     <div class="stack">
       <div class="stack-item">
         <h3>Privacy in Context: Technology, Policy, and the Integrity of Social Life</h3>
-        <p class="small"><strong>Helen Nissenbaum</strong> · 2010</p>
-        <p>The canonical foundation for contextual integrity — useful for explaining why "same data, different context" can still constitute harm.</p>
+        <p><small><strong>Helen Nissenbaum</strong> &middot; 2010</small></p>
+        <p>The canonical foundation for contextual integrity &#8212; useful for explaining why &#8220;same data, different context&#8221; can still constitute harm.</p>
       </div>
       <div class="stack-item">
         <h3>Weapons of Math Destruction</h3>
-        <p class="small"><strong>Cathy O&#8217;Neil</strong> · 2016</p>
-        <p>A practical critique of opaque scoring systems — frames explainability and contestability as ethics, not niceties.</p>
+        <p><small><strong>Cathy O&#8217;Neil</strong> &middot; 2016</small></p>
+        <p>A practical critique of opaque scoring systems &#8212; frames explainability and contestability as ethics, not niceties.</p>
       </div>
       <div class="stack-item">
         <h3>The Ethical Algorithm</h3>
-        <p class="small"><strong>Michael Kearns and Aaron Roth</strong> · 2019</p>
-        <p>Readable introductions to fairness and privacy tradeoffs — good for translating abstract risks into design constraints.</p>
+        <p><small><strong>Michael Kearns and Aaron Roth</strong> &middot; 2019</small></p>
+        <p>Readable introductions to fairness and privacy tradeoffs &#8212; good for translating abstract risks into design constraints.</p>
       </div>
       <div class="stack-item">
         <h3>Data Feminism</h3>
-        <p class="small"><strong>Catherine D&#8217;Ignazio and Lauren F. Klein</strong> · 2020</p>
-        <p>A power-aware framework — helps articulate Harmony, burden, and whose interests are served by the system.</p>
+        <p><small><strong>Catherine D&#8217;Ignazio and Lauren F. Klein</strong> &middot; 2020</small></p>
+        <p>A power-aware framework &#8212; helps articulate Harmony, burden, and whose interests are served by the system.</p>
       </div>
       <div class="stack-item">
         <h3>The Age of Surveillance Capitalism</h3>
-        <p class="small"><strong>Shoshana Zuboff</strong> · 2019</p>
-        <p>A macro lens on incentive structures and data extraction — useful for the Incentives step in ETHICMAP.</p>
+        <p><small><strong>Shoshana Zuboff</strong> &middot; 2019</small></p>
+        <p>A macro lens on incentive structures and data extraction &#8212; useful for the Incentive step in ETHICMAP.</p>
       </div>
       <div class="stack-item">
         <h3>Invisible Women: Data Bias in a World Designed for Men</h3>
-        <p class="small"><strong>Caroline Criado Perez</strong> · 2019</p>
-        <p>Concrete examples of missing data and biased defaults — clarifies how "normal" assumptions harm subgroups in ways that aggregate statistics hide.</p>
+        <p><small><strong>Caroline Criado Perez</strong> &middot; 2019</small></p>
+        <p>Concrete examples of missing data and biased defaults &#8212; clarifies how &#8220;normal&#8221; assumptions harm subgroups.</p>
       </div>
       <div class="stack-item">
         <h3>Algorithms of Oppression</h3>
-        <p class="small"><strong>Safiya Umoja Noble</strong> · 2018</p>
-        <p>Explains how systems encode bias — useful for governance arguments about oversight and accountability structures.</p>
+        <p><small><strong>Safiya Umoja Noble</strong> &middot; 2018</small></p>
+        <p>Explains how systems encode bias &#8212; useful for governance arguments about oversight and accountability.</p>
       </div>
       <div class="stack-item">
         <h3>Automating Inequality</h3>
-        <p class="small"><strong>Virginia Eubanks</strong> · 2018</p>
-        <p>High-stakes human impact in administrative systems — the closest match to small-data operational consequences in the practitioner literature.</p>
+        <p><small><strong>Virginia Eubanks</strong> &middot; 2018</small></p>
+        <p>High-stakes human impact in administrative systems &#8212; the closest match to small-data operational consequences in the practitioner literature.</p>
       </div>
     </div>
   </div>
 </section>
-  </main>
-
+    </main>
+  </div>
   <footer class="site-footer">
-    <div class="container footer-grid">
-      <p>© <span id="year"></span> Laini Byfield. All rights reserved.</p>
-      <p>No tracking. No cookies.</p>
+    <div class="footer-inner">
+      <span>&#169; <span id="year"></span> Laini Byfield. All rights reserved.</span>
+      <span><a href="/work-with-me.html">Work with me</a> &nbsp;&middot;&nbsp; No tracking. No cookies.</span>
     </div>
   </footer>
-
   <script src="/assets/script.js"></script>
 </body>
 </html>

@@ -4,89 +4,100 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>The ETHICMAP framework explained | Small Data Ethics</title>
-  <meta name="description" content="An in-depth explanation of the ETHICMAP cycle — how it operationalizes Small Data Ethics through contestability, traceability, and repair." />
+  <meta name="description" content="An in-depth explanation of the ETHICMAP cycle." />
   <meta name="author" content="Laini Byfield" />
   <link rel="canonical" href="https://smalldataethics.com/ethicmap/framework-explained.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="/assets/logo.png" type="image/png" />
   <link rel="stylesheet" href="/assets/styles.css" />
 </head><body>
   <a class="skip" href="#main">Skip to content</a>
-
-  <header class="site-header">
-    <div class="container header-grid">
-      <div class="brand">
-        <a class="brand-link" href="/" aria-label="Home">
-          <span class="mark" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect x="3" y="3" width="7" height="5" rx="1.5" fill="white" opacity="0.9"/>
-  <rect x="12" y="3" width="7" height="5" rx="1.5" fill="white" opacity="0.55"/>
-  <rect x="3" y="10" width="7" height="5" rx="1.5" fill="white" opacity="0.55"/>
-  <rect x="12" y="10" width="7" height="5" rx="1.5" fill="white" opacity="0.9"/>
-  <rect x="3" y="17" width="16" height="2" rx="1" fill="white" opacity="0.35"/>
-</svg></span>
-        </a>
-        <div>
-          <p class="kicker">Evergreen notes and applied theory</p>
-          <h1><a class="title-link" href="/">Small Data Ethics</a></h1>
-          <p class="subhead">For the professional who has to explain a wrong outcome to a real person</p>
-        </div>
-      </div>
-      <nav class="nav" aria-label="Primary">
-        <a href='/what-is.html'>What is Small Data Ethics</a>
-<a href='/theory.html'>Theory</a>
-<a href='/policy/index.html'>Policy</a>
-<a href='/governance/index.html'>Governance</a>
-<a href='/practice.html'>Practice</a>
-<a href='/ethicmap.html' class='active' aria-current='page'>ETHICMAP</a>
-<a href='/newsletter.html'>Newsletter</a>
-<a href='/work-with-me.html'>Work with me</a>
-      </nav>
-    </div>
+  <header class="topbar">
+    <a class="topbar-brand" href="/" aria-label="Small Data Ethics home">
+      <span class="mark-logo" aria-hidden="true"><img src="/assets/logo.png" alt="" width="40" height="40" style="display:block;border-radius:4px;" /></span>
+      <span class="brand-text">
+        <span class="kicker">Notes and Applied Theory</span>
+        <span class="site-title">Small Data Ethics</span>
+      </span>
+    </a>
+    <span class="topbar-tagline" aria-hidden="true">For the professional who has to explain a wrong outcome to a real person</span>
+    <button class="menu-btn" id="menu-btn" aria-controls="sidebar" aria-expanded="false">&#9776; Menu</button>
   </header>
-
-  <main id="main">
+  <div class="sidebar-overlay" id="sidebar-overlay" aria-hidden="true"></div>
+  <div class="page-layout">
+    <nav class="sidebar" id="sidebar" aria-label="Primary">
+  <div class="sidebar-group">
+    <span class="sidebar-group-label">Foundations</span>
+    <a href="/what-is.html">Start Here</a>
+    <a href="/theory.html">Theory</a>
+    <a href="/ethics-vs-privacy.html" class="sub">Ethics vs Privacy</a>
+  </div>
+  <div class="sidebar-group">
+    <span class="sidebar-group-label">Structures</span>
+    <a href="/policy/index.html">Policy</a>
+    <a href="/policy/gdpr.html" class="sub">GDPR</a>
+    <a href="/policy/jisc.html" class="sub">Jisc</a>
+    <a href="/policy/odi.html" class="sub">ODI</a>
+    <a href="/governance/index.html">Governance</a>
+    <a href="/governance/ethics-boards.html" class="sub">Ethics boards</a>
+    <a href="/governance/review-committee.html" class="sub">Review committees</a>
+    <a href="/practice.html">Practice</a>
+  </div>
+  <div class="sidebar-group">
+    <span class="sidebar-group-label">Method</span>
+    <a href="/ethicmap.html">ETHICMAP</a>
+    <a href="/ethicmap/framework-explained.html" class="sub active">Framework explained</a>
+    <a href="/ethicmap/theory-informed-design.html" class="sub">Theory-informed design</a>
+    <a href="/ethicmap/reading-list.html" class="sub">Reading list</a>
+  </div>
+  <div class="sidebar-group">
+    <span class="sidebar-group-label">Extension</span>
+    <a href="/newsletter.html">Notes</a>
+    <a href="/notes/outcome-done-stakeholder-problem.html" class="sub">Outcome Done</a>
+    <a href="/notes/benefit-becomes-evidence.html" class="sub">Benefit as evidence</a>
+  </div>
+</nav>
+    <main class="content" id="main">
 <section class="page-hero">
-  <div class="container hero-inner">
+  <div class="container">
     <p class="eyebrow">By <strong>Laini Byfield</strong></p>
     <h2>The ETHICMAP framework explained</h2>
-    <p class="lead">ETHICMAP is a repeatable cycle that turns ethics into operations. It is designed for programs where timing, merging, and edge cases decide real outcomes for real people.</p>
-    <div class='chips'><span class='chip'>Cycle</span><span class='chip'>Repeatability</span><span class='chip'>Documentation</span><span class='chip'>Repair</span></div>
+    <p class="lead">ETHICMAP is a repeatable cycle that turns ethics into operations. Designed for programs where timing, merging, and edge cases decide real outcomes for real people.</p>
+    <div class="chips"><span class="chip">Cycle</span><span class="chip">Repeatability</span><span class="chip">Documentation</span><span class="chip">Repair</span></div>
   </div>
 </section>
-
-<section id="overview" class="section alt">
+<section class="section alt">
   <div class="container prose">
     <h2>What ETHICMAP is</h2>
-    <p><strong>ETHICMAP</strong> is an implementation cycle for Small Data Ethics. It is designed to be used every program cycle — not only during initial design.</p>
+    <p><strong>ETHICMAP</strong> is an implementation cycle for Small Data Ethics. It is designed to be used every program cycle &#8212; not only during initial design.</p>
     <div class="card wide">
       <h3>Core stance</h3>
       <ul>
-        <li>Treat data errors as moral events — not technical bugs.</li>
+        <li>Treat data errors as moral events &#8212; not technical bugs.</li>
         <li>Design for <strong>contestability</strong>, <strong>traceability</strong>, and <strong>repair</strong>.</li>
-        <li>Assume <strong>relational exposure</strong> — not anonymity.</li>
+        <li>Assume <strong>relational exposure</strong> &#8212; not anonymity.</li>
       </ul>
     </div>
   </div>
 </section>
-
-<section id="cycle" class="section">
+<section class="section">
   <div class="container prose">
-    <h2>The cycle — what each step produces</h2>
+    <h2>The cycle &#8212; what each step produces</h2>
     <div class="stack">
-      <div class="stack-item"><h3>E — Environment</h3><p>Output: context statement, constraints, power map, data boundaries.</p></div>
-      <div class="stack-item"><h3>T — Timing</h3><p>Output: timeline of cutoffs, lags, retroactivity, comms calendar, appeal windows.</p></div>
-      <div class="stack-item"><h3>H — Harmony</h3><p>Output: equity and exposure check — who is at risk under errors and edge cases.</p></div>
-      <div class="stack-item"><h3>I — Incentives</h3><p>Output: feasibility test — participation pathways that avoid coercion.</p></div>
-      <div class="stack-item"><h3>C — Calibration</h3><p>Output: realistic change model — guardrails for what can be claimed and measured.</p></div>
-      <div class="stack-item"><h3>M — Measurement</h3><p>Output: metric spec plus uncertainty — error modes, match rates, confidence flags.</p></div>
-      <div class="stack-item"><h3>A — Application</h3><p>Output: runbook, standard ops, versioning, reprocessing rules, escalation triggers.</p></div>
-      <div class="stack-item"><h3>P — Publish</h3><p>Output: change log and learning memo — decisions, tradeoffs, what changed and why.</p></div>
+      <div class="stack-item"><h3>E &#8212; Environment</h3><p>Output: context statement, constraints, power map, data boundaries.</p></div>
+      <div class="stack-item"><h3>T &#8212; Timing</h3><p>Output: timeline of cutoffs, lags, retroactivity, comms calendar, appeal windows.</p></div>
+      <div class="stack-item"><h3>H &#8212; Harmony</h3><p>Output: equity and exposure check &#8212; who is at risk under errors and edge cases.</p></div>
+      <div class="stack-item"><h3>I &#8212; Incentive</h3><p>Output: feasibility test &#8212; participation pathways that avoid coercion.</p></div>
+      <div class="stack-item"><h3>C &#8212; Calibration</h3><p>Output: realistic change model &#8212; guardrails for what can be claimed and measured.</p></div>
+      <div class="stack-item"><h3>M &#8212; Measurement</h3><p>Output: metric spec plus uncertainty &#8212; error modes, match rates, confidence flags.</p></div>
+      <div class="stack-item"><h3>A &#8212; Application</h3><p>Output: runbook, standard ops, versioning, reprocessing rules, escalation triggers.</p></div>
+      <div class="stack-item"><h3>P &#8212; Publish</h3><p>Output: change log and learning memo &#8212; decisions, tradeoffs, what changed and why.</p></div>
     </div>
   </div>
 </section>
-
-<section id="next" class="section alt">
+<section class="section alt">
   <div class="container prose">
     <h2>Next pages</h2>
     <div class="link-grid">
@@ -95,15 +106,14 @@
     </div>
   </div>
 </section>
-  </main>
-
+    </main>
+  </div>
   <footer class="site-footer">
-    <div class="container footer-grid">
-      <p>© <span id="year"></span> Laini Byfield. All rights reserved.</p>
-      <p>No tracking. No cookies.</p>
+    <div class="footer-inner">
+      <span>&#169; <span id="year"></span> Laini Byfield. All rights reserved.</span>
+      <span><a href="/work-with-me.html">Work with me</a> &nbsp;&middot;&nbsp; No tracking. No cookies.</span>
     </div>
   </footer>
-
   <script src="/assets/script.js"></script>
 </body>
 </html>
