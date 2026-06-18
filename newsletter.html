@@ -3,83 +3,110 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Newsletter | Small Data Ethics</title>
-  <meta name="description" content="Newsletter for Small Data Ethics and ETHICMAP by Laini Byfield — essays, case studies, and practical governance." />
+  <title>Notes | Small Data Ethics</title>
+  <meta name="description" content="Notes and applied theory on small data, governance, and operational ethics by Laini Byfield." />
   <meta name="author" content="Laini Byfield" />
   <link rel="canonical" href="https://smalldataethics.com/newsletter.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="/assets/logo.png" type="image/png" />
   <link rel="stylesheet" href="/assets/styles.css" />
 </head><body>
   <a class="skip" href="#main">Skip to content</a>
-
-  <header class="site-header">
-    <div class="container header-grid">
-      <div class="brand">
-        <a class="brand-link" href="/" aria-label="Home">
-          <span class="mark" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect x="3" y="3" width="7" height="5" rx="1.5" fill="white" opacity="0.9"/>
-  <rect x="12" y="3" width="7" height="5" rx="1.5" fill="white" opacity="0.55"/>
-  <rect x="3" y="10" width="7" height="5" rx="1.5" fill="white" opacity="0.55"/>
-  <rect x="12" y="10" width="7" height="5" rx="1.5" fill="white" opacity="0.9"/>
-  <rect x="3" y="17" width="16" height="2" rx="1" fill="white" opacity="0.35"/>
-</svg></span>
-        </a>
-        <div>
-          <p class="kicker">Evergreen notes and applied theory</p>
-          <h1><a class="title-link" href="/">Small Data Ethics</a></h1>
-          <p class="subhead">For the professional who has to explain a wrong outcome to a real person</p>
-        </div>
-      </div>
-      <nav class="nav" aria-label="Primary">
-        <a href='/what-is.html'>What is Small Data Ethics</a>
-<a href='/theory.html'>Theory</a>
-<a href='/policy/index.html'>Policy</a>
-<a href='/governance/index.html'>Governance</a>
-<a href='/practice.html'>Practice</a>
-<a href='/ethicmap.html'>ETHICMAP</a>
-<a href='/newsletter.html' class='active' aria-current='page'>Newsletter</a>
-<a href='/work-with-me.html'>Work with me</a>
-      </nav>
-    </div>
+  <header class="topbar">
+    <a class="topbar-brand" href="/" aria-label="Small Data Ethics home">
+      <span class="mark-logo" aria-hidden="true"><img src="/assets/logo.png" alt="" width="40" height="40" style="display:block;border-radius:4px;" /></span>
+      <span class="brand-text">
+        <span class="kicker">Notes and Applied Theory</span>
+        <span class="site-title">Small Data Ethics</span>
+      </span>
+    </a>
+    <span class="topbar-tagline" aria-hidden="true">For the professional who has to explain a wrong outcome to a real person</span>
+    <button class="menu-btn" id="menu-btn" aria-controls="sidebar" aria-expanded="false">&#9776; Menu</button>
   </header>
-
-  <main id="main">
+  <div class="sidebar-overlay" id="sidebar-overlay" aria-hidden="true"></div>
+  <div class="page-layout">
+    <nav class="sidebar" id="sidebar" aria-label="Primary">
+  <div class="sidebar-group">
+    <span class="sidebar-group-label">Foundations</span>
+    <a href="/what-is.html">Start Here</a>
+    <a href="/theory.html">Theory</a>
+    <a href="/ethics-vs-privacy.html" class="sub">Ethics vs Privacy</a>
+  </div>
+  <div class="sidebar-group">
+    <span class="sidebar-group-label">Structures</span>
+    <a href="/policy/index.html">Policy</a>
+    <a href="/policy/gdpr.html" class="sub">GDPR</a>
+    <a href="/policy/jisc.html" class="sub">Jisc</a>
+    <a href="/policy/odi.html" class="sub">ODI</a>
+    <a href="/governance/index.html">Governance</a>
+    <a href="/governance/ethics-boards.html" class="sub">Ethics boards</a>
+    <a href="/governance/review-committee.html" class="sub">Review committees</a>
+    <a href="/practice.html">Practice</a>
+  </div>
+  <div class="sidebar-group">
+    <span class="sidebar-group-label">Method</span>
+    <a href="/ethicmap.html">ETHICMAP</a>
+    <a href="/ethicmap/framework-explained.html" class="sub">Framework explained</a>
+    <a href="/ethicmap/theory-informed-design.html" class="sub">Theory-informed design</a>
+    <a href="/ethicmap/reading-list.html" class="sub">Reading list</a>
+  </div>
+  <div class="sidebar-group">
+    <span class="sidebar-group-label">Extension</span>
+    <a href="/newsletter.html" class="active">Notes</a>
+    <a href="/notes/outcome-done-stakeholder-problem.html" class="sub">Outcome Done</a>
+    <a href="/notes/benefit-becomes-evidence.html" class="sub">Benefit as evidence</a>
+  </div>
+</nav>
+    <main class="content" id="main">
 <section class="page-hero">
-  <div class="container hero-inner">
+  <div class="container">
     <p class="eyebrow">By <strong>Laini Byfield</strong></p>
-    <h2>Newsletter</h2>
+    <h2>Notes</h2>
     <p class="lead">Short essays on small data, governance, operational ethics, and how to build systems that respect people.</p>
-    <div class='chips'><span class='chip'>Launching May 2026</span><span class='chip'>Substack</span><span class='chip'>Case studies</span></div>
+    <div class="chips"><span class="chip">Launching May 2026</span><span class="chip">Substack</span><span class="chip">Case studies</span></div>
   </div>
 </section>
-
-<section id="newsletter" class="section alt">
+<section class="section alt">
   <div class="container prose">
     <h2>Coming May 2026</h2>
-    <p>The Small Data Ethics newsletter launches on Substack in May 2026. It will cover the operational realities of running data systems that affect real people — written for the analyst, the program manager, and the governance lead who have to live with the consequences.</p>
-    <div class="callout">
+    <p>The Small Data Ethics newsletter launches on Substack in May 2026. Written for the analyst, the program manager, and the governance lead who have to live with the consequences of data decisions.</p>
+    <div class="callout" style="margin-top:16px;">
       <h3>What to expect</h3>
       <ul>
-        <li>Case studies in small data failure — and what they teach</li>
+        <li>Case studies in small data failure &#8212; and what they teach</li>
         <li>Contestability and appeals in operational systems</li>
-        <li>Designing incentives without coercion</li>
-        <li>Documentation as ethics — how to publish learning across cycles</li>
+        <li>Designing incentive structures without coercion</li>
+        <li>Documentation as ethics &#8212; how to publish learning across cycles</li>
       </ul>
     </div>
-    <p class="note">Want to be notified at launch? Email <a href="mailto:hello@lainibyfield.com">hello@lainibyfield.com</a> with "newsletter" in the subject line.</p>
+    <p class="note">Applied examples and extended notes will be developed in long-form writing on Substack. Want to be notified at launch? Email <a href="mailto:hello@lainibyfield.com">hello@lainibyfield.com</a> with &#8220;newsletter&#8221; in the subject line.</p>
   </div>
 </section>
-  </main>
-
+<section class="section">
+  <div class="container prose">
+    <h2>Published notes</h2>
+    <div class="link-grid">
+      <a class="link-card" href="/notes/benefit-becomes-evidence.html">
+        <h3>When the Benefit Becomes the Evidence</h3>
+        <p>In <em>Kamrass v. AdventHealth</em>, a sponsored therapy benefit was subpoenaed and read in court &#8212; lawfully. The same discovery chain runs in reverse. A governance analysis through ETHICMAP.</p>
+      </a>
+      <a class="link-card" href="/notes/outcome-done-stakeholder-problem.html">
+        <h3>The Definition of Outcome Done Has a Stakeholder Problem</h3>
+        <p>The Scrum Expansion Pack asks whether value landed. ETHICMAP asks for whom &#8212; and provides the governance layer to answer that question in programs where data subjects are never in the room.</p>
+      </a>
+    </div>
+  </div>
+</section>
+    </main>
+  </div>
   <footer class="site-footer">
-    <div class="container footer-grid">
-      <p>© <span id="year"></span> Laini Byfield. All rights reserved.</p>
-      <p>No tracking. No cookies.</p>
+    <div class="footer-inner">
+      <span>&#169; <span id="year"></span> Laini Byfield. All rights reserved.</span>
+      <span><a href="/work-with-me.html">Work with me</a> &nbsp;&middot;&nbsp; No tracking. No cookies.</span>
     </div>
   </footer>
-
   <script src="/assets/script.js"></script>
 </body>
 </html>

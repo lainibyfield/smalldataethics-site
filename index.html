@@ -4,112 +4,119 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Home | Small Data Ethics</title>
-  <meta name="description" content="Small Data Ethics and ETHICMAP by Laini Byfield — an evergreen explainer and implementation framework." />
+  <meta name="description" content="Small Data Ethics and ETHICMAP by Laini Byfield &#8212; notes and applied theory on human-scale data systems." />
   <meta name="author" content="Laini Byfield" />
   <link rel="canonical" href="https://smalldataethics.com/" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="/assets/logo.png" type="image/png" />
   <link rel="stylesheet" href="/assets/styles.css" />
 </head><body>
   <a class="skip" href="#main">Skip to content</a>
-
-  <header class="site-header">
-    <div class="container header-grid">
-      <div class="brand">
-        <a class="brand-link" href="/" aria-label="Home">
-          <span class="mark" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect x="3" y="3" width="7" height="5" rx="1.5" fill="white" opacity="0.9"/>
-  <rect x="12" y="3" width="7" height="5" rx="1.5" fill="white" opacity="0.55"/>
-  <rect x="3" y="10" width="7" height="5" rx="1.5" fill="white" opacity="0.55"/>
-  <rect x="12" y="10" width="7" height="5" rx="1.5" fill="white" opacity="0.9"/>
-  <rect x="3" y="17" width="16" height="2" rx="1" fill="white" opacity="0.35"/>
-</svg></span>
-        </a>
-        <div>
-          <p class="kicker">Notes and applied theory</p>
-          <h1><a class="title-link" href="/">Small Data Ethics</a></h1>
-          <p class="subhead">For the professional who has to explain a wrong outcome to a real person</p>
-        </div>
-      </div>
-      <nav class="nav" aria-label="Primary">
-        <a href='/what-is.html'>What is Small Data Ethics</a>
-<a href='/theory.html'>Theory</a>
-<a href='/policy/index.html'>Policy</a>
-<a href='/governance/index.html'>Governance</a>
-<a href='/practice.html'>Practice</a>
-<a href='/ethicmap.html'>ETHICMAP</a>
-<a href='/newsletter.html'>Newsletter</a>
-<a href='/work-with-me.html'>Work with me</a>
-      </nav>
-    </div>
+  <header class="topbar">
+    <a class="topbar-brand" href="/" aria-label="Small Data Ethics home">
+      <span class="mark-logo" aria-hidden="true"><img src="/assets/logo.png" alt="" width="40" height="40" style="display:block;border-radius:4px;" /></span>
+      <span class="brand-text">
+        <span class="kicker">Notes and Applied Theory</span>
+        <span class="site-title">Small Data Ethics</span>
+      </span>
+    </a>
+    <span class="topbar-tagline" aria-hidden="true">For the professional who has to explain a wrong outcome to a real person</span>
+    <button class="menu-btn" id="menu-btn" aria-controls="sidebar" aria-expanded="false">&#9776; Menu</button>
   </header>
-
-  <main id="main">
+  <div class="sidebar-overlay" id="sidebar-overlay" aria-hidden="true"></div>
+  <div class="page-layout">
+    <nav class="sidebar" id="sidebar" aria-label="Primary">
+  <div class="sidebar-group">
+    <span class="sidebar-group-label">Foundations</span>
+    <a href="/what-is.html">Start Here</a>
+    <a href="/theory.html">Theory</a>
+    <a href="/ethics-vs-privacy.html" class="sub">Ethics vs Privacy</a>
+  </div>
+  <div class="sidebar-group">
+    <span class="sidebar-group-label">Structures</span>
+    <a href="/policy/index.html">Policy</a>
+    <a href="/policy/gdpr.html" class="sub">GDPR</a>
+    <a href="/policy/jisc.html" class="sub">Jisc</a>
+    <a href="/policy/odi.html" class="sub">ODI</a>
+    <a href="/governance/index.html">Governance</a>
+    <a href="/governance/ethics-boards.html" class="sub">Ethics boards</a>
+    <a href="/governance/review-committee.html" class="sub">Review committees</a>
+    <a href="/practice.html">Practice</a>
+  </div>
+  <div class="sidebar-group">
+    <span class="sidebar-group-label">Method</span>
+    <a href="/ethicmap.html">ETHICMAP</a>
+    <a href="/ethicmap/framework-explained.html" class="sub">Framework explained</a>
+    <a href="/ethicmap/theory-informed-design.html" class="sub">Theory-informed design</a>
+    <a href="/ethicmap/reading-list.html" class="sub">Reading list</a>
+  </div>
+  <div class="sidebar-group">
+    <span class="sidebar-group-label">Extension</span>
+    <a href="/newsletter.html">Notes</a>
+    <a href="/notes/outcome-done-stakeholder-problem.html" class="sub">Outcome Done</a>
+    <a href="/notes/benefit-becomes-evidence.html" class="sub">Benefit as evidence</a>
+  </div>
+</nav>
+    <main class="content" id="main">
 <section class="page-hero">
-  <div class="container hero-inner">
+  <div class="container">
     <p class="eyebrow">By <strong>Laini Byfield</strong></p>
     <h2>Ethics for the datasets that are too small to hide harm.</h2>
-    <p class="lead">Small data is not low risk. In small systems, one incorrect merge, one delayed file, or one ambiguous metric can change a person&#8217;s payout, access, reputation, or sense of safety. Small Data Ethics treats these systems as moral infrastructure — not just technical pipelines.</p>
-    <div class='chips'><span class='chip'>Proportionality</span><span class='chip'>Context</span><span class='chip'>Explainability</span><span class='chip'>Repair</span></div>
+    <p class="lead">Small data is not low risk. In small systems, one incorrect merge, one delayed file, or one ambiguous metric can change a person&#8217;s payout, access, reputation, or sense of safety. Small Data Ethics treats these systems as moral infrastructure &#8212; not just technical pipelines.</p>
+    <div class="chips"><span class="chip">Proportionality</span><span class="chip">Context</span><span class="chip">Explainability</span><span class="chip">Repair</span></div>
   </div>
-</section>
-
-<section id="start" class="section alt">
+</section><div class="orient"><div class="container">This site has three layers: the Small Data Ethics lens, the institutional structures that support it, and the ETHICMAP cycle for applying it. Core concepts are stable. Notes reflect ongoing application and refinement.</div></div>
+<section class="section">
   <div class="container prose">
     <h2>Start here</h2>
     <div class="grid-2">
       <div class="callout">
         <h3>Plain-language definition</h3>
-        <p><strong>Small Data Ethics</strong> is a values-driven approach to collecting, analyzing, and using human-scale data in ways that protect dignity, context, and trust — especially when people are identifiable and consequences are personal.</p>
+        <p><strong>Small Data Ethics</strong> is a values-driven approach to collecting, analyzing, and using human-scale data in ways that protect dignity, context, and trust &#8212; especially when people are identifiable and consequences are personal.</p>
         <p class="note">In small data, anonymity is often a myth. Technical choices become ethical choices.</p>
       </div>
       <div class="callout">
         <h3>How this site is organized</h3>
         <ul>
-          <li><strong>What is</strong>: definition, principles, and boundaries</li>
-          <li><strong>Theory</strong>: foundational ideas you can cite</li>
-          <li><strong>Policy</strong>: practical standards and guidance</li>
-          <li><strong>Governance</strong>: committees, roles, and accountability</li>
-          <li><strong>Practice</strong>: how to operate day-to-day</li>
-          <li><strong>ETHICMAP</strong>: the implementation cycle</li>
+          <li><strong>Foundations:</strong> Start Here &middot; Theory &middot; Ethics vs Privacy</li>
+          <li><strong>Structures:</strong> Policy &middot; Governance &middot; Practice</li>
+          <li><strong>Method:</strong> ETHICMAP</li>
+          <li><strong>Extension:</strong> Notes</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
-
-<section id="quick-links" class="section">
+<section class="section alt">
   <div class="container prose">
     <h2>Quick links</h2>
     <div class="link-grid">
-      <a class="link-card" href="/what-is.html"><h3>What is Small Data Ethics</h3><p>Definition, core principles, and where harm concentrates.</p></a>
+      <a class="link-card" href="/what-is.html"><h3>Start Here</h3><p>Definition, core principles, and where harm concentrates.</p></a>
       <a class="link-card" href="/theory.html"><h3>Theory</h3><p>Contextual integrity, fairness, and why context is not optional.</p></a>
-      <a class="link-card" href="/policy/index.html"><h3>Policy</h3><p>GDPR data minimisation, Jisc learning analytics code, ODI canvases.</p></a>
-      <a class="link-card" href="/governance/index.html"><h3>Governance</h3><p>Ethics boards, review committees, and decision traceability.</p></a>
-      <a class="link-card" href="/practice.html"><h3>Practice</h3><p>Operational guardrails for intake, merging, scoring, comms, and appeals.</p></a>
-      <a class="link-card" href="/ethics-vs-privacy.html"><h3>Ethics vs privacy</h3><p>Why Small Data Ethics is broader than a privacy committee.</p></a>
-      <a class="link-card" href="/ethicmap.html"><h3>ETHICMAP</h3><p>Environment → Timing → Harmony → Incentives → Calibration → Measurement → Application → Publish.</p></a>
+      <a class="link-card" href="/policy/index.html"><h3>Policy</h3><p>GDPR minimisation, Jisc code, ODI canvases.</p></a>
+      <a class="link-card" href="/governance/index.html"><h3>Governance</h3><p>Ethics boards, review committees, decision traceability.</p></a>
+      <a class="link-card" href="/practice.html"><h3>Practice</h3><p>Operational guardrails for intake, merging, scoring, and appeals.</p></a>
+      <a class="link-card" href="/ethics-vs-privacy.html"><h3>Ethics vs Privacy</h3><p>Why Small Data Ethics is broader than a privacy committee.</p></a>
+      <a class="link-card" href="/ethicmap.html"><h3>ETHICMAP</h3><p>Environment &#8594; Timing &#8594; Harmony &#8594; Incentive &#8594; Calibration &#8594; Measurement &#8594; Application &#8594; Publish.</p></a>
     </div>
   </div>
 </section>
-
-<section id="attribution" class="section alt">
+<section class="section">
   <div class="container prose">
     <h2>Attribution and term history</h2>
-    <p>This site is authored by <strong>Laini Byfield</strong>. The earliest <em>verifiable public use</em> of "Small data ethics" found in this research pass is a 2021 call for abstracts for a University of Melbourne Digital Studio symposium. Earlier uses may exist in paywalled proceedings or unindexed documents.</p>
-
+    <p>This site is authored by <strong>Laini Byfield</strong>. The earliest <em>verifiable public use</em> of &#8220;Small data ethics&#8221; found in this research pass is a 2021 call for abstracts for a University of Melbourne Digital Studio symposium. Earlier uses may exist in paywalled proceedings or unindexed documents.</p>
   </div>
 </section>
-  </main>
-
+    </main>
+  </div>
   <footer class="site-footer">
-    <div class="container footer-grid">
-      <p>© <span id="year"></span> Laini Byfield. All rights reserved.</p>
-      <p>No tracking. No cookies.</p>
+    <div class="footer-inner">
+      <span>&#169; <span id="year"></span> Laini Byfield. All rights reserved.</span>
+      <span><a href="/work-with-me.html">Work with me</a> &nbsp;&middot;&nbsp; No tracking. No cookies.</span>
     </div>
   </footer>
-
   <script src="/assets/script.js"></script>
 </body>
 </html>
