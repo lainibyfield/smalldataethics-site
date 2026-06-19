@@ -9,9 +9,44 @@
   <link rel="canonical" href="https://smalldataethics.com/ethicmap/theory-informed-design.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,700&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="icon" href="/assets/logo.png" type="image/png" />
   <link rel="stylesheet" href="/assets/styles.css" />
+
+  <style>
+    :root { --mono: 'DM Mono', ui-monospace, monospace; }
+    .page-label {
+      display: block;
+      font-family: var(--mono);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--brick-muted);
+      margin-bottom: 8px;
+    }
+    .pull-quote {
+      font-family: 'Source Serif 4', serif;
+      font-style: italic;
+      font-size: 19px;
+      line-height: 1.55;
+      color: var(--navy);
+      background: var(--brick-pale);
+      border-left: 4px solid var(--brick);
+      padding: 18px 22px;
+      margin: 20px 0;
+      font-weight: 500;
+    }
+    .stance-label {
+      display: block;
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--brick-muted);
+      margin-bottom: 5px;
+    }
+  </style>
 </head><body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="topbar">
@@ -23,6 +58,7 @@
       </span>
     </a>
     <span class="topbar-tagline" aria-hidden="true">For the professional who has to explain a wrong outcome to a real person</span>
+    <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Collapse sidebar" aria-pressed="false" title="Toggle sidebar">&#8249;</button>
     <button class="menu-btn" id="menu-btn" aria-controls="sidebar" aria-expanded="false">&#9776; Menu</button>
   </header>
   <div class="sidebar-overlay" id="sidebar-overlay" aria-hidden="true"></div>
@@ -57,6 +93,8 @@
     <a href="/newsletter.html">Notes</a>
     <a href="/notes/outcome-done-stakeholder-problem.html" class="sub">Outcome Done</a>
     <a href="/notes/benefit-becomes-evidence.html" class="sub">Benefit as evidence</a>
+    <a href="/notes/yale-health-expectations.html" class="sub">Yale wellness case</a>
+    <a href="/notes/just-as-long-as-its-legal.html" class="sub">Just As Long As Legal</a>
   </div>
 </nav>
     <main class="content" id="main">
@@ -70,7 +108,8 @@
 </section>
 <section class="section alt">
   <div class="container prose">
-    <h2>How to translate theory into system choices</h2>
+    <span class="page-label">The translation</span>
+          <h2>How to translate theory into system choices</h2>
     <div class="grid-2">
       <div class="callout">
         <h3>From contextual integrity</h3>
@@ -93,7 +132,9 @@
 </section>
 <section class="section">
   <div class="container prose">
-    <h2>Use ETHICMAP as the design map</h2>
+    <span class="page-label">The map</span>
+          <h2>Use ETHICMAP as the design map</h2>
+    <blockquote class="pull-quote">Most harm in small data is created before anyone looks at the data itself &#8212; in the cutoffs, lags, and timing assumptions made at program design.</blockquote>
     <div class="stack">
       <div class="stack-item"><h3>E + T</h3><p>Write context and timing assumptions first. Most harm in small data is created by cutoffs, lags, and retroactivity &#8212; before anyone has looked at the data itself.</p></div>
       <div class="stack-item"><h3>H</h3><p>Identify who is harmed when errors occur. In small systems, fairness is often about error distribution and visibility &#8212; not just aggregate outcomes.</p></div>
@@ -105,7 +146,8 @@
 </section>
 <section class="section alt">
   <div class="container prose">
-    <h2>Suggested artifacts</h2>
+    <span class="page-label">What to produce</span>
+          <h2>Suggested artifacts</h2>
     <ul>
       <li>Program timeline and cutoff map</li>
       <li>Metric spec sheet &#8212; definitions, edge cases, and appealability</li>

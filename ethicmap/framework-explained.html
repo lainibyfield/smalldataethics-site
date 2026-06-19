@@ -9,9 +9,44 @@
   <link rel="canonical" href="https://smalldataethics.com/ethicmap/framework-explained.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,700&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="icon" href="/assets/logo.png" type="image/png" />
   <link rel="stylesheet" href="/assets/styles.css" />
+
+  <style>
+    :root { --mono: 'DM Mono', ui-monospace, monospace; }
+    .page-label {
+      display: block;
+      font-family: var(--mono);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--brick-muted);
+      margin-bottom: 8px;
+    }
+    .pull-quote {
+      font-family: 'Source Serif 4', serif;
+      font-style: italic;
+      font-size: 19px;
+      line-height: 1.55;
+      color: var(--navy);
+      background: var(--brick-pale);
+      border-left: 4px solid var(--brick);
+      padding: 18px 22px;
+      margin: 20px 0;
+      font-weight: 500;
+    }
+    .stance-label {
+      display: block;
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--brick-muted);
+      margin-bottom: 5px;
+    }
+  </style>
 </head><body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="topbar">
@@ -23,6 +58,7 @@
       </span>
     </a>
     <span class="topbar-tagline" aria-hidden="true">For the professional who has to explain a wrong outcome to a real person</span>
+    <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Collapse sidebar" aria-pressed="false" title="Toggle sidebar">&#8249;</button>
     <button class="menu-btn" id="menu-btn" aria-controls="sidebar" aria-expanded="false">&#9776; Menu</button>
   </header>
   <div class="sidebar-overlay" id="sidebar-overlay" aria-hidden="true"></div>
@@ -57,6 +93,8 @@
     <a href="/newsletter.html">Notes</a>
     <a href="/notes/outcome-done-stakeholder-problem.html" class="sub">Outcome Done</a>
     <a href="/notes/benefit-becomes-evidence.html" class="sub">Benefit as evidence</a>
+    <a href="/notes/yale-health-expectations.html" class="sub">Yale wellness case</a>
+    <a href="/notes/just-as-long-as-its-legal.html" class="sub">Just As Long As Legal</a>
   </div>
 </nav>
     <main class="content" id="main">
@@ -70,7 +108,8 @@
 </section>
 <section class="section alt">
   <div class="container prose">
-    <h2>What ETHICMAP is</h2>
+    <span class="page-label">The framework</span>
+          <h2>What ETHICMAP is</h2>
     <p><strong>ETHICMAP</strong> is an implementation cycle for Small Data Ethics. It is designed to be used every program cycle &#8212; not only during initial design.</p>
     <div class="card wide">
       <h3>Core stance</h3>
@@ -84,7 +123,8 @@
 </section>
 <section class="section">
   <div class="container prose">
-    <h2>The cycle &#8212; what each step produces</h2>
+    <span class="page-label">Step by step</span>
+          <h2>The cycle &#8212; what each step produces</h2>
     <div class="stack">
       <div class="stack-item"><h3>E &#8212; Environment</h3><p>Output: context statement, constraints, power map, data boundaries.</p></div>
       <div class="stack-item"><h3>T &#8212; Timing</h3><p>Output: timeline of cutoffs, lags, retroactivity, comms calendar, appeal windows.</p></div>
@@ -99,7 +139,8 @@
 </section>
 <section class="section alt">
   <div class="container prose">
-    <h2>Next pages</h2>
+    <span class="page-label">Go deeper</span>
+          <h2>Next pages</h2>
     <div class="link-grid">
       <a class="link-card" href="/ethicmap/theory-informed-design.html"><h3>Theory-informed program design</h3><p>How to translate theory into operational choices using ETHICMAP.</p></a>
       <a class="link-card" href="/ethicmap/reading-list.html"><h3>Resources and reading list</h3><p>Books curated for governance, privacy, fairness, and operational accountability.</p></a>
