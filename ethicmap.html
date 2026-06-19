@@ -4,15 +4,72 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ETHICMAP | Small Data Ethics</title>
-  <meta name="description" content="ETHICMAP by Laini Byfield &#8212; a Small Data Ethics implementation cycle." />
+  <meta name="description" content="ETHICMAP by Laini Byfield &#8212; a Small Data Ethics implementation cycle built for repeatable program operations and continuous learning." />
   <meta name="author" content="Laini Byfield" />
   <link rel="canonical" href="https://smalldataethics.com/ethicmap.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,700&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="icon" href="/assets/logo.png" type="image/png" />
   <link rel="stylesheet" href="/assets/styles.css" />
-</head><body>
+  <style>
+    :root { --mono: 'DM Mono', ui-monospace, monospace; }
+
+    .page-label {
+      display: block;
+      font-family: var(--mono);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--brick-muted);
+      margin-bottom: 8px;
+    }
+
+    .pull-quote {
+      font-family: 'Source Serif 4', serif;
+      font-style: italic;
+      font-size: 20px;
+      line-height: 1.5;
+      color: var(--navy);
+      background: var(--brick-pale);
+      border-left: 4px solid var(--brick);
+      padding: 20px 24px;
+      margin: 28px 0 0;
+      font-weight: 500;
+    }
+
+    .pipeline-figure {
+      margin: 28px 0 0;
+    }
+    .pipeline-figure img,
+    .pipeline-figure svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .pipeline-caption {
+      font-family: var(--mono);
+      font-size: 12.5px;
+      letter-spacing: .04em;
+      color: var(--faint);
+      margin-top: 12px;
+      font-style: italic;
+      text-transform: none;
+    }
+
+    .stance-label {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--brick-muted);
+      display: block;
+      margin-bottom: 6px;
+    }
+  </style>
+</head>
+<body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="topbar">
     <a class="topbar-brand" href="/" aria-label="Small Data Ethics home">
@@ -23,100 +80,132 @@
       </span>
     </a>
     <span class="topbar-tagline" aria-hidden="true">For the professional who has to explain a wrong outcome to a real person</span>
+    <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Collapse sidebar" aria-pressed="false" title="Toggle sidebar">&#8249;</button>
     <button class="menu-btn" id="menu-btn" aria-controls="sidebar" aria-expanded="false">&#9776; Menu</button>
   </header>
   <div class="sidebar-overlay" id="sidebar-overlay" aria-hidden="true"></div>
   <div class="page-layout">
     <nav class="sidebar" id="sidebar" aria-label="Primary">
-  <div class="sidebar-group">
-    <span class="sidebar-group-label">Foundations</span>
-    <a href="/what-is.html">Start Here</a>
-    <a href="/theory.html">Theory</a>
-    <a href="/ethics-vs-privacy.html" class="sub">Ethics vs Privacy</a>
-  </div>
-  <div class="sidebar-group">
-    <span class="sidebar-group-label">Structures</span>
-    <a href="/policy/index.html">Policy</a>
-    <a href="/policy/gdpr.html" class="sub">GDPR</a>
-    <a href="/policy/jisc.html" class="sub">Jisc</a>
-    <a href="/policy/odi.html" class="sub">ODI</a>
-    <a href="/governance/index.html">Governance</a>
-    <a href="/governance/ethics-boards.html" class="sub">Ethics boards</a>
-    <a href="/governance/review-committee.html" class="sub">Review committees</a>
-    <a href="/practice.html">Practice</a>
-  </div>
-  <div class="sidebar-group">
-    <span class="sidebar-group-label">Method</span>
-    <a href="/ethicmap.html" class="active">ETHICMAP</a>
-    <a href="/ethicmap/framework-explained.html" class="sub">Framework explained</a>
-    <a href="/ethicmap/theory-informed-design.html" class="sub">Theory-informed design</a>
-    <a href="/ethicmap/reading-list.html" class="sub">Reading list</a>
-  </div>
-  <div class="sidebar-group">
-    <span class="sidebar-group-label">Extension</span>
-    <a href="/newsletter.html">Notes</a>
-    <a href="/notes/outcome-done-stakeholder-problem.html" class="sub">Outcome Done</a>
-    <a href="/notes/benefit-becomes-evidence.html" class="sub">Benefit as evidence</a>
-  </div>
-</nav>
-    <main class="content" id="main">
-<section class="page-hero">
-  <div class="container">
-    <p class="eyebrow">By <strong>Laini Byfield</strong></p>
-    <h2>ETHICMAP</h2>
-    <p class="lead">An implementation cycle for Small Data Ethics &#8212; built for repeatable program operations and continuous learning.</p>
-    <div class="chips"><span class="chip">Environment</span><span class="chip">Timing</span><span class="chip">Harmony</span><span class="chip">Incentive</span><span class="chip">Calibration</span><span class="chip">Measurement</span><span class="chip">Application</span><span class="chip">Publish</span></div>
-  </div>
-</section>
-<section class="section alt">
-  <div class="container prose">
-    <h2>The ETHICMAP cycle</h2>
-    <div class="ethicmap-grid">
-      <article class="pill"><h3>E &#8212; Environment</h3><p>Where are we operating &#8212; constraints, norms, and power dynamics.</p></article>
-      <article class="pill"><h3>T &#8212; Timing</h3><p>When do things happen &#8212; cutoffs, lags, retroactivity, and notice.</p></article>
-      <article class="pill"><h3>H &#8212; Harmony</h3><p>For whom does this work &#8212; who benefits, who is burdened, who is exposed.</p></article>
-      <article class="pill"><h3>I &#8212; Incentive</h3><p>Why would someone participate &#8212; ensure feasibility without coercion.</p></article>
-      <article class="pill"><h3>C &#8212; Calibration</h3><p>What can realistically change &#8212; align expectations to capacity and context.</p></article>
-      <article class="pill"><h3>M &#8212; Measurement</h3><p>What moved &#8212; include uncertainty and error rates, not just point estimates.</p></article>
-      <article class="pill"><h3>A &#8212; Application</h3><p>How do we sustain and repeat it &#8212; standardize without freezing learning.</p></article>
-      <article class="pill"><h3>P &#8212; Publish</h3><p>Formalize learning &#8212; document decisions, tradeoffs, and changes across cycles.</p></article>
-    </div>
-  </div>
-</section>
-<section class="section">
-  <div class="container prose">
-    <h2>Design stance</h2>
-    <div class="card wide">
-      <h3>ETHICMAP treats data errors as moral events &#8212; not technical bugs.</h3>
-      <div class="grid-3" style="margin-top:14px;">
-        <div><h4>Contestability</h4><p>People can challenge outcomes, submit evidence, and receive timely review.</p></div>
-        <div><h4>Traceability</h4><p>Every outcome can be traced to a source file, load date, and rule version.</p></div>
-        <div><h4>Repair</h4><p>Correction triggers reprocessing &#8212; changes are communicated and documented.</p></div>
+      <div class="sidebar-group">
+        <span class="sidebar-group-label">Foundations</span>
+        <a href="/what-is.html">Start Here</a>
+        <a href="/theory.html">Theory</a>
+        <a href="/ethics-vs-privacy.html" class="sub">Ethics vs Privacy</a>
       </div>
-    </div>
-    <p class="note">ETHICMAP assumes relational exposure &#8212; not anonymity. <a href="/ethics-vs-privacy.html">Read: Small Data Ethics is not Small Data Privacy &#8594;</a></p>
-  </div>
-</section>
-<section class="section alt">
-  <div class="container prose">
-    <h2>How to run ETHICMAP in real life</h2>
-    <ul>
-      <li>Use ETHICMAP as a standing agenda for monthly or quarterly operations reviews.</li>
-      <li>Keep a change log: rule updates, data source changes, known issues, and decisions.</li>
-      <li>Publish learning internally: what changed, why, and what it means for participants.</li>
-    </ul>
-  </div>
-</section>
-<section class="section">
-  <div class="container prose">
-    <h2>More on ETHICMAP</h2>
-    <div class="link-grid">
-      <a class="link-card" href="/ethicmap/framework-explained.html"><h3>Framework explained</h3><p>Definitions, outputs, and what repeatable ethics looks like in practice.</p></a>
-      <a class="link-card" href="/ethicmap/theory-informed-design.html"><h3>Theory-informed design</h3><p>Translate theory into operational choices using the ETHICMAP cycle.</p></a>
-      <a class="link-card" href="/ethicmap/reading-list.html"><h3>Reading list</h3><p>Books only &#8212; curated for practitioners.</p></a>
-    </div>
-  </div>
-</section>
+      <div class="sidebar-group">
+        <span class="sidebar-group-label">Structures</span>
+        <a href="/policy/index.html">Policy</a>
+        <a href="/policy/gdpr.html" class="sub">GDPR</a>
+        <a href="/policy/jisc.html" class="sub">Jisc</a>
+        <a href="/policy/odi.html" class="sub">ODI</a>
+        <a href="/governance/index.html">Governance</a>
+        <a href="/governance/ethics-boards.html" class="sub">Ethics boards</a>
+        <a href="/governance/review-committee.html" class="sub">Review committees</a>
+        <a href="/practice.html">Practice</a>
+      </div>
+      <div class="sidebar-group">
+        <span class="sidebar-group-label">Method</span>
+        <a href="/ethicmap.html" class="active">ETHICMAP</a>
+        <a href="/ethicmap/framework-explained.html" class="sub">Framework explained</a>
+        <a href="/ethicmap/theory-informed-design.html" class="sub">Theory-informed design</a>
+        <a href="/ethicmap/reading-list.html" class="sub">Reading list</a>
+      </div>
+      <div class="sidebar-group">
+        <span class="sidebar-group-label">Extension</span>
+        <a href="/newsletter.html">Notes</a>
+        <a href="/notes/outcome-done-stakeholder-problem.html" class="sub">Outcome Done</a>
+        <a href="/notes/benefit-becomes-evidence.html" class="sub">Benefit as evidence</a>
+        <a href="/notes/yale-health-expectations.html" class="sub">Yale wellness case</a>
+        <a href="/notes/just-as-long-as-its-legal.html" class="sub">Just As Long As Legal</a>
+      </div>
+    </nav>
+    <main class="content" id="main">
+
+      <section class="page-hero">
+        <div class="container">
+          <p class="eyebrow">By <strong>Laini Byfield</strong></p>
+          <h2>ETHICMAP</h2>
+          <p class="lead">An implementation cycle for Small Data Ethics &#8212; built for repeatable program operations and continuous learning.</p>
+          <div class="chips">
+            <span class="chip">Environment</span><span class="chip">Timing</span><span class="chip">Harmony</span><span class="chip">Incentive</span><span class="chip">Calibration</span><span class="chip">Measurement</span><span class="chip">Application</span><span class="chip">Publish</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt">
+        <div class="container prose">
+          <span class="page-label">The eight dimensions</span>
+          <h2>The ETHICMAP cycle</h2>
+          <div class="ethicmap-grid">
+            <article class="pill"><h3>E &#8212; Environment</h3><p>Where are we operating &#8212; constraints, norms, and power dynamics.</p></article>
+            <article class="pill"><h3>T &#8212; Timing</h3><p>When do things happen &#8212; cutoffs, lags, retroactivity, and notice.</p></article>
+            <article class="pill"><h3>H &#8212; Harmony</h3><p>For whom does this work &#8212; who benefits, who is burdened, who is exposed.</p></article>
+            <article class="pill"><h3>I &#8212; Incentive</h3><p>Why would someone participate &#8212; ensure feasibility without coercion.</p></article>
+            <article class="pill"><h3>C &#8212; Calibration</h3><p>What can realistically change &#8212; align expectations to capacity and context.</p></article>
+            <article class="pill"><h3>M &#8212; Measurement</h3><p>What moved &#8212; include uncertainty and error rates, not just point estimates.</p></article>
+            <article class="pill"><h3>A &#8212; Application</h3><p>How do we sustain and repeat it &#8212; standardize without freezing learning.</p></article>
+            <article class="pill"><h3>P &#8212; Publish</h3><p>Formalize learning &#8212; document decisions, tradeoffs, and changes across cycles.</p></article>
+          </div>
+
+          <div class="pipeline-figure">
+            <a href="/assets/ethicmap-pipeline.svg" target="_blank" title="Open pipeline diagram full size" aria-label="View ETHICMAP pipeline diagram full size">
+              <img src="/assets/ethicmap-pipeline.svg"
+                   alt="ETHICMAP as a data pipeline. Environment and Timing at the ingestion gate. Harmony and Incentive at the human layer. Calibration and Measurement at the testing gate. Application and Publish at the deployment phase." />
+            </a>
+            <p class="pipeline-caption">How the eight dimensions map onto a standard program-operations pipeline &#8212; click to open full size</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container prose">
+          <span class="page-label">Design stance</span>
+          <h2>What ETHICMAP is built on</h2>
+          <blockquote class="pull-quote">Data errors are moral events &#8212; not technical bugs. A wrong outcome that reaches a real person is not a pipeline failure to be patched. It is an accountability event that requires contestability, traceability, and repair.</blockquote>
+          <div class="card wide" style="margin-top:24px;">
+            <div class="grid-3">
+              <div>
+                <span class="stance-label">Contestability</span>
+                <p>People can challenge outcomes, submit evidence, and receive timely review.</p>
+              </div>
+              <div>
+                <span class="stance-label">Traceability</span>
+                <p>Every outcome can be traced to a source file, load date, and rule version.</p>
+              </div>
+              <div>
+                <span class="stance-label">Repair</span>
+                <p>Correction triggers reprocessing &#8212; changes are communicated and documented.</p>
+              </div>
+            </div>
+          </div>
+          <p class="note" style="margin-top:16px;">ETHICMAP assumes relational exposure &#8212; not anonymity. <a href="/ethics-vs-privacy.html">Read: Small Data Ethics is not Small Data Privacy &#8594;</a></p>
+        </div>
+      </section>
+
+      <section class="section alt">
+        <div class="container prose">
+          <span class="page-label">In practice</span>
+          <h2>How to run ETHICMAP in real life</h2>
+          <ul>
+            <li>Use ETHICMAP as a standing agenda for monthly or quarterly operations reviews.</li>
+            <li>Keep a change log: rule updates, data source changes, known issues, and decisions.</li>
+            <li>Publish learning internally: what changed, why, and what it means for participants.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container prose">
+          <span class="page-label">Go deeper</span>
+          <h2>More on ETHICMAP</h2>
+          <div class="link-grid">
+            <a class="link-card" href="/ethicmap/framework-explained.html"><h3>Framework explained</h3><p>Definitions, outputs, and what repeatable ethics looks like in practice.</p></a>
+            <a class="link-card" href="/ethicmap/theory-informed-design.html"><h3>Theory-informed design</h3><p>Translate theory into operational choices using the ETHICMAP cycle.</p></a>
+            <a class="link-card" href="/ethicmap/reading-list.html"><h3>Reading list</h3><p>Books only &#8212; curated for practitioners.</p></a>
+          </div>
+        </div>
+      </section>
+
     </main>
   </div>
   <footer class="site-footer">
