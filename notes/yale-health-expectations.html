@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Everyone Saw the Fine. Nobody Saw the Framework. | Small Data Ethics</title>
+  <meta name="description" content="Yale paid $1.29 million to settle a wellness program lawsuit. Through ETHICMAP, the incentive penalty was the least of the governance failures &#8212; the costly ones were Calibration, Application, and Publish." />
+  <meta name="author" content="Laini Byfield" />
+  <link rel="canonical" href="https://smalldataethics.com/notes/yale-health-expectations.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Everyone Saw the Fine. Nobody Saw the Framework." />
+  <meta property="og:description" content="Yale paid $1.29 million to settle a wellness program lawsuit. Through ETHICMAP, the incentive penalty was the least of the governance failures &#8212; the costly ones were Calibration, Application, and Publish." />
+  <meta property="og:url" content="https://smalldataethics.com/notes/yale-health-expectations.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,700&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" href="/assets/logo.png" type="image/png" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <link rel="stylesheet" href="/assets/article.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="topbar">
+    <a class="topbar-brand" href="/" aria-label="Small Data Ethics home">
+      <span class="mark-logo" aria-hidden="true"><img src="/assets/logo.png" alt="" width="40" height="40" style="display:block;border-radius:4px;" /></span>
+      <span class="brand-text">
+        <span class="kicker">Notes and Applied Theory</span>
+        <span class="site-title">Small Data Ethics</span>
+      </span>
+    </a>
+    <span class="topbar-tagline" aria-hidden="true">For the professional who has to explain a wrong outcome to a real person</span>
+    <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Collapse sidebar" aria-pressed="false" title="Toggle sidebar">&#8249;</button>
+    <button class="menu-btn" id="menu-btn" aria-controls="sidebar" aria-expanded="false">&#9776; Menu</button>
+  </header>
+  <div class="sidebar-overlay" id="sidebar-overlay" aria-hidden="true"></div>
+  <div class="page-layout">
+    <nav class="sidebar" id="sidebar" aria-label="Primary">
+      <div class="sidebar-group">
+        <span class="sidebar-group-label">Foundations</span>
+        <a href="/what-is.html">Start Here</a>
+        <a href="/theory.html">Theory</a>
+        <a href="/ethics-vs-privacy.html" class="sub">Ethics vs Privacy</a>
+      </div>
+      <div class="sidebar-group">
+        <span class="sidebar-group-label">Structures</span>
+        <a href="/policy/index.html">Policy</a>
+        <a href="/policy/gdpr.html" class="sub">GDPR</a>
+        <a href="/policy/jisc.html" class="sub">Jisc</a>
+        <a href="/policy/odi.html" class="sub">ODI</a>
+        <a href="/governance/index.html">Governance</a>
+        <a href="/governance/ethics-boards.html" class="sub">Ethics boards</a>
+        <a href="/governance/review-committee.html" class="sub">Review committees</a>
+        <a href="/practice.html">Practice</a>
+      </div>
+      <div class="sidebar-group">
+        <span class="sidebar-group-label">Method</span>
+        <a href="/ethicmap.html">ETHICMAP</a>
+        <a href="/ethicmap/framework-explained.html" class="sub">Framework explained</a>
+        <a href="/ethicmap/theory-informed-design.html" class="sub">Theory-informed design</a>
+        <a href="/ethicmap/reading-list.html" class="sub">Reading list</a>
+      </div>
+      <div class="sidebar-group">
+        <span class="sidebar-group-label">Extension</span>
+        <a href="/newsletter.html">Notes</a>
+        <a href="/notes/outcome-done-stakeholder-problem.html" class="sub">Outcome Done</a>
+        <a href="/notes/benefit-becomes-evidence.html" class="sub">Benefit as evidence</a>
+        <a href="/notes/yale-health-expectations.html" class="sub active">Yale wellness case</a>
+      </div>
+    </nav>
+    <main class="content" id="main">
+      <section class="page-hero">
+        <div class="container">
+          <p class="article-eyebrow">ETHICMAP Framework &middot; Yale Health Expectations Program &middot; 2022</p>
+          <h2>Everyone Saw the Fine. Nobody Saw the Framework.</h2>
+          <p class="lead">Yale paid $1.29 million to settle a wellness program lawsuit. The incentive structure was the least of it.</p>
+          <div class="chips"><span class="chip">Case analysis</span><span class="chip">Wellness programs</span><span class="chip">Vendor governance</span><span class="chip">ETHICMAP</span></div>
+        </div>
+      </section>
+      <div class="orient"><div class="container">Published on smalldataethics.com</div></div>
+      <div class="article-body">
+        <p class="article-byline">Analysis by Laini Byfield &nbsp;&middot;&nbsp; NBC-HWC &nbsp;&middot;&nbsp; CSPO &nbsp;&middot;&nbsp; Developer of ETHICMAP</p>
+
+        <p class="lead-para">In March 2022, Yale University agreed to settle a class action lawsuit brought by approximately 6,000 union employees over its Health Expectations Program. The settlement required Yale to pay $1.29 million, eliminate opt-out fees, and &#8212; the part that received almost no coverage &#8212; require its affiliated vendors to purge employee health data that had been improperly received and shared.</p>
+
+        <p>Every analysis of the case led with the same finding: Yale charged employees $25 per week, or $1,300 annually, to opt out of a wellness program that required medical screenings, biometric data collection, and in some cases health coaching. The penalty was coercive. The EEOC rules that had permitted it were vacated in 2019. Yale kept collecting the fees anyway. Employees sued. Yale settled.</p>
+
+        <p>That reading is correct. It is also incomplete.</p>
+
+        <p>The Incentive failure &#8212; coercion dressed as voluntarism &#8212; was visible from the outside. What was not visible, and what cost Yale and its vendors far more than the settlement figure, were the failures that lived inside the program&#8217;s architecture: in its Calibration, its Application, its failure to Publish, and ultimately in its treatment of Harmony. These are the failures that vendors need to understand, because they are the failures that vendors are most likely to repeat.</p>
+
+        <hr>
+
+        <div class="section-block">
+          <span class="section-label">Incentive</span>
+          <h2>The Easy Read</h2>
+        </div>
+
+        <p>The canonical definition of Incentive in program governance is straightforward: ensure feasibility without coercion. A $1,300 annual penalty imposed on union employees &#8212; many in service and facilities roles &#8212; for declining to share biometric and genetic information with a vendor chain that individual employees did not select and had no practical ability to audit is coercion. The label &#8220;voluntary&#8221; does not survive contact with a paycheck deduction.</p>
+
+        <p>This is what every HR attorney saw. It is what every headline covered. It is correct.</p>
+
+        <blockquote>It is not where the real governance failures lived.</blockquote>
+
+        <div class="section-block">
+          <span class="section-label">Calibration</span>
+          <h2>The Program Wasn&#8217;t Built for the Population</h2>
+        </div>
+
+        <p>Calibration asks what can realistically change &#8212; and requires aligning expectations to the capacity and context of the people the program is designed to serve.</p>
+
+        <p>The Health Expectations Program was designed for a participant who had flexibility in their schedule, reliable access to screening facilities, and enough financial cushion that $1,300 represented a genuine choice between two options rather than a forced enrollment. That participant exists in many workplaces. Yale&#8217;s union workforce &#8212; Local 34 and Local 35, representing clerical, technical, service, and maintenance employees &#8212; skewed heavily toward workers for whom none of those conditions reliably held.</p>
+
+        <p>Consider the operational reality: a facilities or maintenance worker cannot easily block out 45 minutes on a calendar for an external health coaching call or a biometric screening without clocking out or obtaining supervisor approval. The structural friction that a desk-bound administrator experiences as a minor scheduling inconvenience becomes, for a shift worker, a permission-seeking event with professional consequences. The program did not account for that distinction. The vendor chain that delivered it was not designed to ask.</p>
+
+        <figure class="article-figure">
+          <img src="/assets/yale-staircase.png" alt="A split architectural cross-section. On the left, a warm, sunlit hall with a clean ascending staircase, chandelier, and ornate paneling. On the right, the same structure rendered in shadow as industrial concrete stairs and bare utility doors, with a lone figure standing on a ledge looking across at the unreachable bright side.">
+          <figcaption>The program as designed &middot; The program as experienced</figcaption>
+        </figure>
+
+        <p>One side of the structure ascends cleanly, in good light, with room to move. The other is built from different materials, with different footing and different starting points &#8212; and where the two meet, there is no landing. There is a gap. The figure standing at the edge is not alarmed. He is simply standing where his staircase stops, looking across at something immaculate and completely unreachable. The $1,300 penalty was not the cause of that gap. It was what filled it when no one acknowledged the gap existed.</p>
+
+        <p>Vendors who design programs for an idealized participant and sell them to employers without population-level calibration reviews are not selling wellness programs. They are selling liability.</p>
+
+        <div class="section-block">
+          <span class="section-label">Application</span>
+          <h2>The Framework Froze While the Law Moved</h2>
+        </div>
+
+        <p>Application governs how a program is sustained and repeated &#8212; specifically, whether it can standardize without freezing learning.</p>
+
+        <p>The EEOC rules that permitted opt-out fees in employer wellness programs were vacated by a federal court, taking effect January 1, 2019. Yale&#8217;s Health Expectations Program continued collecting those fees. The lawsuit was filed in July 2019. The settlement was not reached until March 2022. By that point, the program had operated for three years on a legal framework that no longer existed.</p>
+
+        <p>This is an Application failure in its clearest form. The program had no mechanism to detect that the ground had shifted. There was no governance trigger that asked: has the regulatory environment that permitted this design changed? Has the population context changed? Has the vendor chain changed in ways that affect compliance?</p>
+
+        <p>What a functioning Application cycle looks like in practice is not complicated. It requires a structured annual review that cross-references current regulatory guidance against the program&#8217;s original design assumptions, vendor subcontracts, and actual population enrollment metrics before each program cycle begins. Under a functioning ETHICMAP Application cycle, the 2019 EEOC rule vacatur would have been a mandatory review trigger. The question &#8220;does our fee structure still have legal support?&#8221; would have been asked and documented. The answer would have changed the program before employees had standing to sue.</p>
+
+        <p>Application failure does not require bad intent. It requires only the absence of a learning loop.</p>
+
+        <div class="section-block">
+          <span class="section-label">Harmony</span>
+          <h2>Who Was Actually Exposed</h2>
+        </div>
+
+        <p>Harmony asks for whom a program works &#8212; who benefits, who is burdened, who is exposed.</p>
+
+        <p>The surface answer in the Yale case is the union employees who paid $1,300 annually to protect their medical privacy. That is accurate. It is not the full exposure picture.</p>
+
+        <p>The program collected biometric screening results, genetic information through spousal health data, and behavioral health information. It routed that data through a vendor chain &#8212; first to Healthmine for review, then to TrestleTree for health coaching referrals. In some cases, data was transferred to TrestleTree even when employees had not signed the required HIPAA waiver authorizing the transfer. The program collected, analyzed, and acted on sensitive human health data at scale, in ways that would have raised consent and human-subject protection questions had the same activity occurred under a federal research grant.</p>
+
+        <p>The employees who were most exposed were the ones least able to refuse. Harmony, properly applied, would have required asking that question before the program launched: who is exposed here, and under what protections? The answer would have surfaced the consent architecture question. The consent architecture question would have changed what the vendor chain was permitted to do.</p>
+
+        <p>None of those questions were asked. The settlement required the answers anyway, in the form of a data purge order.</p>
+
+        <div class="section-block">
+          <span class="section-label">Publish</span>
+          <h2>The Settlement Was the Documentation</h2>
+        </div>
+
+        <p>Publish requires formalizing decisions, tradeoffs, and changes across cycles &#8212; creating a record that makes governance visible and auditable before something goes wrong.</p>
+
+        <p>The Yale settlement is, in effect, a forced Publish event. The corrective actions required &#8212; cessation of fees, modification of data sharing practices, vendor data purge, participant notification &#8212; are precisely the documentation that a functioning Publish cycle would have produced proactively.</p>
+
+        <p>When Publish is absent, decisions don&#8217;t disappear. They accumulate. And when litigation arrives, the absence of documentation is itself evidence &#8212; not of what was decided, but of what was never examined.</p>
+
+        <p>There is one additional consequence of the Publish failure that has received almost no attention: the data purge order issued to TrestleTree. For a behavioral health or wellness vendor, a court-ordered data purge is not an administrative chore. It is demolition of a core business asset. Three years of longitudinal health coaching records &#8212; the data used to train predictive algorithms, calculate population health risk profiles, and demonstrate program efficacy to future clients &#8212; went into the same court order as Yale&#8217;s liability. A functioning Publish cycle, with documented data governance decisions and explicit consent architecture, would not have prevented the lawsuit. It would have prevented the purge.</p>
+
+        <div class="section-block">
+          <span class="section-label">Advisory Ecosystem</span>
+          <h2>The Ghost in the Room</h2>
+        </div>
+
+        <p>Yale and its vendors bore the public cost of this settlement. But employers rarely design, procure, or implement wellness programs without guidance from global benefits brokerages and human capital consulting firms. Those advisors evaluated the Health Expectations Program&#8217;s market fit and compliance posture. They were present when the fee structure was designed. They were present, or should have been, when the EEOC rules were vacated in 2019.</p>
+
+        <p>Benefits consultants and brokers who are not auditing their clients&#8217; program designs against current regulatory baselines &#8212; on a structured, documented cycle &#8212; are not providing governance advisory services. They are providing procurement services and calling them something else. The liability exposure that follows is not limited to the employer. It extends to the advisory relationship.</p>
+
+        <p>Vendors who want to survive that scrutiny need governance documentation that is independent of the broker&#8217;s assurances. ETHICMAP provides that architecture. It is not a substitute for legal counsel. It is the record that makes legal counsel&#8217;s work defensible.</p>
+
+        <div class="section-block">
+          <span class="section-label">For Vendors</span>
+          <h2>What Vendors Need to Know</h2>
+        </div>
+
+        <p>CAP failures &#8212; Calibration, Application, Publish &#8212; do not announce themselves. They accumulate quietly, in the space between program design and program reality, until someone with standing and legal representation decides to measure the gap.</p>
+
+        <p>The $1.29 million settlement is the floor, not the ceiling. The vendor data purge order is the consequence that no contract price ever anticipated. The reputational cost of being named in a class action as the entity that received improperly transferred employee health data is not in the settlement figure at all.</p>
+
+        <p>There is also a technical dimension to the Harmony failure that benefits leaders need to understand. Most enterprise benefits integrations rely on automated data pipelines &#8212; nightly file drops, SFTP transfers, eligibility feeds moving in bulk from employer system to vendor to subvendor. These systems are built to push data efficiently. They are rarely built to check, at the row level, whether a specific employee has provided the consent required before their record moves to the next system in the chain. A governance framework that does not reach the data pipeline is not a governance framework. It is a policy document.</p>
+
+        <div class="questions-block">
+          <span class="q-label">Three questions every vendor should be able to answer</span>
+          <ol>
+            <li>If your program ran unchanged for three years while the regulatory environment shifted, who in your organization would know &#8212; and when?</li>
+            <li>If the population your program was designed for does not match the population actually enrolled, where does your contract place the risk of that mismatch?</li>
+            <li>If a court ordered you to produce documentation of every decision made about data sharing, retention, and vendor transfer in the last program cycle, what would you be able to produce?</li>
+          </ol>
+        </div>
+
+        <p>If the answers are uncertain, the governance architecture is the product gap. Closing that gap requires a systemic approach to programmatic ethics &#8212; which is exactly why the ETHICMAP framework exists. It is built to make these questions answerable before litigation forces them into the open.</p>
+
+        <hr>
+
+        <div class="section-block">
+          <span class="section-label">Conclusion</span>
+          <h2>A Final Note on Incentive</h2>
+        </div>
+
+        <p>The coercion was visible. That is precisely why it distracted from everything else.</p>
+
+        <p>Vendors who look at Yale and conclude that the lesson is &#8220;don&#8217;t charge opt-out fees&#8221; have learned the headline. The governance failures that made the lawsuit possible &#8212; the unfrozen design, the uncalibrated population assumptions, the unpublished decisions, the unexamined exposure of data subjects &#8212; none of those failures required a $1,300 penalty to exist. They were present from the first day the program ran.</p>
+
+        <div class="closing-banner">
+          <p>The fine was the symptom.<strong>The missing framework was the disease.</strong></p>
+        </div>
+
+        <div class="disclaimer">
+          This is a governance analysis based on public reporting and court records of the Yale University Health Expectations Program settlement (2022). It does not characterize the legal merits beyond what has been publicly decided and is not legal advice. Employers and vendors should consult qualified counsel on program design and discovery exposure specific to their circumstances.
+        </div>
+
+        <div class="bio">Laini Byfield is the developer of ETHICMAP and the Small Data Ethics framework. She is a Certified Scrum Product Owner, NBC-HWC, and Total Rewards program manager. ETHICMAP is published at <a href="https://smalldataethics.com">smalldataethics.com</a>.</div>
+      </div>
+    </main>
+  </div>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>&#169; <span id="year"></span> Laini Byfield. All rights reserved.</span>
+      <span><a href="/work-with-me.html">Work with me</a> &nbsp;&middot;&nbsp; No tracking. No cookies.</span>
+    </div>
+  </footer>
+  <script src="/assets/script.js"></script>
+</body>
+</html>
