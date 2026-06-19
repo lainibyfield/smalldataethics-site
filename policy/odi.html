@@ -4,15 +4,50 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ODI canvases | Small Data Ethics</title>
-  <meta name="description" content="ODI Data Ethics Canvas and how to apply it to Small Data Ethics programs." />
+  <meta name="description" content="ODI Data Ethics Canvas and how to apply it to Small Data Ethics programs and workflows." />
   <meta name="author" content="Laini Byfield" />
   <link rel="canonical" href="https://smalldataethics.com/policy/odi.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,700&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="icon" href="/assets/logo.png" type="image/png" />
   <link rel="stylesheet" href="/assets/styles.css" />
-</head><body>
+  <style>
+    :root { --mono: 'DM Mono', ui-monospace, monospace; }
+    .page-label {
+      display: block;
+      font-family: var(--mono);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--brick-muted);
+      margin-bottom: 8px;
+    }
+    .pull-quote {
+      font-family: 'Source Serif 4', serif;
+      font-style: italic;
+      font-size: 19px;
+      line-height: 1.55;
+      color: var(--navy);
+      background: var(--brick-pale);
+      border-left: 4px solid var(--brick);
+      padding: 18px 22px;
+      margin: 20px 0;
+      font-weight: 500;
+    }
+    .stance-label {
+      display: block;
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--brick-muted);
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="topbar">
     <a class="topbar-brand" href="/" aria-label="Small Data Ethics home">
@@ -23,69 +58,82 @@
       </span>
     </a>
     <span class="topbar-tagline" aria-hidden="true">For the professional who has to explain a wrong outcome to a real person</span>
+    <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Collapse sidebar" aria-pressed="false" title="Toggle sidebar">&#8249;</button>
     <button class="menu-btn" id="menu-btn" aria-controls="sidebar" aria-expanded="false">&#9776; Menu</button>
   </header>
   <div class="sidebar-overlay" id="sidebar-overlay" aria-hidden="true"></div>
   <div class="page-layout">
     <nav class="sidebar" id="sidebar" aria-label="Primary">
-  <div class="sidebar-group">
-    <span class="sidebar-group-label">Foundations</span>
-    <a href="/what-is.html">Start Here</a>
-    <a href="/theory.html">Theory</a>
-    <a href="/ethics-vs-privacy.html" class="sub">Ethics vs Privacy</a>
-  </div>
-  <div class="sidebar-group">
-    <span class="sidebar-group-label">Structures</span>
-    <a href="/policy/index.html">Policy</a>
-    <a href="/policy/gdpr.html" class="sub">GDPR</a>
-    <a href="/policy/jisc.html" class="sub">Jisc</a>
-    <a href="/policy/odi.html" class="sub active">ODI</a>
-    <a href="/governance/index.html">Governance</a>
-    <a href="/governance/ethics-boards.html" class="sub">Ethics boards</a>
-    <a href="/governance/review-committee.html" class="sub">Review committees</a>
-    <a href="/practice.html">Practice</a>
-  </div>
-  <div class="sidebar-group">
-    <span class="sidebar-group-label">Method</span>
-    <a href="/ethicmap.html">ETHICMAP</a>
-    <a href="/ethicmap/framework-explained.html" class="sub">Framework explained</a>
-    <a href="/ethicmap/theory-informed-design.html" class="sub">Theory-informed design</a>
-    <a href="/ethicmap/reading-list.html" class="sub">Reading list</a>
-  </div>
-  <div class="sidebar-group">
-    <span class="sidebar-group-label">Extension</span>
-    <a href="/newsletter.html">Notes</a>
-    <a href="/notes/outcome-done-stakeholder-problem.html" class="sub">Outcome Done</a>
-    <a href="/notes/benefit-becomes-evidence.html" class="sub">Benefit as evidence</a>
-  </div>
-</nav>
+      <div class="sidebar-group">
+        <span class="sidebar-group-label">Foundations</span>
+        <a href="/what-is.html">Start Here</a>
+        <a href="/theory.html">Theory</a>
+        <a href="/ethics-vs-privacy.html" class="sub">Ethics vs Privacy</a>
+      </div>
+      <div class="sidebar-group">
+        <span class="sidebar-group-label">Structures</span>
+        <a href="/policy/index.html">Policy</a>
+        <a href="/policy/gdpr.html" class="sub ">GDPR</a>
+        <a href="/policy/jisc.html" class="sub ">Jisc</a>
+        <a href="/policy/odi.html" class="sub active">ODI</a>
+        <a href="/governance/index.html">Governance</a>
+        <a href="/governance/ethics-boards.html" class="sub">Ethics boards</a>
+        <a href="/governance/review-committee.html" class="sub">Review committees</a>
+        <a href="/practice.html">Practice</a>
+      </div>
+      <div class="sidebar-group">
+        <span class="sidebar-group-label">Method</span>
+        <a href="/ethicmap.html">ETHICMAP</a>
+        <a href="/ethicmap/framework-explained.html" class="sub">Framework explained</a>
+        <a href="/ethicmap/theory-informed-design.html" class="sub">Theory-informed design</a>
+        <a href="/ethicmap/reading-list.html" class="sub">Reading list</a>
+      </div>
+      <div class="sidebar-group">
+        <span class="sidebar-group-label">Extension</span>
+        <a href="/newsletter.html">Notes</a>
+        <a href="/notes/outcome-done-stakeholder-problem.html" class="sub">Outcome Done</a>
+        <a href="/notes/benefit-becomes-evidence.html" class="sub">Benefit as evidence</a>
+        <a href="/notes/yale-health-expectations.html" class="sub">Yale wellness case</a>
+        <a href="/notes/just-as-long-as-its-legal.html" class="sub">Just As Long As Legal</a>
+      </div>
+    </nav>
     <main class="content" id="main">
-<section class="page-hero">
-  <div class="container">
-    <p class="eyebrow">By <strong>Laini Byfield</strong></p>
-    <h2>ODI canvases</h2>
-    <p class="lead">A lightweight way to force the right questions early &#8212; stakeholders, harms, governance, and decision boundaries.</p>
-    <div class="chips"><span class="chip">Data Ethics Canvas</span><span class="chip">Checklists</span><span class="chip">Repeatability</span></div>
-  </div>
-</section>
-<section class="section alt">
-  <div class="container prose">
-    <h2>How to use canvases in small data systems</h2>
-    <p>The ODI&#8217;s Data Ethics Canvas is a project planning tool. In small data environments, it functions like a structured pre-mortem: what could go wrong, who gets harmed, and what controls exist.</p>
-    <div class="grid-2">
-      <div class="callout"><h3>Use before build</h3><p>Document the purpose, stakeholders, and likely harms &#8212; decide what data is truly necessary before building.</p></div>
-      <div class="callout"><h3>Use every cycle</h3><p>Re-run the canvas when data sources change, rules change, or reporting scope expands.</p></div>
-    </div>
-    <p class="note" style="margin-top:14px;">Reference: Open Data Institute, Data Ethics Canvas.</p>
-  </div>
-</section>
-<section class="section">
-  <div class="container prose">
-    <h2>How it fits Small Data Ethics</h2>
-    <p>Canvases create awareness. ETHICMAP turns awareness into operations by embedding checks into environment, timing, measurement, and publish loops &#8212; so the questions get asked every cycle, not just at launch.</p>
-    <p class="note"><a href="/ethicmap.html">See the full ETHICMAP cycle &#8594;</a></p>
-  </div>
-</section>
+
+      <section class="page-hero">
+        <div class="container">
+          <p class="eyebrow">By <strong>Laini Byfield</strong></p>
+          <h2>ODI canvases</h2>
+          <p class="lead">A lightweight way to force the right questions early &#8212; stakeholders, harms, governance, and decision boundaries.</p>
+          <div class="chips"><span class="chip">Data Ethics Canvas</span><span class="chip">Checklists</span><span class="chip">Repeatability</span></div>
+        </div>
+      </section>
+      <section class="section alt">
+        <div class="container prose">
+          <span class="page-label">How to use canvases in small data systems</span>
+          <h2>A structured pre-mortem</h2>
+          <p>The ODI&#8217;s Data Ethics Canvas is a project planning tool. In small data environments, it functions like a structured pre-mortem: what could go wrong, who gets harmed, and what controls exist.</p>
+          <div class="grid-2">
+            <div class="callout">
+              <span class="ref-label">Use before build</span>
+              <p>Document the purpose, stakeholders, and likely harms &#8212; decide what data is truly necessary before building the pipeline.</p>
+            </div>
+            <div class="callout">
+              <span class="ref-label">Use every cycle</span>
+              <p>Re-run the canvas when data sources change, rules change, or reporting scope expands. Canvases are not one-time exercises.</p>
+            </div>
+          </div>
+          <p class="note" style="margin-top:16px;">Reference: Open Data Institute, Data Ethics Canvas.</p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container prose">
+          <span class="page-label">How it fits Small Data Ethics</span>
+          <h2>Awareness into operations</h2>
+          <p>Canvases create awareness. ETHICMAP turns awareness into operations by embedding checks into environment, timing, measurement, and publish loops &#8212; so the questions get asked every cycle, not just at launch.</p>
+          <p class="note"><a href="/ethicmap.html">See the full ETHICMAP cycle &#8594;</a></p>
+          <blockquote class="pull-quote" style="margin-top:20px;">The questions a canvas forces at launch are the same questions ETHICMAP forces at every cycle. The canvas starts the conversation. The cycle keeps it going.</blockquote>
+        </div>
+      </section>
     </main>
   </div>
   <footer class="site-footer">

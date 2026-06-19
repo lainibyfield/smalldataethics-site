@@ -9,10 +9,45 @@
   <link rel="canonical" href="https://smalldataethics.com/policy/" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,700&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="icon" href="/assets/logo.png" type="image/png" />
   <link rel="stylesheet" href="/assets/styles.css" />
-</head><body>
+  <style>
+    :root { --mono: 'DM Mono', ui-monospace, monospace; }
+    .page-label {
+      display: block;
+      font-family: var(--mono);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--brick-muted);
+      margin-bottom: 8px;
+    }
+    .pull-quote {
+      font-family: 'Source Serif 4', serif;
+      font-style: italic;
+      font-size: 19px;
+      line-height: 1.55;
+      color: var(--navy);
+      background: var(--brick-pale);
+      border-left: 4px solid var(--brick);
+      padding: 18px 22px;
+      margin: 20px 0;
+      font-weight: 500;
+    }
+    .stance-label {
+      display: block;
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--brick-muted);
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="topbar">
     <a class="topbar-brand" href="/" aria-label="Small Data Ethics home">
@@ -23,70 +58,87 @@
       </span>
     </a>
     <span class="topbar-tagline" aria-hidden="true">For the professional who has to explain a wrong outcome to a real person</span>
+    <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Collapse sidebar" aria-pressed="false" title="Toggle sidebar">&#8249;</button>
     <button class="menu-btn" id="menu-btn" aria-controls="sidebar" aria-expanded="false">&#9776; Menu</button>
   </header>
   <div class="sidebar-overlay" id="sidebar-overlay" aria-hidden="true"></div>
   <div class="page-layout">
     <nav class="sidebar" id="sidebar" aria-label="Primary">
-  <div class="sidebar-group">
-    <span class="sidebar-group-label">Foundations</span>
-    <a href="/what-is.html">Start Here</a>
-    <a href="/theory.html">Theory</a>
-    <a href="/ethics-vs-privacy.html" class="sub">Ethics vs Privacy</a>
-  </div>
-  <div class="sidebar-group">
-    <span class="sidebar-group-label">Structures</span>
-    <a href="/policy/index.html" class="active">Policy</a>
-    <a href="/policy/gdpr.html" class="sub">GDPR</a>
-    <a href="/policy/jisc.html" class="sub">Jisc</a>
-    <a href="/policy/odi.html" class="sub">ODI</a>
-    <a href="/governance/index.html">Governance</a>
-    <a href="/governance/ethics-boards.html" class="sub">Ethics boards</a>
-    <a href="/governance/review-committee.html" class="sub">Review committees</a>
-    <a href="/practice.html">Practice</a>
-  </div>
-  <div class="sidebar-group">
-    <span class="sidebar-group-label">Method</span>
-    <a href="/ethicmap.html">ETHICMAP</a>
-    <a href="/ethicmap/framework-explained.html" class="sub">Framework explained</a>
-    <a href="/ethicmap/theory-informed-design.html" class="sub">Theory-informed design</a>
-    <a href="/ethicmap/reading-list.html" class="sub">Reading list</a>
-  </div>
-  <div class="sidebar-group">
-    <span class="sidebar-group-label">Extension</span>
-    <a href="/newsletter.html">Notes</a>
-    <a href="/notes/outcome-done-stakeholder-problem.html" class="sub">Outcome Done</a>
-    <a href="/notes/benefit-becomes-evidence.html" class="sub">Benefit as evidence</a>
-  </div>
-</nav>
+      <div class="sidebar-group">
+        <span class="sidebar-group-label">Foundations</span>
+        <a href="/what-is.html">Start Here</a>
+        <a href="/theory.html">Theory</a>
+        <a href="/ethics-vs-privacy.html" class="sub">Ethics vs Privacy</a>
+      </div>
+      <div class="sidebar-group">
+        <span class="sidebar-group-label">Structures</span>
+        <a href="/policy/index.html" class="active">Policy</a>
+        <a href="/policy/gdpr.html" class="sub ">GDPR</a>
+        <a href="/policy/jisc.html" class="sub ">Jisc</a>
+        <a href="/policy/odi.html" class="sub ">ODI</a>
+        <a href="/governance/index.html">Governance</a>
+        <a href="/governance/ethics-boards.html" class="sub">Ethics boards</a>
+        <a href="/governance/review-committee.html" class="sub">Review committees</a>
+        <a href="/practice.html">Practice</a>
+      </div>
+      <div class="sidebar-group">
+        <span class="sidebar-group-label">Method</span>
+        <a href="/ethicmap.html">ETHICMAP</a>
+        <a href="/ethicmap/framework-explained.html" class="sub">Framework explained</a>
+        <a href="/ethicmap/theory-informed-design.html" class="sub">Theory-informed design</a>
+        <a href="/ethicmap/reading-list.html" class="sub">Reading list</a>
+      </div>
+      <div class="sidebar-group">
+        <span class="sidebar-group-label">Extension</span>
+        <a href="/newsletter.html">Notes</a>
+        <a href="/notes/outcome-done-stakeholder-problem.html" class="sub">Outcome Done</a>
+        <a href="/notes/benefit-becomes-evidence.html" class="sub">Benefit as evidence</a>
+        <a href="/notes/yale-health-expectations.html" class="sub">Yale wellness case</a>
+        <a href="/notes/just-as-long-as-its-legal.html" class="sub">Just As Long As Legal</a>
+      </div>
+    </nav>
     <main class="content" id="main">
-<section class="page-hero">
-  <div class="container">
-    <p class="eyebrow">By <strong>Laini Byfield</strong></p>
-    <h2>Policy</h2>
-    <p class="lead">Policies and standards provide guardrails &#8212; Small Data Ethics uses them as the minimum, not the finish line.</p>
-    <div class="chips"><span class="chip">Minimisation</span><span class="chip">Transparency</span><span class="chip">Purpose limitation</span></div>
-  </div>
-</section>
-<section class="section alt">
-  <div class="container prose">
-    <h2>Policy toolkit</h2>
-    <div class="link-grid">
-      <a class="link-card" href="/policy/gdpr.html"><h3>GDPR data minimisation</h3><p>Collect what is necessary &#8212; reduce re-identification and misuse creep.</p></a>
-      <a class="link-card" href="/policy/jisc.html"><h3>Jisc learning analytics code</h3><p>A practical code of practice for monitoring and participation scoring.</p></a>
-      <a class="link-card" href="/policy/odi.html"><h3>ODI canvases</h3><p>Lightweight planning tools that force the right questions early.</p></a>
-    </div>
-  </div>
-</section>
-<section class="section">
-  <div class="container prose">
-    <h2>How Small Data Ethics extends policy</h2>
-    <ul>
-      <li><strong>Policy</strong> often emphasizes legality and privacy. <strong>Small Data Ethics</strong> additionally emphasizes fairness, incentive, and repair.</li>
-      <li>Compliance can be achieved while harm still occurs. The operational goal is not &#8220;compliant&#8221; &#8212; it is &#8220;defensible, explainable, and correctable.&#8221;</li>
-    </ul>
-  </div>
-</section>
+
+      <section class="page-hero">
+        <div class="container">
+          <p class="eyebrow">By <strong>Laini Byfield</strong></p>
+          <h2>Policy</h2>
+          <p class="lead">Policies and standards provide guardrails &#8212; Small Data Ethics uses them as the minimum, not the finish line.</p>
+          <div class="chips"><span class="chip">Minimisation</span><span class="chip">Transparency</span><span class="chip">Purpose limitation</span></div>
+        </div>
+      </section>
+      <section class="section alt">
+        <div class="container prose">
+          <span class="page-label">Policy toolkit</span>
+          <h2>Three frameworks worth knowing</h2>
+          <div class="link-grid">
+            <a class="link-card" href="/policy/gdpr.html"><h3>GDPR data minimisation</h3><p>Collect what is necessary &#8212; reduce re-identification and misuse creep.</p></a>
+            <a class="link-card" href="/policy/jisc.html"><h3>Jisc learning analytics code</h3><p>A practical code of practice for monitoring and participation scoring.</p></a>
+            <a class="link-card" href="/policy/odi.html"><h3>ODI canvases</h3><p>Lightweight planning tools that force the right questions early.</p></a>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container prose">
+          <span class="page-label">How Small Data Ethics extends policy</span>
+          <h2>Policy is the floor, not the frame</h2>
+          <div class="stack">
+            <div class="stack-item">
+              <span class="ref-label">What policy covers</span>
+              <p>Legality, privacy, purpose limitation, and minimum disclosure standards. These are necessary conditions for ethical operation.</p>
+            </div>
+            <div class="stack-item">
+              <span class="ref-label">What Small Data Ethics adds</span>
+              <p>Fairness, incentive, contestability, and repair. Compliance can be achieved while harm still occurs. The operational goal is not &#8220;compliant&#8221; &#8212; it is &#8220;defensible, explainable, and correctable.&#8221;</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section alt">
+        <div class="container prose">
+          <blockquote class="pull-quote">Compliance is the ceiling that regulators set. Ethics is the ceiling you set for yourself.</blockquote>
+        </div>
+      </section>
     </main>
   </div>
   <footer class="site-footer">
