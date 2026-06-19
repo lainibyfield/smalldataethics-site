@@ -9,10 +9,45 @@
   <link rel="canonical" href="https://smalldataethics.com/governance/" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,700&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="icon" href="/assets/logo.png" type="image/png" />
   <link rel="stylesheet" href="/assets/styles.css" />
-</head><body>
+  <style>
+    :root { --mono: 'DM Mono', ui-monospace, monospace; }
+    .page-label {
+      display: block;
+      font-family: var(--mono);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--brick-muted);
+      margin-bottom: 8px;
+    }
+    .pull-quote {
+      font-family: 'Source Serif 4', serif;
+      font-style: italic;
+      font-size: 19px;
+      line-height: 1.55;
+      color: var(--navy);
+      background: var(--brick-pale);
+      border-left: 4px solid var(--brick);
+      padding: 18px 22px;
+      margin: 20px 0;
+      font-weight: 500;
+    }
+    .stance-label {
+      display: block;
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--brick-muted);
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="topbar">
     <a class="topbar-brand" href="/" aria-label="Small Data Ethics home">
@@ -23,72 +58,117 @@
       </span>
     </a>
     <span class="topbar-tagline" aria-hidden="true">For the professional who has to explain a wrong outcome to a real person</span>
+    <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Collapse sidebar" aria-pressed="false" title="Toggle sidebar">&#8249;</button>
     <button class="menu-btn" id="menu-btn" aria-controls="sidebar" aria-expanded="false">&#9776; Menu</button>
   </header>
   <div class="sidebar-overlay" id="sidebar-overlay" aria-hidden="true"></div>
   <div class="page-layout">
     <nav class="sidebar" id="sidebar" aria-label="Primary">
-  <div class="sidebar-group">
-    <span class="sidebar-group-label">Foundations</span>
-    <a href="/what-is.html">Start Here</a>
-    <a href="/theory.html">Theory</a>
-    <a href="/ethics-vs-privacy.html" class="sub">Ethics vs Privacy</a>
-  </div>
-  <div class="sidebar-group">
-    <span class="sidebar-group-label">Structures</span>
-    <a href="/policy/index.html">Policy</a>
-    <a href="/policy/gdpr.html" class="sub">GDPR</a>
-    <a href="/policy/jisc.html" class="sub">Jisc</a>
-    <a href="/policy/odi.html" class="sub">ODI</a>
-    <a href="/governance/index.html" class="active">Governance</a>
-    <a href="/governance/ethics-boards.html" class="sub">Ethics boards</a>
-    <a href="/governance/review-committee.html" class="sub">Review committees</a>
-    <a href="/practice.html">Practice</a>
-  </div>
-  <div class="sidebar-group">
-    <span class="sidebar-group-label">Method</span>
-    <a href="/ethicmap.html">ETHICMAP</a>
-    <a href="/ethicmap/framework-explained.html" class="sub">Framework explained</a>
-    <a href="/ethicmap/theory-informed-design.html" class="sub">Theory-informed design</a>
-    <a href="/ethicmap/reading-list.html" class="sub">Reading list</a>
-  </div>
-  <div class="sidebar-group">
-    <span class="sidebar-group-label">Extension</span>
-    <a href="/newsletter.html">Notes</a>
-    <a href="/notes/outcome-done-stakeholder-problem.html" class="sub">Outcome Done</a>
-    <a href="/notes/benefit-becomes-evidence.html" class="sub">Benefit as evidence</a>
-  </div>
-</nav>
+      <div class="sidebar-group">
+        <span class="sidebar-group-label">Foundations</span>
+        <a href="/what-is.html">Start Here</a>
+        <a href="/theory.html">Theory</a>
+        <a href="/ethics-vs-privacy.html" class="sub">Ethics vs Privacy</a>
+      </div>
+      <div class="sidebar-group">
+        <span class="sidebar-group-label">Structures</span>
+        <a href="/policy/index.html">Policy</a>
+        <a href="/policy/gdpr.html" class="sub">GDPR</a>
+        <a href="/policy/jisc.html" class="sub">Jisc</a>
+        <a href="/policy/odi.html" class="sub">ODI</a>
+        <a href="/governance/index.html" class="active">Governance</a>
+        <a href="/governance/ethics-boards.html" class="sub">Ethics boards</a>
+        <a href="/governance/review-committee.html" class="sub">Review committees</a>
+        <a href="/practice.html">Practice</a>
+      </div>
+      <div class="sidebar-group">
+        <span class="sidebar-group-label">Method</span>
+        <a href="/ethicmap.html">ETHICMAP</a>
+        <a href="/ethicmap/framework-explained.html" class="sub">Framework explained</a>
+        <a href="/ethicmap/theory-informed-design.html" class="sub">Theory-informed design</a>
+        <a href="/ethicmap/reading-list.html" class="sub">Reading list</a>
+      </div>
+      <div class="sidebar-group">
+        <span class="sidebar-group-label">Extension</span>
+        <a href="/newsletter.html">Notes</a>
+        <a href="/notes/outcome-done-stakeholder-problem.html" class="sub">Outcome Done</a>
+        <a href="/notes/benefit-becomes-evidence.html" class="sub">Benefit as evidence</a>
+        <a href="/notes/yale-health-expectations.html" class="sub">Yale wellness case</a>
+        <a href="/notes/just-as-long-as-its-legal.html" class="sub">Just As Long As Legal</a>
+      </div>
+    </nav>
     <main class="content" id="main">
-<section class="page-hero">
-  <div class="container">
-    <p class="eyebrow">By <strong>Laini Byfield</strong></p>
-    <h2>Governance</h2>
-    <p class="lead">Governance answers: who decides, who audits, who can change rules, and how people can challenge outcomes.</p>
-    <div class="chips"><span class="chip">Accountability</span><span class="chip">Review</span><span class="chip">Authority</span><span class="chip">Appeals</span></div>
-  </div>
-</section>
-<section class="section alt">
-  <div class="container prose">
-    <h2>Governance toolkit</h2>
-    <div class="link-grid">
-      <a class="link-card" href="/ethics-vs-privacy.html"><h3>Ethics vs privacy</h3><p>Why Small Data Ethics is broader than privacy &#8212; committees are one mechanism, not the full frame.</p></a>
-      <a class="link-card" href="/governance/ethics-boards.html"><h3>Ethics boards</h3><p>Scope, membership, authority, and what &#8220;review&#8221; should mean in practice.</p></a>
-      <a class="link-card" href="/governance/review-committee.html"><h3>Review committees</h3><p>A pragmatic option for operational systems &#8212; faster than boards, still accountable.</p></a>
-    </div>
-  </div>
-</section>
-<section class="section">
-  <div class="container prose">
-    <h2>Minimum governance controls for small data</h2>
-    <ul>
-      <li><strong>Role separation</strong>: who can change rules vs. who can run loads vs. who can approve exceptions</li>
-      <li><strong>Traceability</strong>: record source files, load dates, and rule versions</li>
-      <li><strong>Contestability</strong>: a clear appeals process with defined evidence standards</li>
-      <li><strong>Small-n protections</strong>: suppression and aggregation rules for reporting</li>
-    </ul>
-  </div>
-</section>
+
+      <section class="page-hero">
+        <div class="container">
+          <p class="eyebrow">By <strong>Laini Byfield</strong></p>
+          <h2>Governance</h2>
+          <p class="lead">Governance answers: who decides, who audits, who can change rules, and how people can challenge outcomes.</p>
+          <div class="chips">
+            <span class="chip">Accountability</span>
+            <span class="chip">Review</span>
+            <span class="chip">Authority</span>
+            <span class="chip">Appeals</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container prose">
+          <span class="page-label">Decision rights</span>
+          <h2>How authority and challenge flow</h2>
+          <p>In a governed small data system, authority flows downward from those who set rules to those who operate programs. Challenge flows upward from the data subject to the appeals layer. Both directions must exist &#8212; a system with authority but no challenge path is not governed. It is just powerful.</p>
+          <div class="gov-figure">
+            <img src="/assets/governance-decision-rights.png"
+                 alt="Governance decision rights diagram. Three boxes across the top: Rule Authority (with institution icon), Program Operator (with building icon), Appeals Review (with scales icon). Data Subject at the bottom. Navy solid arrows show authority flowing top-down from Rule Authority. Brick dashed arrows show challenge flowing bottom-up from Data Subject through Program Operator to Appeals Review, and the Challenge Path returning across the top. A documented decision arrow returns from Appeals Review back to the Data Subject." />
+            <p class="gov-caption">Authority flows down. Challenge flows up. Every data subject must have a path to both.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt">
+        <div class="container prose">
+          <span class="page-label">Governance toolkit</span>
+          <h2>Resources</h2>
+          <div class="link-grid">
+            <a class="link-card" href="/ethics-vs-privacy.html"><h3>Ethics vs privacy</h3><p>Why Small Data Ethics is broader than privacy &#8212; committees are one mechanism, not the full frame.</p></a>
+            <a class="link-card" href="/governance/ethics-boards.html"><h3>Ethics boards</h3><p>Scope, membership, authority, and what &#8220;review&#8221; should mean in practice.</p></a>
+            <a class="link-card" href="/governance/review-committee.html"><h3>Review committees</h3><p>A pragmatic option for operational systems &#8212; faster than boards, still accountable.</p></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container prose">
+          <span class="page-label">Minimum controls</span>
+          <h2>What governance requires in small data</h2>
+          <div class="stack">
+            <div class="stack-item">
+              <span class="control-label">Role separation</span>
+              <p>Who can change rules vs. who can run loads vs. who can approve exceptions. These must be different people or the control is decorative.</p>
+            </div>
+            <div class="stack-item">
+              <span class="control-label">Traceability</span>
+              <p>Record source files, load dates, and rule versions. An outcome that cannot be traced to its inputs cannot be contested or repaired.</p>
+            </div>
+            <div class="stack-item">
+              <span class="control-label">Contestability</span>
+              <p>A clear appeals process with defined evidence standards and timelines. &#8220;We have an appeals process&#8221; is not governance. A process with a documented path and a response commitment is.</p>
+            </div>
+            <div class="stack-item">
+              <span class="control-label">Small-n protections</span>
+              <p>Suppression and aggregation rules for reporting. When a cohort is small enough that individuals are identifiable in aggregate data, governance requires a documented suppression standard.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt">
+        <div class="container prose">
+          <blockquote class="pull-quote">A board that can only advise is not governance. Governance requires the authority to say no, demand changes, and require a repair plan when systems fail.</blockquote>
+        </div>
+      </section>
+
     </main>
   </div>
   <footer class="site-footer">
