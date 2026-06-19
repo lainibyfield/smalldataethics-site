@@ -4,15 +4,50 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Theory | Small Data Ethics</title>
-  <meta name="description" content="Theory foundations for Small Data Ethics &#8212; contextual integrity, power, and fairness." />
+  <meta name="description" content="Theory foundations for Small Data Ethics &#8212; contextual integrity, power, and fairness, curated by Laini Byfield." />
   <meta name="author" content="Laini Byfield" />
   <link rel="canonical" href="https://smalldataethics.com/theory.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,700&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="icon" href="/assets/logo.png" type="image/png" />
   <link rel="stylesheet" href="/assets/styles.css" />
-</head><body>
+  <style>
+    :root { --mono: 'DM Mono', ui-monospace, monospace; }
+    .page-label {
+      display: block;
+      font-family: var(--mono);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--brick-muted);
+      margin-bottom: 8px;
+    }
+    .pull-quote {
+      font-family: 'Source Serif 4', serif;
+      font-style: italic;
+      font-size: 19px;
+      line-height: 1.55;
+      color: var(--navy);
+      background: var(--brick-pale);
+      border-left: 4px solid var(--brick);
+      padding: 18px 22px;
+      margin: 20px 0;
+      font-weight: 500;
+    }
+    .stance-label {
+      display: block;
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--brick-muted);
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="topbar">
     <a class="topbar-brand" href="/" aria-label="Small Data Ethics home">
@@ -23,91 +58,136 @@
       </span>
     </a>
     <span class="topbar-tagline" aria-hidden="true">For the professional who has to explain a wrong outcome to a real person</span>
+    <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Collapse sidebar" aria-pressed="false" title="Toggle sidebar">&#8249;</button>
     <button class="menu-btn" id="menu-btn" aria-controls="sidebar" aria-expanded="false">&#9776; Menu</button>
   </header>
   <div class="sidebar-overlay" id="sidebar-overlay" aria-hidden="true"></div>
   <div class="page-layout">
     <nav class="sidebar" id="sidebar" aria-label="Primary">
-  <div class="sidebar-group">
-    <span class="sidebar-group-label">Foundations</span>
-    <a href="/what-is.html">Start Here</a>
-    <a href="/theory.html" class="active">Theory</a>
-    <a href="/ethics-vs-privacy.html" class="sub">Ethics vs Privacy</a>
-  </div>
-  <div class="sidebar-group">
-    <span class="sidebar-group-label">Structures</span>
-    <a href="/policy/index.html">Policy</a>
-    <a href="/policy/gdpr.html" class="sub">GDPR</a>
-    <a href="/policy/jisc.html" class="sub">Jisc</a>
-    <a href="/policy/odi.html" class="sub">ODI</a>
-    <a href="/governance/index.html">Governance</a>
-    <a href="/governance/ethics-boards.html" class="sub">Ethics boards</a>
-    <a href="/governance/review-committee.html" class="sub">Review committees</a>
-    <a href="/practice.html">Practice</a>
-  </div>
-  <div class="sidebar-group">
-    <span class="sidebar-group-label">Method</span>
-    <a href="/ethicmap.html">ETHICMAP</a>
-    <a href="/ethicmap/framework-explained.html" class="sub">Framework explained</a>
-    <a href="/ethicmap/theory-informed-design.html" class="sub">Theory-informed design</a>
-    <a href="/ethicmap/reading-list.html" class="sub">Reading list</a>
-  </div>
-  <div class="sidebar-group">
-    <span class="sidebar-group-label">Extension</span>
-    <a href="/newsletter.html">Notes</a>
-    <a href="/notes/outcome-done-stakeholder-problem.html" class="sub">Outcome Done</a>
-    <a href="/notes/benefit-becomes-evidence.html" class="sub">Benefit as evidence</a>
-  </div>
-</nav>
+      <div class="sidebar-group">
+        <span class="sidebar-group-label">Foundations</span>
+        <a href="/what-is.html">Start Here</a>
+        <a href="/theory.html" class="active">Theory</a>
+        <a href="/ethics-vs-privacy.html" class="sub">Ethics vs Privacy</a>
+      </div>
+      <div class="sidebar-group">
+        <span class="sidebar-group-label">Structures</span>
+        <a href="/policy/index.html">Policy</a>
+        <a href="/policy/gdpr.html" class="sub">GDPR</a>
+        <a href="/policy/jisc.html" class="sub">Jisc</a>
+        <a href="/policy/odi.html" class="sub">ODI</a>
+        <a href="/governance/index.html">Governance</a>
+        <a href="/governance/ethics-boards.html" class="sub">Ethics boards</a>
+        <a href="/governance/review-committee.html" class="sub">Review committees</a>
+        <a href="/practice.html">Practice</a>
+      </div>
+      <div class="sidebar-group">
+        <span class="sidebar-group-label">Method</span>
+        <a href="/ethicmap.html">ETHICMAP</a>
+        <a href="/ethicmap/framework-explained.html" class="sub">Framework explained</a>
+        <a href="/ethicmap/theory-informed-design.html" class="sub">Theory-informed design</a>
+        <a href="/ethicmap/reading-list.html" class="sub">Reading list</a>
+      </div>
+      <div class="sidebar-group">
+        <span class="sidebar-group-label">Extension</span>
+        <a href="/newsletter.html">Notes</a>
+        <a href="/notes/outcome-done-stakeholder-problem.html" class="sub">Outcome Done</a>
+        <a href="/notes/benefit-becomes-evidence.html" class="sub">Benefit as evidence</a>
+        <a href="/notes/yale-health-expectations.html" class="sub">Yale wellness case</a>
+        <a href="/notes/just-as-long-as-its-legal.html" class="sub">Just As Long As Legal</a>
+      </div>
+    </nav>
     <main class="content" id="main">
-<section class="page-hero">
-  <div class="container">
-    <p class="eyebrow">By <strong>Laini Byfield</strong></p>
-    <h2>Theory</h2>
-    <p class="lead">Foundations you can cite and teach &#8212; then operationalize through governance and practice.</p>
-    <div class="chips"><span class="chip">Contextual integrity</span><span class="chip">Fairness</span><span class="chip">Power</span><span class="chip">Accountability</span></div>
-  </div>
-</section>
-<section class="section">
-  <div class="container prose">
-    <h2>Foundational anchors</h2>
+
+      <section class="page-hero">
+        <div class="container">
+          <p class="eyebrow">By <strong>Laini Byfield</strong></p>
+          <h2>Theory</h2>
+          <p class="lead">Foundations you can cite and teach &#8212; then operationalize through governance and practice.</p>
+          <div class="chips">
+            <span class="chip">Contextual integrity</span>
+            <span class="chip">Fairness</span>
+            <span class="chip">Power</span>
+            <span class="chip">Accountability</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container prose">
+          <span class="page-label">Foundational anchors</span>
+          <h2>Four ideas that do real work</h2>
+          <blockquote class="pull-quote">Privacy is about appropriate information flows within a context &#8212; shaped by norms, not just rules. The same data can be harmful when it moves to the wrong place.</blockquote>
     <div class="stack">
-      <div class="stack-item">
-        <h3>Contextual integrity</h3>
-        <p>Privacy is about appropriate information flows within a context, shaped by norms: who shares what, with whom, and for what purpose. The same data can be harmful when moved to a new context &#8212; even if it was collected appropriately in the first one.</p>
-        <p class="note">Suggested citation: Helen Nissenbaum, <em>Privacy in Context</em> (Stanford University Press, 2010).</p>
-      </div>
-      <div class="stack-item">
-        <h3>Power and proximity</h3>
-        <p>Small systems create relational exposure. The system operator often knows the data subject &#8212; a supervisor, a benefits administrator, a program coordinator. That proximity changes incentives and raises the accountability bar in ways that large-scale anonymous systems do not face.</p>
-      </div>
-      <div class="stack-item">
-        <h3>Fairness under small-n</h3>
-        <p>Small cohorts make subgroup analysis and reporting risky. Suppression, aggregation, and careful narrative framing are not optional politeness &#8212; they are ethical design choices with real stakes.</p>
-      </div>
-      <div class="stack-item">
-        <h3>Contestability as a design requirement</h3>
-        <p>Systems that produce consequential outcomes without an appeals path are not neutral &#8212; they are authoritative by default. The absence of a challenge mechanism is itself a design choice that concentrates power.</p>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="section alt">
-  <div class="container prose">
-    <h2>From theory to practice</h2>
-    <ul>
-      <li><strong>Policy</strong> translates principles into rules and standards</li>
-      <li><strong>Governance</strong> assigns responsibility, review, and authority</li>
-      <li><strong>Practice</strong> embeds controls into day-to-day operations</li>
-      <li><strong>ETHICMAP</strong> makes the whole thing repeatable across cycles</li>
-    </ul>
-    <div class="link-grid" style="margin-top:20px;">
-      <a class="link-card" href="/policy/index.html"><h3>Policy</h3><p>Standards and frameworks that operationalize these principles.</p></a>
-      <a class="link-card" href="/governance/index.html"><h3>Governance</h3><p>Who decides, who audits, who can correct.</p></a>
-      <a class="link-card" href="/ethicmap/reading-list.html"><h3>Reading list</h3><p>Books that ground this theory in practice.</p></a>
-    </div>
-  </div>
-</section>
+
+            <div class="stack-item">
+              <span class="anchor-label">Anchor 1</span>
+              <h3>Contextual integrity</h3>
+              <p>Privacy is about appropriate information flows within a context, shaped by norms: who shares what, with whom, and for what purpose. The same data can be harmful when moved to a new context &#8212; even if it was collected appropriately in the first one.</p>
+              <p class="note">Suggested citation: Helen Nissenbaum, <em>Privacy in Context</em> (Stanford University Press, 2010).</p>
+            </div>
+
+            <div class="stack-item">
+              <span class="anchor-label">Anchor 2</span>
+              <h3>Power and proximity</h3>
+              <p>Small systems create relational exposure. The system operator often knows the data subject &#8212; a supervisor, a benefits administrator, a program coordinator. That proximity changes incentives and raises the accountability bar in ways that large-scale anonymous systems do not face.</p>
+            </div>
+
+            <div class="stack-item">
+              <span class="anchor-label">Anchor 3</span>
+              <h3>Fairness under small-n</h3>
+              <p>Small cohorts make subgroup analysis and reporting risky. Suppression, aggregation, and careful narrative framing are not optional politeness &#8212; they are ethical design choices with real stakes.</p>
+            </div>
+
+            <div class="stack-item">
+              <span class="anchor-label">Anchor 4</span>
+              <h3>Contestability as a design requirement</h3>
+              <p>Systems that produce consequential outcomes without an appeals path are not neutral &#8212; they are authoritative by default. The absence of a challenge mechanism is itself a design choice that concentrates power.</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt">
+        <div class="container prose">
+          <span class="page-label">Contextual integrity in practice</span>
+          <h2>When data crosses a context boundary</h2>
+          <p>The most common ethics failure in small data is not a breach &#8212; it is a context crossing. Data collected appropriately in one setting (employment, healthcare, benefits) becomes harmful the moment it flows into a setting with different norms, purposes, and power relationships.</p>
+
+          <div class="theory-figure">
+            <img src="/assets/contextual-integrity-diagram.png"
+                 alt="Three-panel diagram illustrating contextual integrity. Left panel in navy: an employer building, three suited figures, and a circular governed data flow with record cards cycling around a verified shield. Middle panel in grey: a hospital and clinical staff with static records and a medical shield but no cycling arrows. Right panel in brick red: a benefits umbrella with people underneath, a heart shield, and records struck by a lightning bolt where data from the other contexts arrives uninvited. An arrow runs left to right through all three panels, showing the data flow that causes harm on impact." />
+            <p class="theory-caption">Data that flows appropriately within its originating context becomes harmful the moment it crosses into a context with different norms, purposes, and power relationships.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container prose">
+          <span class="page-label">The pull quote</span>
+          <blockquote class="pull-quote">Theory matters only if it shapes system choices. A principle that does not reach the data pipeline, the contract clause, or the appeals process is decoration.</blockquote>
+        </div>
+      </section>
+
+      <section class="section alt">
+        <div class="container prose">
+          <span class="page-label">From theory to operations</span>
+          <h2>How these ideas become system choices</h2>
+          <ul>
+            <li><strong>Policy</strong> translates principles into rules and standards</li>
+            <li><strong>Governance</strong> assigns responsibility, review, and authority</li>
+            <li><strong>Practice</strong> embeds controls into day-to-day operations</li>
+            <li><strong>ETHICMAP</strong> makes the whole thing repeatable across cycles</li>
+          </ul>
+          <div class="link-grid" style="margin-top:20px;">
+            <a class="link-card" href="/policy/index.html"><h3>Policy</h3><p>Standards and frameworks that operationalize these principles.</p></a>
+            <a class="link-card" href="/governance/index.html"><h3>Governance</h3><p>Who decides, who audits, who can correct.</p></a>
+            <a class="link-card" href="/ethicmap/reading-list.html"><h3>Reading list</h3><p>Books that ground this theory in practice.</p></a>
+          </div>
+        </div>
+      </section>
+
     </main>
   </div>
   <footer class="site-footer">

@@ -9,10 +9,45 @@
   <link rel="canonical" href="https://smalldataethics.com/what-is.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,700&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="icon" href="/assets/logo.png" type="image/png" />
   <link rel="stylesheet" href="/assets/styles.css" />
-</head><body>
+  <style>
+    :root { --mono: 'DM Mono', ui-monospace, monospace; }
+    .page-label {
+      display: block;
+      font-family: var(--mono);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--brick-muted);
+      margin-bottom: 8px;
+    }
+    .pull-quote {
+      font-family: 'Source Serif 4', serif;
+      font-style: italic;
+      font-size: 19px;
+      line-height: 1.55;
+      color: var(--navy);
+      background: var(--brick-pale);
+      border-left: 4px solid var(--brick);
+      padding: 18px 22px;
+      margin: 20px 0;
+      font-weight: 500;
+    }
+    .stance-label {
+      display: block;
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--brick-muted);
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="topbar">
     <a class="topbar-brand" href="/" aria-label="Small Data Ethics home">
@@ -23,105 +58,139 @@
       </span>
     </a>
     <span class="topbar-tagline" aria-hidden="true">For the professional who has to explain a wrong outcome to a real person</span>
+    <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Collapse sidebar" aria-pressed="false" title="Toggle sidebar">&#8249;</button>
     <button class="menu-btn" id="menu-btn" aria-controls="sidebar" aria-expanded="false">&#9776; Menu</button>
   </header>
   <div class="sidebar-overlay" id="sidebar-overlay" aria-hidden="true"></div>
   <div class="page-layout">
     <nav class="sidebar" id="sidebar" aria-label="Primary">
-  <div class="sidebar-group">
-    <span class="sidebar-group-label">Foundations</span>
-    <a href="/what-is.html" class="active">Start Here</a>
-    <a href="/theory.html">Theory</a>
-    <a href="/ethics-vs-privacy.html" class="sub">Ethics vs Privacy</a>
-  </div>
-  <div class="sidebar-group">
-    <span class="sidebar-group-label">Structures</span>
-    <a href="/policy/index.html">Policy</a>
-    <a href="/policy/gdpr.html" class="sub">GDPR</a>
-    <a href="/policy/jisc.html" class="sub">Jisc</a>
-    <a href="/policy/odi.html" class="sub">ODI</a>
-    <a href="/governance/index.html">Governance</a>
-    <a href="/governance/ethics-boards.html" class="sub">Ethics boards</a>
-    <a href="/governance/review-committee.html" class="sub">Review committees</a>
-    <a href="/practice.html">Practice</a>
-  </div>
-  <div class="sidebar-group">
-    <span class="sidebar-group-label">Method</span>
-    <a href="/ethicmap.html">ETHICMAP</a>
-    <a href="/ethicmap/framework-explained.html" class="sub">Framework explained</a>
-    <a href="/ethicmap/theory-informed-design.html" class="sub">Theory-informed design</a>
-    <a href="/ethicmap/reading-list.html" class="sub">Reading list</a>
-  </div>
-  <div class="sidebar-group">
-    <span class="sidebar-group-label">Extension</span>
-    <a href="/newsletter.html">Notes</a>
-    <a href="/notes/outcome-done-stakeholder-problem.html" class="sub">Outcome Done</a>
-    <a href="/notes/benefit-becomes-evidence.html" class="sub">Benefit as evidence</a>
-  </div>
-</nav>
+      <div class="sidebar-group">
+        <span class="sidebar-group-label">Foundations</span>
+        <a href="/what-is.html" class="active">Start Here</a>
+        <a href="/theory.html">Theory</a>
+        <a href="/ethics-vs-privacy.html" class="sub">Ethics vs Privacy</a>
+      </div>
+      <div class="sidebar-group">
+        <span class="sidebar-group-label">Structures</span>
+        <a href="/policy/index.html">Policy</a>
+        <a href="/policy/gdpr.html" class="sub">GDPR</a>
+        <a href="/policy/jisc.html" class="sub">Jisc</a>
+        <a href="/policy/odi.html" class="sub">ODI</a>
+        <a href="/governance/index.html">Governance</a>
+        <a href="/governance/ethics-boards.html" class="sub">Ethics boards</a>
+        <a href="/governance/review-committee.html" class="sub">Review committees</a>
+        <a href="/practice.html">Practice</a>
+      </div>
+      <div class="sidebar-group">
+        <span class="sidebar-group-label">Method</span>
+        <a href="/ethicmap.html">ETHICMAP</a>
+        <a href="/ethicmap/framework-explained.html" class="sub">Framework explained</a>
+        <a href="/ethicmap/theory-informed-design.html" class="sub">Theory-informed design</a>
+        <a href="/ethicmap/reading-list.html" class="sub">Reading list</a>
+      </div>
+      <div class="sidebar-group">
+        <span class="sidebar-group-label">Extension</span>
+        <a href="/newsletter.html">Notes</a>
+        <a href="/notes/outcome-done-stakeholder-problem.html" class="sub">Outcome Done</a>
+        <a href="/notes/benefit-becomes-evidence.html" class="sub">Benefit as evidence</a>
+        <a href="/notes/yale-health-expectations.html" class="sub">Yale wellness case</a>
+        <a href="/notes/just-as-long-as-its-legal.html" class="sub">Just As Long As Legal</a>
+      </div>
+    </nav>
     <main class="content" id="main">
-<section class="page-hero">
-  <div class="container">
-    <p class="eyebrow">By <strong>Laini Byfield</strong></p>
-    <h2>What is Small Data Ethics</h2>
-    <p class="lead">A human-scale ethics lens for data systems where people are identifiable, errors concentrate, and outcomes are personal.</p>
-    <div class="chips"><span class="chip">Human-scale</span><span class="chip">Identifiability</span><span class="chip">Consequences</span><span class="chip">Repair</span></div>
-  </div>
-</section>
-<section class="section">
-  <div class="container prose">
-    <h2>Definition</h2>
-    <p><strong>Small Data Ethics</strong> is the practice of collecting, analyzing, and using human-scale data with proportionality, context preservation, explainability, and repair.</p>
-    <p>It assumes the data subject can be recognized &#8212; it designs for accountability.</p>
-  </div>
-</section>
-<section class="section alt">
-  <div class="container prose">
-    <h2>Core principles</h2>
-    <div class="grid-2">
-      <div class="callout">
-        <h3>Proportionality</h3>
-        <p>Collect only what is necessary for the decision. &#8220;Nice to have&#8221; becomes risk in small systems.</p>
-        <h3 style="margin-top:14px;">Context preservation</h3>
-        <p>Numbers without context create false certainty. Document assumptions and edge cases.</p>
-      </div>
-      <div class="callout">
-        <h3>Explainability</h3>
-        <p>If you cannot explain the metric to the person it describes, it does not belong in high-stakes use.</p>
-        <h3 style="margin-top:14px;">Repair</h3>
-        <p>Design for correction, appeal, and recovery. Permanent digital scars are unethical in small systems.</p>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="section">
-  <div class="container prose">
-    <h2>Small data is not &#8220;small risk&#8221;</h2>
-    <div class="card wide">
-      <div class="grid-3">
-        <div><h4>Errors concentrate</h4><p>There is no averaging effect. One bad join can become someone&#8217;s outcome.</p></div>
-        <div><h4>People are visible</h4><p>Small-n reporting can identify individuals even when names are removed.</p></div>
-        <div><h4>Power is sharper</h4><p>Data is used by institutions. Small systems amplify the impact on individuals.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="section alt">
-  <div class="container prose">
-    <h2>Common settings</h2>
-    <ul>
-      <li>Workplace incentives, benefits eligibility, and compliance tracking</li>
-      <li>Education and learning analytics</li>
-      <li>Clinical programs, referrals, and small cohort interventions</li>
-      <li>Community programs with eligibility, stipends, or resource distribution</li>
-    </ul>
-  </div>
-</section>
-<section class="section">
-  <div class="container prose">
-    <p class="note"><em>This framework did not emerge in abstraction. It grew out of direct experience designing wellness and incentive systems, and from witnessing how technically sound programs can still cause confusion, disengagement, and harm. Small Data Ethics exists to make those moments visible &#8212; not as failures of people, but as signals from systems that need to be re-examined.</em></p>
-  </div>
-</section>
+
+      <section class="page-hero">
+        <div class="container">
+          <p class="eyebrow">By <strong>Laini Byfield</strong></p>
+          <h2>What is Small Data Ethics</h2>
+          <p class="lead">A human-scale ethics lens for data systems where people are identifiable, errors concentrate, and outcomes are personal.</p>
+          <div class="chips">
+            <span class="chip">Human-scale</span><span class="chip">Identifiability</span><span class="chip">Consequences</span><span class="chip">Repair</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container prose">
+          <span class="page-label">The definition</span>
+                    <h2>Definition</h2>
+          <p><strong>Small Data Ethics</strong> is the practice of collecting, analyzing, and using human-scale data with proportionality, context preservation, explainability, and repair.</p>
+          <p>It assumes the data subject can be recognized &#8212; it designs for accountability.</p>
+        </div>
+      </section>
+
+      <section class="section alt">
+        <div class="container prose">
+          <span class="page-label">Core principles</span>
+          <h2>Four commitments</h2>
+          <div class="grid-2">
+            <div class="callout">
+              <span class="principle-label">Proportionality</span>
+              <h3 style="margin-bottom:6px;">Collect only what is necessary.</h3>
+              <p>&#8220;Nice to have&#8221; becomes risk in small systems. Every extra field increases identifiability.</p>
+              <span class="principle-label" style="margin-top:16px;">Context preservation</span>
+              <h3 style="margin-bottom:6px;">Numbers without context create false certainty.</h3>
+              <p>Document assumptions and edge cases. The metric is not the person.</p>
+            </div>
+            <div class="callout">
+              <span class="principle-label">Explainability</span>
+              <h3 style="margin-bottom:6px;">If you cannot explain it to the person it describes, it does not belong in high-stakes use.</h3>
+              <p>Opacity is not neutral. It concentrates power in the system operator.</p>
+              <span class="principle-label" style="margin-top:16px;">Repair</span>
+              <h3 style="margin-bottom:6px;">Design for correction, appeal, and recovery.</h3>
+              <p>Permanent digital scars are unethical in small systems. Errors must be contestable and fixable.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container prose">
+          <span class="page-label">Why it matters</span>
+                    <h2>Small data is not &#8220;small risk&#8221;</h2>
+          <div class="visual-figure">
+            <img src="/assets/small-data-errors-concentrate.png"
+                 alt="Two grids side by side. Left: a large grid of hundreds of navy dots where a single red dot near the bottom is nearly invisible among the mass. Right: a small 3x4 grid of navy dots where a single red dot in the center is immediately the only thing visible. The contrast illustrates how errors concentrate in small data systems where there is no averaging effect." />
+            <p class="visual-caption">In a large dataset, one error disappears. In a small one, it becomes someone&#8217;s outcome.</p>
+          </div>
+          <div class="card wide" style="margin-top:24px;">
+            <div class="grid-3">
+              <div>
+                <span class="principle-label">Errors concentrate</span>
+                <p>There is no averaging effect. One bad join can become someone&#8217;s outcome.</p>
+              </div>
+              <div>
+                <span class="principle-label">People are visible</span>
+                <p>Small-n reporting can identify individuals even when names are removed.</p>
+              </div>
+              <div>
+                <span class="principle-label">Power is sharper</span>
+                <p>Data is used by institutions. Small systems amplify the impact on individuals.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt">
+        <div class="container prose">
+          <span class="page-label">Common settings</span>
+          <h2>Where this applies</h2>
+          <ul>
+            <li>Workplace incentives, benefits eligibility, and compliance tracking</li>
+            <li>Education and learning analytics</li>
+            <li>Clinical programs, referrals, and small cohort interventions</li>
+            <li>Community programs with eligibility, stipends, or resource distribution</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container prose">
+          <blockquote class="pull-quote">This framework did not emerge in abstraction. It grew out of direct experience designing wellness and incentive systems, and from witnessing how technically sound programs can still cause confusion, disengagement, and harm. Small Data Ethics exists to make those moments visible &#8212; not as failures of people, but as signals from systems that need to be re-examined.</blockquote>
+        </div>
+      </section>
+
     </main>
   </div>
   <footer class="site-footer">
