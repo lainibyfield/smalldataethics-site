@@ -111,6 +111,29 @@ strong { font-weight: 600; }
   margin-left: auto;
 }
 
+/* ── Sidebar toggle — desktop push/compress ── */
+.sidebar-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,.18);
+  background: none;
+  color: rgba(255,255,255,.7);
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  flex-shrink: 0;
+  transition: background .12s, color .12s;
+  margin-right: 4px;
+}
+.sidebar-toggle:hover {
+  background: rgba(255,255,255,.10);
+  color: #fff;
+}
+
 /* ── Layout ── */
 .page-layout {
   display: flex;
@@ -128,7 +151,39 @@ strong { font-weight: 600; }
   top: var(--topbar-h);
   height: calc(100vh - var(--topbar-h));
   overflow-y: auto;
+  overflow-x: hidden;
   padding: 28px 0 48px;
+  transition: width .2s ease, padding .2s ease;
+}
+
+/* Collapsed state — thin brick rail remains */
+body.sidebar-collapsed .sidebar {
+  width: 4px;
+  padding: 0;
+  border-right-color: var(--brick-muted);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+body.sidebar-collapsed .sidebar:hover {
+  border-right-color: var(--brick);
+}
+
+/* Hide sidebar content when collapsed */
+body.sidebar-collapsed .sidebar-group {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sidebar-group {
+  transition: opacity .15s ease;
+}
+
+/* Content area expands when sidebar collapses */
+.content {
+  flex: 1;
+  min-width: 0;
+  transition: none;
 }
 
 .sidebar-group { margin-bottom: 24px; }
@@ -179,9 +234,6 @@ strong { font-weight: 600; }
   background: var(--brick-pale);
   font-weight: 500;
 }
-
-/* ── Content ── */
-.content { flex: 1; min-width: 0; }
 
 .container {
   width: min(860px, calc(100% - 48px));
@@ -343,6 +395,7 @@ strong { font-weight: 600; }
 /* ── Mobile ── */
 @media (max-width: 768px) {
   .topbar-tagline { display: none; }
+  .sidebar-toggle { display: none; }
   .menu-btn { display: block; }
 
   .sidebar {
@@ -369,6 +422,10 @@ strong { font-weight: 600; }
   .grid-2, .grid-3, .ethicmap-grid, .link-grid { grid-template-columns: 1fr; }
   .container { width: calc(100% - 32px); }
 }
+
+/* Suppress transitions during state restore on page load */
+body.no-transition .sidebar,
+body.no-transition .sidebar-group { transition: none !important; }
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .page-hero h2 { font-size: 28px; }

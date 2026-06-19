@@ -1,31 +1,84 @@
+// Small Data Ethics — script.js
+// Year stamp + mobile sidebar drawer + desktop sidebar toggle. No tracking.
+
 (function () {
-  var el = document.getElementById("year");
-  if (el) el.textContent = String(new Date().getFullYear());
 
-  var btn     = document.getElementById("menu-btn");
+  // ── Year stamp ──
+  var yr = document.getElementById("year");
+  if (yr) yr.textContent = String(new Date().getFullYear());
+
+  // ── Desktop sidebar toggle (push/compress) ──
+  var toggleBtn = document.getElementById("sidebar-toggle");
+  var STORAGE_KEY = "sde-sidebar-collapsed";
+
+  function applyCollapsed(collapsed, animate) {
+    if (!animate) document.body.classList.add("no-transition");
+    if (collapsed) {
+      document.body.classList.add("sidebar-collapsed");
+    } else {
+      document.body.classList.remove("sidebar-collapsed");
+    }
+    if (toggleBtn) {
+      toggleBtn.setAttribute("aria-pressed", String(collapsed));
+      toggleBtn.setAttribute("aria-label", collapsed ? "Expand sidebar" : "Collapse sidebar");
+      toggleBtn.textContent = collapsed ? "›" : "‹";
+    }
+    if (!animate) {
+      // Force reflow then remove the no-transition class
+      document.body.offsetHeight;
+      document.body.classList.remove("no-transition");
+    }
+  }
+
+  // Restore saved state immediately (no animation on load)
+  var savedCollapsed = localStorage.getItem(STORAGE_KEY) === "true";
+  applyCollapsed(savedCollapsed, false);
+
+  // Wire up toggle button
+  if (toggleBtn) {
+    toggleBtn.addEventListener("click", function () {
+      var nowCollapsed = !document.body.classList.contains("sidebar-collapsed");
+      applyCollapsed(nowCollapsed, true);
+      try { localStorage.setItem(STORAGE_KEY, String(nowCollapsed)); } catch(e) {}
+    });
+  }
+
+  // Also allow clicking the collapsed rail to reopen
   var sidebar = document.getElementById("sidebar");
-  var overlay = document.getElementById("sidebar-overlay");
+  if (sidebar) {
+    sidebar.addEventListener("click", function (e) {
+      if (document.body.classList.contains("sidebar-collapsed")) {
+        applyCollapsed(false, true);
+        try { localStorage.setItem(STORAGE_KEY, "false"); } catch(e) {}
+      }
+    });
+  }
 
-  if (btn && sidebar && overlay) {
-    btn.addEventListener("click", function () {
+  // ── Mobile sidebar drawer ──
+  var menuBtn  = document.getElementById("menu-btn");
+  var overlay  = document.getElementById("sidebar-overlay");
+
+  if (menuBtn && sidebar && overlay) {
+    menuBtn.addEventListener("click", function () {
       var isOpen = sidebar.classList.toggle("open");
       overlay.classList.toggle("open", isOpen);
-      btn.textContent = isOpen ? "\u2715 Close" : "\u2630 Menu";
-      btn.setAttribute("aria-expanded", String(isOpen));
+      menuBtn.textContent = isOpen ? "\u2715 Close" : "\u2630 Menu";
+      menuBtn.setAttribute("aria-expanded", String(isOpen));
     });
     overlay.addEventListener("click", function () {
       sidebar.classList.remove("open");
       overlay.classList.remove("open");
-      btn.textContent = "\u2630 Menu";
-      btn.setAttribute("aria-expanded", "false");
+      menuBtn.textContent = "\u2630 Menu";
+      menuBtn.setAttribute("aria-expanded", "false");
     });
     sidebar.querySelectorAll("a").forEach(function (a) {
       a.addEventListener("click", function () {
         sidebar.classList.remove("open");
         overlay.classList.remove("open");
-        btn.textContent = "\u2630 Menu";
-        btn.setAttribute("aria-expanded", "false");
+        menuBtn.textContent = "\u2630 Menu";
+        menuBtn.setAttribute("aria-expanded", "false");
       });
     });
   }
+
 })();

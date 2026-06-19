@@ -1,0 +1,243 @@
+/* Small Data Ethics — article.css
+   Shared stylesheet for Notes / long-form articles.
+   Loads AFTER styles.css. Keeps the site shell (topbar, sidebar, white/brick
+   palette) and adds an editorial article layer: DM Mono labels, pull quotes,
+   figures, question callouts, closing banner, bio.
+
+   Fonts assumed loaded in <head>: Source Serif 4, DM Sans, DM Mono.
+*/
+
+:root {
+  --mono: 'DM Mono', ui-monospace, monospace;
+}
+
+/* ── Article container ── */
+.article-body {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px 24px 64px;
+}
+
+/* ── Byline ── */
+.article-byline {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: .04em;
+  color: var(--faint);
+  margin-bottom: 32px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* ── Lead paragraph ── */
+.article-body .lead-para {
+  font-size: 16.5px;
+  line-height: 1.8;
+  color: var(--ink);
+  margin-bottom: 24px;
+}
+
+/* ── Body text ── */
+.article-body p {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.78;
+  margin-bottom: 18px;
+}
+.article-body p:last-child { margin-bottom: 0; }
+.article-body strong { font-weight: 600; color: var(--ink); }
+.article-body em { font-style: italic; }
+.article-body ul,
+.article-body ol { color: var(--muted); font-size: 15px; line-height: 1.7; padding-left: 22px; margin-bottom: 18px; }
+.article-body li { margin: 8px 0; }
+.article-body a { color: var(--brick); }
+.article-body a:hover { color: var(--brick-light); }
+
+/* ── Section blocks with mono label + serif heading ── */
+.section-block {
+  margin: 44px 0 18px;
+}
+.section-label {
+  display: block;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--brick);
+  margin-bottom: 8px;
+}
+.article-body h2 {
+  font-family: 'Source Serif 4', serif;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--navy);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 10px;
+  margin: 0;
+  letter-spacing: .01em;
+}
+
+/* Standalone h2 (no section-block wrapper) */
+.article-body > h2 {
+  margin: 40px 0 16px;
+}
+
+.article-body h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--brick);
+  margin: 24px 0 8px;
+}
+
+/* ── Eyebrow (mono, above the title in hero) ── */
+.article-eyebrow {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--brick);
+  margin-bottom: 12px;
+}
+
+/* ── Pull quote ── */
+.article-body blockquote,
+.pull {
+  font-family: 'Source Serif 4', serif;
+  font-style: italic;
+  font-size: 19px;
+  line-height: 1.55;
+  color: var(--navy);
+  background: var(--brick-pale);
+  border-left: 4px solid var(--brick);
+  padding: 18px 22px;
+  margin: 28px 0;
+  font-weight: 500;
+}
+
+/* ── Figures ── */
+.article-figure {
+  margin: 32px 0;
+  text-align: center;
+}
+.article-figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 16px rgba(28,43,64,.10);
+}
+.article-figure.diagram img {
+  background: #fff;
+  padding: 12px;
+}
+.article-figure figcaption {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--faint);
+  margin-top: 10px;
+}
+
+/* ── Question / callout block ── */
+.questions-block {
+  margin: 36px 0;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 24px;
+  background: var(--panel);
+}
+.q-label {
+  display: block;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--brick);
+  margin-bottom: 16px;
+}
+.questions-block ol { padding-left: 20px; margin: 0; }
+.questions-block li {
+  margin-bottom: 12px;
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--ink);
+}
+.questions-block li:last-child { margin-bottom: 0; }
+
+/* ── Closing banner ── */
+.closing-banner {
+  margin: 44px 0 0;
+  padding: 32px;
+  background: var(--navy);
+  border-radius: 10px;
+  text-align: center;
+}
+.closing-banner p {
+  font-family: 'Source Serif 4', serif;
+  font-size: 19px;
+  font-style: italic;
+  line-height: 1.55;
+  color: rgba(255,255,255,.85);
+  margin: 0;
+}
+.closing-banner strong {
+  display: block;
+  margin-top: 6px;
+  color: #fff;
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* ── Section rule ── */
+.article-body hr,
+hr.section-rule {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 40px 0;
+}
+
+/* ── Disclaimer + sources ── */
+.disclaimer {
+  font-size: 12.5px;
+  color: var(--faint);
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-top: 28px;
+  line-height: 1.55;
+}
+.sources {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .03em;
+  color: var(--faint);
+  margin-top: 20px;
+  line-height: 1.7;
+}
+.sources a { word-break: break-word; }
+
+/* ── Bio ── */
+.article-footer,
+.bio {
+  margin-top: 44px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: .03em;
+  color: var(--faint);
+  line-height: 1.75;
+  font-style: normal;
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .article-body { padding: 28px 20px 48px; }
+  .article-body h2 { font-size: 20px; }
+  .closing-banner { padding: 24px; }
+  .questions-block { padding: 18px; }
+}

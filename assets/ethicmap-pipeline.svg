@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 280" font-family="'DM Mono', ui-monospace, monospace" role="img" aria-label="ETHICMAP as a data pipeline. Environment and Timing sit at the data ingestion gate. Harmony and Incentive sit at the human interaction layer. Calibration and Measurement sit at the testing gate. Application and Publish sit at the deployment and learning phase.">
+
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#C4846E"/>
+    </marker>
+  </defs>
+
+  <!-- Background panels -->
+  <rect x="12" y="40" width="196" height="200" rx="10" fill="#F6F4F1" stroke="#DDDAD5" stroke-width="1"/>
+  <rect x="232" y="40" width="196" height="200" rx="10" fill="#F6F4F1" stroke="#DDDAD5" stroke-width="1"/>
+  <rect x="452" y="40" width="196" height="200" rx="10" fill="#F6F4F1" stroke="#DDDAD5" stroke-width="1"/>
+  <rect x="672" y="40" width="216" height="200" rx="10" fill="#F6F4F1" stroke="#DDDAD5" stroke-width="1"/>
+
+  <!-- Gate labels -->
+  <text x="110" y="28" text-anchor="middle" font-size="9" fill="#C4846E" letter-spacing=".14em" text-transform="uppercase">DATA INGESTION</text>
+  <text x="330" y="28" text-anchor="middle" font-size="9" fill="#C4846E" letter-spacing=".14em">HUMAN LAYER</text>
+  <text x="550" y="28" text-anchor="middle" font-size="9" fill="#C4846E" letter-spacing=".14em">TESTING GATES</text>
+  <text x="780" y="28" text-anchor="middle" font-size="9" fill="#C4846E" letter-spacing=".14em">DEPLOYMENT</text>
+
+  <!-- Connector arrows -->
+  <line x1="210" y1="140" x2="230" y2="140" stroke="#C4846E" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="430" y1="140" x2="450" y2="140" stroke="#C4846E" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="650" y1="140" x2="670" y2="140" stroke="#C4846E" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- E — Environment -->
+  <rect x="28" y="60" width="164" height="72" rx="8" fill="#fff" stroke="#DDDAD5" stroke-width="1" stroke-left-width="4"/>
+  <rect x="28" y="60" width="4" height="72" rx="2" fill="#1C2B40"/>
+  <text x="44" y="80" font-size="9" fill="#C4846E" letter-spacing=".12em">E</text>
+  <text x="44" y="95" font-size="13" fill="#1C2B40" font-weight="600" font-family="'Source Serif 4', serif">Environment</text>
+  <text x="44" y="112" font-size="10.5" fill="#4A4A4A">Constraints, norms,</text>
+  <text x="44" y="126" font-size="10.5" fill="#4A4A4A">power dynamics</text>
+
+  <!-- T — Timing -->
+  <rect x="28" y="144" width="164" height="72" rx="8" fill="#fff" stroke="#DDDAD5" stroke-width="1"/>
+  <rect x="28" y="144" width="4" height="72" rx="2" fill="#1C2B40"/>
+  <text x="44" y="164" font-size="9" fill="#C4846E" letter-spacing=".12em">T</text>
+  <text x="44" y="179" font-size="13" fill="#1C2B40" font-weight="600" font-family="'Source Serif 4', serif">Timing</text>
+  <text x="44" y="196" font-size="10.5" fill="#4A4A4A">Cutoffs, lags,</text>
+  <text x="44" y="210" font-size="10.5" fill="#4A4A4A">retroactivity, notice</text>
+
+  <!-- H — Harmony -->
+  <rect x="248" y="60" width="164" height="72" rx="8" fill="#fff" stroke="#DDDAD5" stroke-width="1"/>
+  <rect x="248" y="60" width="4" height="72" rx="2" fill="#8B3A2A"/>
+  <text x="264" y="80" font-size="9" fill="#C4846E" letter-spacing=".12em">H</text>
+  <text x="264" y="95" font-size="13" fill="#1C2B40" font-weight="600" font-family="'Source Serif 4', serif">Harmony</text>
+  <text x="264" y="112" font-size="10.5" fill="#4A4A4A">Who benefits,</text>
+  <text x="264" y="126" font-size="10.5" fill="#4A4A4A">burdened, exposed</text>
+
+  <!-- I — Incentive -->
+  <rect x="248" y="144" width="164" height="72" rx="8" fill="#fff" stroke="#DDDAD5" stroke-width="1"/>
+  <rect x="248" y="144" width="4" height="72" rx="2" fill="#8B3A2A"/>
+  <text x="264" y="164" font-size="9" fill="#C4846E" letter-spacing=".12em">I</text>
+  <text x="264" y="179" font-size="13" fill="#1C2B40" font-weight="600" font-family="'Source Serif 4', serif">Incentive</text>
+  <text x="264" y="196" font-size="10.5" fill="#4A4A4A">Feasibility</text>
+  <text x="264" y="210" font-size="10.5" fill="#4A4A4A">without coercion</text>
+
+  <!-- C — Calibration -->
+  <rect x="468" y="60" width="164" height="72" rx="8" fill="#fff" stroke="#DDDAD5" stroke-width="1"/>
+  <rect x="468" y="60" width="4" height="72" rx="2" fill="#1C2B40"/>
+  <text x="484" y="80" font-size="9" fill="#C4846E" letter-spacing=".12em">C</text>
+  <text x="484" y="95" font-size="13" fill="#1C2B40" font-weight="600" font-family="'Source Serif 4', serif">Calibration</text>
+  <text x="484" y="112" font-size="10.5" fill="#4A4A4A">Expectations aligned</text>
+  <text x="484" y="126" font-size="10.5" fill="#4A4A4A">to capacity</text>
+
+  <!-- M — Measurement -->
+  <rect x="468" y="144" width="164" height="72" rx="8" fill="#fff" stroke="#DDDAD5" stroke-width="1"/>
+  <rect x="468" y="144" width="4" height="72" rx="2" fill="#1C2B40"/>
+  <text x="484" y="164" font-size="9" fill="#C4846E" letter-spacing=".12em">M</text>
+  <text x="484" y="179" font-size="13" fill="#1C2B40" font-weight="600" font-family="'Source Serif 4', serif">Measurement</text>
+  <text x="484" y="196" font-size="10.5" fill="#4A4A4A">Uncertainty and error</text>
+  <text x="484" y="210" font-size="10.5" fill="#4A4A4A">rates, not just points</text>
+
+  <!-- A — Application -->
+  <rect x="688" y="60" width="184" height="72" rx="8" fill="#fff" stroke="#DDDAD5" stroke-width="1"/>
+  <rect x="688" y="60" width="4" height="72" rx="2" fill="#8B3A2A"/>
+  <text x="704" y="80" font-size="9" fill="#C4846E" letter-spacing=".12em">A</text>
+  <text x="704" y="95" font-size="13" fill="#1C2B40" font-weight="600" font-family="'Source Serif 4', serif">Application</text>
+  <text x="704" y="112" font-size="10.5" fill="#4A4A4A">Standardize without</text>
+  <text x="704" y="126" font-size="10.5" fill="#4A4A4A">freezing learning</text>
+
+  <!-- P — Publish -->
+  <rect x="688" y="144" width="184" height="72" rx="8" fill="#fff" stroke="#DDDAD5" stroke-width="1"/>
+  <rect x="688" y="144" width="4" height="72" rx="2" fill="#8B3A2A"/>
+  <text x="704" y="164" font-size="9" fill="#C4846E" letter-spacing=".12em">P</text>
+  <text x="704" y="179" font-size="13" fill="#1C2B40" font-weight="600" font-family="'Source Serif 4', serif">Publish</text>
+  <text x="704" y="196" font-size="10.5" fill="#4A4A4A">Decisions, tradeoffs,</text>
+  <text x="704" y="210" font-size="10.5" fill="#4A4A4A">changes across cycles</text>
+
+  <!-- Caption -->
+  <text x="450" y="262" text-anchor="middle" font-size="10" fill="#7A7A7A" letter-spacing=".04em">Each pair maps onto a standard program-operations gate — ask these questions in this sequence, every cycle</text>
+
+</svg>
