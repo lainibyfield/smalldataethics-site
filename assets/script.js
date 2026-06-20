@@ -21,20 +21,17 @@
     if (toggleBtn) {
       toggleBtn.setAttribute("aria-pressed", String(collapsed));
       toggleBtn.setAttribute("aria-label", collapsed ? "Expand sidebar" : "Collapse sidebar");
-      toggleBtn.textContent = collapsed ? "›" : "‹";
+      toggleBtn.textContent = collapsed ? "\u203a" : "\u2039";
     }
     if (!animate) {
-      // Force reflow then remove the no-transition class
       document.body.offsetHeight;
       document.body.classList.remove("no-transition");
     }
   }
 
-  // Restore saved state immediately (no animation on load)
   var savedCollapsed = localStorage.getItem(STORAGE_KEY) === "true";
   applyCollapsed(savedCollapsed, false);
 
-  // Wire up toggle button
   if (toggleBtn) {
     toggleBtn.addEventListener("click", function () {
       var nowCollapsed = !document.body.classList.contains("sidebar-collapsed");
@@ -43,7 +40,6 @@
     });
   }
 
-  // Also allow clicking the collapsed rail to reopen
   var sidebar = document.getElementById("sidebar");
   if (sidebar) {
     sidebar.addEventListener("click", function (e) {
@@ -55,8 +51,8 @@
   }
 
   // ── Mobile sidebar drawer ──
-  var menuBtn  = document.getElementById("menu-btn");
-  var overlay  = document.getElementById("sidebar-overlay");
+  var menuBtn = document.getElementById("menu-btn");
+  var overlay = document.getElementById("sidebar-overlay");
 
   if (menuBtn && sidebar && overlay) {
     menuBtn.addEventListener("click", function () {
@@ -64,6 +60,8 @@
       overlay.classList.toggle("open", isOpen);
       menuBtn.textContent = isOpen ? "\u2715 Close" : "\u2630 Menu";
       menuBtn.setAttribute("aria-expanded", String(isOpen));
+      // Reset scroll to top every time drawer opens
+      if (isOpen) { sidebar.scrollTop = 0; }
     });
     overlay.addEventListener("click", function () {
       sidebar.classList.remove("open");

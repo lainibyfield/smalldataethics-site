@@ -16,6 +16,13 @@
   max-width: 720px;
   margin: 0 auto;
   padding: 40px 24px 64px;
+  /* Allow full-bleed components like the timeline to break out */
+  overflow-x: visible;
+}
+
+/* Timeline breakout within article — escape the 720px container */
+.article-body .sde-timeline-breakout {
+  position: relative;
 }
 
 /* ── Byline ── */
