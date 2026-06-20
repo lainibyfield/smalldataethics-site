@@ -1,0 +1,645 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ETHICMAP Scorecard | Small Data Ethics</title>
+  <meta name="description" content="Score your program across the eight ETHICMAP dimensions. An interactive self-assessment tool for small data practitioners." />
+  <meta name="author" content="Laini Byfield" />
+  <link rel="canonical" href="https://smalldataethics.com/ethicmap/scorecard.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,700&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" href="/assets/logo.png" type="image/png" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <style>
+    :root {
+      --mono: 'DM Mono', ui-monospace, monospace;
+      --sc-brick:      #8B3A2A;
+      --sc-brick-pale: #F5EDE9;
+      --sc-brick-mid:  #C4846E;
+      --sc-navy:       #1C2B40;
+      --sc-panel:      #F6F4F1;
+      --sc-border:     #DDDAD5;
+      --sc-ink:        #1A1A1A;
+      --sc-muted:      #4A4A4A;
+      --sc-faint:      #7A7A7A;
+      --sc-amber:      #8a6a1a;
+      --sc-amber-pale: #fdf6e3;
+      --sc-green:      #1a5c3a;
+      --sc-green-pale: #edf6f0;
+      --sc-red:        #7a1a1a;
+      --sc-red-pale:   #fdf0f0;
+    }
+
+    .page-label {
+      display: block;
+      font-family: var(--mono);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--sc-brick-mid);
+      margin-bottom: 8px;
+    }
+
+    /* ── Scorecard shell ── */
+    .sc-wrap {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 36px 24px 64px;
+    }
+
+    .sc-intro {
+      margin-bottom: 28px;
+    }
+    .sc-intro p {
+      color: var(--sc-muted);
+      font-size: 14.5px;
+      line-height: 1.7;
+      margin-bottom: 10px;
+    }
+    .sc-intro p:last-child { margin-bottom: 0; }
+
+    /* ── Two-column layout ── */
+    .sc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    /* ── Sliders ── */
+    .sc-sliders {
+      background: var(--sc-panel);
+      border: 1px solid var(--sc-border);
+      border-radius: 12px;
+      padding: 20px;
+    }
+
+    .sc-slider-group {
+      margin-bottom: 18px;
+    }
+    .sc-slider-group:last-of-type { margin-bottom: 0; }
+
+    .sc-slider-label {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--sc-navy);
+      margin-bottom: 3px;
+    }
+    .sc-slider-label .dim-code {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: .12em;
+      color: var(--sc-brick-mid);
+      margin-right: 6px;
+    }
+    .sc-score-val {
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--sc-brick);
+    }
+
+    .sc-slider-desc {
+      display: block;
+      font-size: 12px;
+      color: var(--sc-faint);
+      margin-bottom: 6px;
+      line-height: 1.45;
+    }
+
+    .sc-range {
+      width: 100%;
+      -webkit-appearance: none;
+      appearance: none;
+      height: 5px;
+      border-radius: 3px;
+      background: var(--sc-border);
+      outline: none;
+      cursor: pointer;
+    }
+    .sc-range::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--sc-brick);
+      cursor: pointer;
+      border: 2px solid #fff;
+      box-shadow: 0 1px 4px rgba(139,58,42,.3);
+      transition: background .12s;
+    }
+    .sc-range::-webkit-slider-thumb:hover { background: var(--sc-brick-mid); }
+    .sc-range::-moz-range-thumb {
+      width: 18px; height: 18px;
+      border-radius: 50%;
+      background: var(--sc-brick);
+      border: 2px solid #fff;
+      cursor: pointer;
+    }
+
+    .sc-reset-btn {
+      margin-top: 18px;
+      background: none;
+      border: 1px solid var(--sc-border);
+      color: var(--sc-faint);
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: 8px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: border-color .12s, color .12s;
+    }
+    .sc-reset-btn:hover {
+      border-color: var(--sc-brick-mid);
+      color: var(--sc-brick);
+    }
+
+    /* ── Visual panel ── */
+    .sc-visual {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .sc-chart-wrap {
+      background: #fff;
+      border: 1px solid var(--sc-border);
+      border-radius: 12px;
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .sc-chart-wrap svg { overflow: visible; }
+
+    .sc-grid-line { fill: none; stroke: var(--sc-border); stroke-width: 1; }
+    .sc-axis-line { stroke: var(--sc-border); stroke-width: 1; stroke-dasharray: 3,3; }
+    .sc-chart-label {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 500;
+      fill: var(--sc-navy);
+      text-anchor: middle;
+    }
+    #sc-data-poly {
+      fill: rgba(139,58,42,.15);
+      stroke: var(--sc-brick);
+      stroke-width: 2.5;
+      stroke-linejoin: round;
+    }
+
+    /* ── Status box ── */
+    .sc-status {
+      border: 1px solid var(--sc-border);
+      border-radius: 12px;
+      padding: 16px 18px;
+      background: #fff;
+    }
+    .sc-status-label {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--sc-brick-mid);
+      margin-bottom: 6px;
+    }
+    .sc-status-rating {
+      font-family: 'Source Serif 4', serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--sc-navy);
+      margin-bottom: 10px;
+    }
+    .sc-progress-track {
+      background: var(--sc-border);
+      border-radius: 999px;
+      height: 6px;
+      width: 100%;
+      margin-bottom: 8px;
+      overflow: hidden;
+    }
+    .sc-progress-fill {
+      height: 100%;
+      border-radius: 999px;
+      background: var(--sc-brick);
+      width: 50%;
+      transition: width .3s ease, background .3s ease;
+    }
+    .sc-avg {
+      font-family: var(--mono);
+      font-size: 11.5px;
+      color: var(--sc-faint);
+    }
+
+    /* ── Insight panel ── */
+    .sc-insight {
+      border: 1px solid var(--sc-border);
+      border-radius: 12px;
+      padding: 18px 20px;
+      background: var(--sc-amber-pale);
+      border-left: 4px solid var(--sc-amber);
+      transition: background .2s, border-color .2s;
+    }
+    .sc-insight.is-strong {
+      background: var(--sc-green-pale);
+      border-left-color: var(--sc-green);
+    }
+    .sc-insight.is-risk {
+      background: var(--sc-red-pale);
+      border-left-color: var(--sc-red);
+    }
+    .sc-insight-label {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--sc-amber);
+      margin-bottom: 6px;
+    }
+    .sc-insight.is-strong .sc-insight-label { color: var(--sc-green); }
+    .sc-insight.is-risk .sc-insight-label { color: var(--sc-red); }
+    .sc-insight p {
+      font-size: 13.5px;
+      line-height: 1.65;
+      color: var(--sc-ink);
+      margin: 0;
+    }
+    .sc-insight strong { color: var(--sc-navy); }
+
+    .sc-note {
+      font-size: 12.5px;
+      color: var(--sc-faint);
+      border-left: 3px solid var(--sc-brick-mid);
+      padding-left: 11px;
+      margin-top: 20px;
+      line-height: 1.55;
+    }
+
+    @media (max-width: 800px) {
+      .sc-grid { grid-template-columns: 1fr; }
+      .sc-wrap { padding: 28px 16px 48px; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="topbar">
+    <a class="topbar-brand" href="/" aria-label="Small Data Ethics home">
+      <span class="mark-logo" aria-hidden="true"><img src="/assets/logo.png" alt="" width="40" height="40" style="display:block;border-radius:4px;" /></span>
+      <span class="brand-text">
+        <span class="kicker">Notes and Applied Theory</span>
+        <span class="site-title">Small Data Ethics</span>
+      </span>
+    </a>
+    <span class="topbar-tagline" aria-hidden="true">For the professional who has to explain a wrong outcome to a real person</span>
+    <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Collapse sidebar" aria-pressed="false" title="Toggle sidebar">&#8249;</button>
+    <button class="menu-btn" id="menu-btn" aria-controls="sidebar" aria-expanded="false">&#9776; Menu</button>
+  </header>
+  <div class="sidebar-overlay" id="sidebar-overlay" aria-hidden="true"></div>
+  <div class="page-layout">
+    <nav class="sidebar" id="sidebar" aria-label="Primary">
+      <div class="sidebar-group">
+        <span class="sidebar-group-label">Foundations</span>
+        <a href="/what-is.html">Start Here</a>
+        <a href="/theory.html">Theory</a>
+        <a href="/ethics-vs-privacy.html" class="sub">Ethics vs Privacy</a>
+      </div>
+      <div class="sidebar-group">
+        <span class="sidebar-group-label">Structures</span>
+        <a href="/policy/index.html">Policy</a>
+        <a href="/policy/gdpr.html" class="sub">GDPR</a>
+        <a href="/policy/jisc.html" class="sub">Jisc</a>
+        <a href="/policy/odi.html" class="sub">ODI</a>
+        <a href="/governance/index.html">Governance</a>
+        <a href="/governance/ethics-boards.html" class="sub">Ethics boards</a>
+        <a href="/governance/review-committee.html" class="sub">Review committees</a>
+        <a href="/practice.html">Practice</a>
+      </div>
+      <div class="sidebar-group">
+        <span class="sidebar-group-label">Method</span>
+        <a href="/ethicmap.html">ETHICMAP</a>
+        <a href="/ethicmap/framework-explained.html" class="sub">Framework explained</a>
+        <a href="/ethicmap/theory-informed-design.html" class="sub">Theory-informed design</a>
+        <a href="/ethicmap/reading-list.html" class="sub">Reading list</a>
+        <a href="/ethicmap/scorecard.html" class="sub active">Scorecard</a>
+      </div>
+      <div class="sidebar-group">
+        <span class="sidebar-group-label">Extension</span>
+        <a href="/newsletter.html">Notes</a>
+        <a href="/notes/outcome-done-stakeholder-problem.html" class="sub">Outcome Done</a>
+        <a href="/notes/benefit-becomes-evidence.html" class="sub">Benefit as evidence</a>
+        <a href="/notes/yale-health-expectations.html" class="sub">Yale wellness case</a>
+        <a href="/notes/just-as-long-as-its-legal.html" class="sub">Just As Long As Legal</a>
+      </div>
+    </nav>
+    <main class="content" id="main">
+
+      <section class="page-hero">
+        <div class="container">
+          <p class="eyebrow">By <strong>Laini Byfield</strong></p>
+          <h2>ETHICMAP Scorecard</h2>
+          <p class="lead">Score your program across the eight ETHICMAP dimensions. Move the sliders to reflect your current governance posture. The radar chart and insight panel update in real time.</p>
+          <div class="chips">
+            <span class="chip">Self-assessment</span>
+            <span class="chip">Eight dimensions</span>
+            <span class="chip">Governance posture</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="sc-wrap">
+        <span class="page-label">How to use this</span>
+        <div class="sc-intro">
+          <p>For each dimension, score your program from 1 (not addressed) to 10 (fully documented, actively maintained). Score what is actually in place &#8212; not what you intend to do. A score of 5 means something exists but is incomplete, undocumented, or untested.</p>
+          <p>The insight panel surfaces the dimension most in need of attention. Use it as a starting point for your next governance review, not as a final verdict.</p>
+        </div>
+
+        <div class="sc-grid">
+
+          <!-- Sliders -->
+          <div class="sc-sliders">
+
+            <div class="sc-slider-group">
+              <div class="sc-slider-label">
+                <span><span class="dim-code">E</span>Environment</span>
+                <span class="sc-score-val" id="val-env">5</span>
+              </div>
+              <span class="sc-slider-desc">Power dynamics, constraints, and norms are named. The program knows what institutional context it operates in.</span>
+              <input type="range" id="env" min="1" max="10" value="5" class="sc-range">
+            </div>
+
+            <div class="sc-slider-group">
+              <div class="sc-slider-label">
+                <span><span class="dim-code">T</span>Timing</span>
+                <span class="sc-score-val" id="val-tim">5</span>
+              </div>
+              <span class="sc-slider-desc">Cutoffs, lags, retroactivity, and notice windows are documented. Participants know when decisions are made and when they can be challenged.</span>
+              <input type="range" id="tim" min="1" max="10" value="5" class="sc-range">
+            </div>
+
+            <div class="sc-slider-group">
+              <div class="sc-slider-label">
+                <span><span class="dim-code">H</span>Harmony</span>
+                <span class="sc-score-val" id="val-har">5</span>
+              </div>
+              <span class="sc-slider-desc">Who benefits, who is burdened, and who is exposed has been examined. The program does not assume organizational outcomes equal participant outcomes.</span>
+              <input type="range" id="har" min="1" max="10" value="5" class="sc-range">
+            </div>
+
+            <div class="sc-slider-group">
+              <div class="sc-slider-label">
+                <span><span class="dim-code">I</span>Incentive</span>
+                <span class="sc-score-val" id="val-inc">5</span>
+              </div>
+              <span class="sc-slider-desc">Participation is feasible without being coercive. The pathway to outcomes is one participants can meaningfully choose.</span>
+              <input type="range" id="inc" min="1" max="10" value="5" class="sc-range">
+            </div>
+
+            <div class="sc-slider-group">
+              <div class="sc-slider-label">
+                <span><span class="dim-code">C</span>Calibration</span>
+                <span class="sc-score-val" id="val-cal">5</span>
+              </div>
+              <span class="sc-slider-desc">Expectations are aligned to what the population can realistically achieve. The program was designed for the people actually enrolled, not an idealized participant.</span>
+              <input type="range" id="cal" min="1" max="10" value="5" class="sc-range">
+            </div>
+
+            <div class="sc-slider-group">
+              <div class="sc-slider-label">
+                <span><span class="dim-code">M</span>Measurement</span>
+                <span class="sc-score-val" id="val-mea">5</span>
+              </div>
+              <span class="sc-slider-desc">Outcomes include uncertainty and error rates, not just point estimates. Known failure modes, match rates, and data gaps are documented alongside results.</span>
+              <input type="range" id="mea" min="1" max="10" value="5" class="sc-range">
+            </div>
+
+            <div class="sc-slider-group">
+              <div class="sc-slider-label">
+                <span><span class="dim-code">A</span>Application</span>
+                <span class="sc-score-val" id="val-app">5</span>
+              </div>
+              <span class="sc-slider-desc">The program has a runbook. Rules are versioned. Reprocessing triggers exist. The cycle can be repeated without relying on institutional memory.</span>
+              <input type="range" id="app" min="1" max="10" value="5" class="sc-range">
+            </div>
+
+            <div class="sc-slider-group">
+              <div class="sc-slider-label">
+                <span><span class="dim-code">P</span>Publish</span>
+                <span class="sc-score-val" id="val-pub">5</span>
+              </div>
+              <span class="sc-slider-desc">Decisions, tradeoffs, and changes are documented across cycles. If something changed, there is a record of what, why, and what it meant for participants.</span>
+              <input type="range" id="pub" min="1" max="10" value="5" class="sc-range">
+            </div>
+
+            <button type="button" id="sc-reset" class="sc-reset-btn">Reset scorecard</button>
+          </div>
+
+          <!-- Visual panel -->
+          <div class="sc-visual">
+
+            <div class="sc-chart-wrap">
+              <svg id="sc-radar" viewBox="0 0 360 360" width="320" height="320">
+                <g id="sc-grid"></g>
+                <polygon id="sc-data-poly" points=""/>
+                <g id="sc-labels"></g>
+              </svg>
+            </div>
+
+            <div class="sc-status">
+              <div class="sc-status-label">Governance posture</div>
+              <div class="sc-status-rating" id="sc-rating">Developing</div>
+              <div class="sc-progress-track">
+                <div class="sc-progress-fill" id="sc-progress"></div>
+              </div>
+              <div class="sc-avg">Average score: <span id="sc-avg">5.0</span> / 10</div>
+            </div>
+
+            <div class="sc-insight" id="sc-insight">
+              <div class="sc-insight-label" id="sc-insight-label">Operational checkpoint</div>
+              <p id="sc-insight-text">Adjust the sliders to reflect your program&#8217;s current governance posture.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <p class="sc-note">This scorecard is a self-assessment tool, not an audit. Scores reflect your own judgment about what is documented and maintained. Use the lowest-scoring dimension as the starting point for your next governance review cycle. <a href="/ethicmap/framework-explained.html">See what each dimension produces &#8594;</a></p>
+      </div>
+
+    </main>
+  </div>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>&#169; <span id="year"></span> Laini Byfield. All rights reserved.</span>
+      <span><a href="/work-with-me.html">Bring a question</a> &nbsp;&middot;&nbsp; No tracking. No cookies.</span>
+    </div>
+  </footer>
+  <script src="/assets/script.js"></script>
+  <script>
+(function () {
+
+  var dims = [
+    { id: 'env', code: 'E', name: 'Environment',
+      insight: 'The program has not fully named the institutional context it operates in. Power dynamics, norms, and constraints should be documented before they become unexamined assumptions. Who controls the rules? Who has authority to change them? What structural pressures shape participation?' },
+    { id: 'tim', code: 'T', name: 'Timing',
+      insight: 'Cutoffs, lags, and retroactivity are a leading source of participant harm in small data programs. If people do not know when decisions are made &#8212; or when they can still challenge them &#8212; the program is operating without informed consent in any practical sense. Document the full timeline and publish it.' },
+    { id: 'har', code: 'H', name: 'Harmony',
+      insight: 'The distribution of benefit and burden has not been examined carefully enough. Harmony does not assume that what is good for the organization is good for participants. Who is most exposed when something goes wrong? Who had the least input into program design? Those are the same people who need the most protection.' },
+    { id: 'inc', code: 'I', name: 'Incentive',
+      insight: 'Participation may not be as voluntary as it appears. In employer-sponsored programs, financial incentives, social pressure, and employment context all shape what people feel able to choose. Feasibility without coercion means the pathway to outcomes is one participants can meaningfully decline &#8212; not just technically opt out of.' },
+    { id: 'cal', code: 'C', name: 'Calibration',
+      insight: 'The program may have been designed for an idealized participant who does not match the people actually enrolled. Calibration requires examining whether the population can realistically achieve what the program requires &#8212; given their schedules, resources, and working conditions. Misaligned expectations become harm at scale.' },
+    { id: 'mea', code: 'M', name: 'Measurement',
+      insight: 'Results are being reported without their uncertainty. Every outcome has a match rate, an error mode, and a confidence range &#8212; and the people not captured in clean data are still stakeholders in the program&#8217;s outcomes. Point estimates without error bands are not complete specifications.' },
+    { id: 'app', code: 'A', name: 'Application',
+      insight: 'The program is running on institutional memory rather than documented process. If the person who runs it left tomorrow, could the cycle be repeated correctly? A runbook, versioned rules, and reprocessing triggers are not administrative overhead &#8212; they are the difference between a governed program and a fragile one.' },
+    { id: 'pub', code: 'P', name: 'Publish',
+      insight: 'Decisions are being made without a record. When something changes &#8212; a rule, a data source, a vendor, a cutoff &#8212; is there documentation of what changed, why, and what it meant for participants? A system without a change log cannot be audited, contested, or learned from.' }
+  ];
+
+  var cx = 180, cy = 180, rMax = 120;
+  var n = dims.length;
+
+  function angle(i) {
+    return (i * 2 * Math.PI / n) - (Math.PI / 2);
+  }
+
+  function pt(i, score) {
+    var r = (score / 10) * rMax;
+    return {
+      x: cx + r * Math.cos(angle(i)),
+      y: cy + r * Math.sin(angle(i))
+    };
+  }
+
+  function initChart() {
+    var grid = document.getElementById('sc-grid');
+    var labels = document.getElementById('sc-labels');
+    if (!grid) return;
+
+    // Concentric rings
+    [2,4,6,8,10].forEach(function(level) {
+      var pts = [];
+      for (var i = 0; i < n; i++) {
+        var p = pt(i, level);
+        pts.push(p.x + ',' + p.y);
+      }
+      var poly = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+      poly.setAttribute('points', pts.join(' '));
+      poly.setAttribute('class', 'sc-grid-line');
+      grid.appendChild(poly);
+    });
+
+    // Axis lines and labels
+    dims.forEach(function(dim, i) {
+      var a = angle(i);
+      var xEdge = cx + rMax * Math.cos(a);
+      var yEdge = cy + rMax * Math.sin(a);
+
+      var line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+      line.setAttribute('x1', cx); line.setAttribute('y1', cy);
+      line.setAttribute('x2', xEdge); line.setAttribute('y2', yEdge);
+      line.setAttribute('class', 'sc-axis-line');
+      grid.appendChild(line);
+
+      var xText = cx + (rMax + 20) * Math.cos(a);
+      var yText = cy + (rMax + 20) * Math.sin(a) + 4;
+      var text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+      text.setAttribute('x', xText);
+      text.setAttribute('y', yText);
+      text.setAttribute('class', 'sc-chart-label');
+      text.textContent = dim.code;
+      labels.appendChild(text);
+    });
+  }
+
+  function update() {
+    var total = 0;
+    var minScore = 11;
+    var weakest = dims[0];
+    var polyPts = [];
+
+    dims.forEach(function(dim, i) {
+      var input = document.getElementById(dim.id);
+      var valEl = document.getElementById('val-' + dim.id);
+      if (!input) return;
+      var score = parseInt(input.value, 10);
+      if (valEl) valEl.textContent = score;
+      total += score;
+      if (score < minScore) { minScore = score; weakest = dim; }
+      var p = pt(i, score);
+      polyPts.push(p.x + ',' + p.y);
+    });
+
+    var poly = document.getElementById('sc-data-poly');
+    if (poly) poly.setAttribute('points', polyPts.join(' '));
+
+    var avg = total / n;
+    var avgEl = document.getElementById('sc-avg');
+    if (avgEl) avgEl.textContent = avg.toFixed(1);
+
+    var progress = document.getElementById('sc-progress');
+    var rating = document.getElementById('sc-rating');
+    var insight = document.getElementById('sc-insight');
+    var insightLabel = document.getElementById('sc-insight-label');
+    var insightText = document.getElementById('sc-insight-text');
+
+    if (progress) progress.style.width = (avg * 10) + '%';
+
+    if (avg >= 8) {
+      if (rating) rating.textContent = 'Strong governance posture';
+      if (progress) progress.style.background = '#1a5c3a';
+      if (insight) { insight.className = 'sc-insight is-strong'; }
+      if (insightLabel) insightLabel.textContent = 'All dimensions accounted for';
+      if (insightText) insightText.innerHTML = 'Your program shows strong documentation and governance discipline across all eight dimensions. The priority now is maintaining this posture across cycles &#8212; governance decays when programs run on autopilot. Schedule a review before the next program cycle begins.';
+    } else if (avg >= 5) {
+      if (rating) rating.textContent = 'Developing governance posture';
+      if (progress) progress.style.background = '#8a6a1a';
+      if (insight) { insight.className = 'sc-insight'; }
+      if (insightLabel) insightLabel.textContent = 'Operational checkpoint \u2014 ' + weakest.name;
+      if (insightText) insightText.innerHTML = weakest.insight;
+    } else {
+      if (rating) rating.textContent = 'Governance gaps present';
+      if (progress) progress.style.background = '#7a1a1a';
+      if (insight) { insight.className = 'sc-insight is-risk'; }
+      if (insightLabel) insightLabel.textContent = 'Priority gap \u2014 ' + weakest.name;
+      if (insightText) insightText.innerHTML = weakest.insight;
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    initChart();
+    dims.forEach(function(dim) {
+      var input = document.getElementById(dim.id);
+      if (input) input.addEventListener('input', update);
+    });
+    var reset = document.getElementById('sc-reset');
+    if (reset) {
+      reset.addEventListener('click', function () {
+        dims.forEach(function(dim) {
+          var input = document.getElementById(dim.id);
+          if (input) input.value = 5;
+        });
+        update();
+      });
+    }
+    update();
+  });
+
+  setTimeout(function () {
+    var grid = document.getElementById('sc-grid');
+    if (grid && grid.children.length === 0) { initChart(); update(); }
+  }, 400);
+
+})();
+  </script>
+</body>
+</html>
