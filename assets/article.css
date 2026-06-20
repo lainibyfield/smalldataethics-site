@@ -16,13 +16,27 @@
   max-width: 720px;
   margin: 0 auto;
   padding: 40px 24px 64px;
-  /* Allow full-bleed components like the timeline to break out */
   overflow-x: visible;
 }
 
-/* Timeline breakout within article — escape the 720px container */
+/* Timeline breakout escapes the 720px article container */
 .article-body .sde-timeline-breakout {
   position: relative;
+}
+
+@media (max-width: 900px) {
+  /* On mobile the timeline must escape article-body padding and max-width */
+  .article-body .sde-timeline-breakout {
+    margin-left: -24px;
+    margin-right: -24px;
+    width: calc(100% + 48px);
+  }
+  /* article-body itself must not clip the breakout */
+  .article-body {
+    overflow-x: hidden;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 }
 
 /* ── Byline ── */
